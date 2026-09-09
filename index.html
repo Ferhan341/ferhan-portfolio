@@ -1,3 +1,2024 @@
+<!DOCTYPE html>
+<html lang="om">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ferhan Shaamil | Da'ii • Islamic Educator • Software Engineering Student</title>
+
+  <meta name="description" content="Official personal website of Ferhan Shaamil — Da'ii, Teacher at Markaza Uweysii Ibnu Aamir, and Software Engineering Student.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #06130f;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(6, 19, 15, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    nav {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #d4af37;
+    }
+
+    .logo span {
+      color: #ffffff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: #0d5c46;
+      filter: blur(150px);
+      opacity: 0.25;
+      top: 100px;
+      left: -200px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .small-title {
+      color: #d4af37;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 9vw, 90px);
+      line-height: 1;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      color: #d4af37;
+    }
+
+    .arabic-title {
+      font-size: clamp(22px, 4vw, 35px);
+      direction: rtl;
+      color: #e8d99b;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      color: #b9c8c1;
+      margin-bottom: 25px;
+    }
+
+    .hero-description {
+      max-width: 700px;
+      color: #9eada6;
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 13px 25px;
+      border-radius: 30px;
+      display: inline-block;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #d4af37;
+      color: #06130f;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #f0cf58;
+    }
+
+    .btn-outline {
+      border: 1px solid #d4af37;
+      color: #d4af37;
+    }
+
+    .btn-outline:hover {
+      background: #d4af37;
+      color: #06130f;
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title span {
+      color: #d4af37;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: #9eada6;
+      margin-top: 10px;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 30px;
+    }
+
+    .card {
+      background: #0a1d17;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      border-radius: 20px;
+      padding: 30px;
+    }
+
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #b5c2bc;
+    }
+
+    /* ================= IDENTITY ================= */
+
+    .identity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .identity-box {
+      padding: 30px;
+      text-align: center;
+      background: linear-gradient(145deg, #0a2119, #07150f);
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .identity-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .identity-box h3 {
+      margin-bottom: 8px;
+    }
+
+    .identity-box p {
+      color: #9eada6;
+      font-size: 14px;
+    }
+
+    /* ================= MARKAZA ================= */
+
+    .markaza-box {
+      background: linear-gradient(135deg, #0b261d, #07150f);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 25px;
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .markaza-box h2 {
+      color: #d4af37;
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    .arabic {
+      direction: rtl;
+      font-size: 25px;
+      color: #e8d99b;
+      margin: 20px 0;
+      line-height: 2;
+    }
+
+    .markaza-box p {
+      color: #b9c8c1;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .quote {
+      margin-top: 25px;
+      font-size: 20px;
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    /* ================= PROGRAMS ================= */
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .program {
+      background: #0a1d17;
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      transition: 0.3s;
+    }
+
+    .program:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .program-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .program h3 {
+      margin-bottom: 8px;
+    }
+
+    .program p {
+      color: #9eada6;
+      font-size: 14px;
+    }
+
+    .duration {
+      display: inline-block;
+      margin-top: 12px;
+      color: #d4af37;
+      font-size: 13px;
+    }
+
+    /* ================= DA'WAH ================= */
+
+    .dawah {
+      background: #081a14;
+    }
+
+    .dawah-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .dawah-content p {
+      color: #b9c8c1;
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+
+    /* ================= TECHNOLOGY ================= */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .skill {
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: #e8d99b;
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: #0a1d17;
+    }
+
+    /* ================= LANGUAGES ================= */
+
+    .languages {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .language {
+      text-align: center;
+      padding: 20px;
+      background: #0a1d17;
+      border-radius: 15px;
+    }
+
+    .language strong {
+      display: block;
+      color: #d4af37;
+      margin-bottom: 5px;
+    }
+
+    .language span {
+      color: #9eada6;
+      font-size: 13px;
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      padding: 30px;
+      background: #0a1d17;
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .project h3 {
+      color: #d4af37;
+      margin-bottom: 12px;
+    }
+
+    .project p {
+      color: #9eada6;
+      font-size: 14px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      padding: 50px 30px;
+      border-radius: 25px;
+      background: linear-gradient(145deg, #0b261d, #07150f);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .contact-box h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #9eada6;
+      margin-bottom: 25px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      padding: 35px 0;
+      text-align: center;
+      border-top: 1px solid rgba(212, 175, 55, 0.12);
+      color: #81918a;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .about-grid,
+      .identity-grid,
+      .program-grid,
+      .projects,
+      .languages {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .hero-content {
+        margin: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+  <div class="container">
+    <nav>
+
+      <div class="logo">
+        FERHAN <span>SHAAMIL</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#dawah">Da'wah</a></li>
+        <li><a href="#markaza">Markaza</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        Official Personal Website
+      </div>
+
+      <h1>
+        FERHAN <span>SHAAMIL</span>
+      </h1>
+
+      <div class="arabic-title">
+        داعية ومعلّم للقرآن والعلوم الشرعية
+      </div>
+
+      <div class="hero-subtitle">
+        Barsiisaa • Da'ii • Barataa Software Engineering
+      </div>
+
+      <p class="hero-description">
+        Ani Ferhan Shaamil AbdulGafur, barsiisaa Markaza Uweysii Ibnu Aamir,
+        Da'ii fi barataa Software Engineering ti.
+        Kaayyoon koo Qur'aanaa fi beekumsa sirrii barsiisuu,
+        dhaloota ijaaruu fi teknooloojii karaa gaarii ta'een fayyadamuudha.
+      </p>
+
+      <div class="buttons">
+        <a href="#about" class="btn btn-primary">
+          👤 About Me
+        </a>
+
+        <a href="#markaza" class="btn btn-outline">
+          🕌 Markaza Uweysii
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>About Me</span>
+      <h2>👤 Waa'ee Koo</h2>
+      <p>Nama ani ta'e, hojii koo fi kaayyoo koo.</p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="card">
+
+        <h3>🌿 Ferhan Shaamil AbdulGafur</h3>
+
+        <p>
+          Ani barsiisaa Markaza Uweysii Ibnu Aamir,
+          Da'ii fi barataa Software Engineering ti.
+          Barnoota Qur'aanaa fi علوم شرعية irratti barsiisuu,
+          beekumsa babal'isuu fi dhaloota akhlaaqa gaarii qabu ijaaruun
+          hojii koo keessaa isa ijoodha.
+        </p>
+
+        <br>
+
+        <p>
+          Akkasumas teknooloojii ammayyaa akka meeshaa barnootaa,
+          da'waa fi tajaajila hawaasaaf fayyadamu irratti xiyyeeffadha.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>🎯 Mul'ata Koo</h3>
+
+        <p>
+          Dhaloota Qur'aana jaallatu, beekumsa Shari'aa qabu,
+          akhlaaqa gaarii horatu fi teknooloojii ammayyaa
+          karaa bu'a qabeessa ta'een fayyadamu ijaaruu.
+        </p>
+
+        <br>
+
+        <h3>✨ Kaayyoo</h3>
+
+        <p>
+          Beekumsa sirrii barsiisuu, nama gaarii ijaaruu,
+          dhaloota kakaasuu fi hawaasa keessatti gahee gaarii taphachuu.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= IDENTITY ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>My Identity</span>
+      <h2>✨ Eenyu Ani?</h2>
+    </div>
+
+    <div class="identity-grid">
+
+      <div class="identity-box">
+        <div class="identity-icon">🕌</div>
+        <h3>Da'ii</h3>
+        <p>
+          Nama gara kheeyrii, beekumsa fi hojii gaarii waamu.
+        </p>
+      </div>
+
+      <div class="identity-box">
+        <div class="identity-icon">📖</div>
+        <h3>Islamic Educator</h3>
+        <p>
+          Barsiisaa Qur'aanaa fi علوم شرعية.
+        </p>
+      </div>
+
+      <div class="identity-box">
+        <div class="identity-icon">💻</div>
+        <h3>Software Engineering</h3>
+        <p>
+          Barataa Software Engineering fi technology enthusiast.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= DA'WAH ================= -->
+
+<section class="dawah" id="dawah">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Da'wah & Education</span>
+      <h2>🕌 Da'waa fi Barnoota</h2>
+    </div>
+
+    <div class="dawah-content">
+
+      <p>
+        Da'waan koo Qur'aanaa fi Sunnah irratti hundaa'uun
+        nama gara beekumsaa, tawhiidaa, akhlaaqa gaarii fi hojii gaarii
+        waamuudha.
+      </p>
+
+      <p>
+        Dargaggoota fi hawaasa keessatti jaalala Qur'aanaa,
+        beekumsa Shari'aa, naamusa gaarii fi itti gaafatamummaa cimsuu
+        irratti xiyyeeffadha.
+      </p>
+
+      <p>
+        Teknooloojii ammayyaa illee akka karaa barnootaa fi da'waa
+        babal'isuutti itti fayyadamuun kaayyoo koo keessaa isa tokko.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= MARKAZA ================= -->
+
+<section id="markaza">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Islamic Education Center</span>
+      <h2>🌿 Markaza Uweysii</h2>
+      <p>Iddoo Qur'aanaa, Beekumsa Shari'aa fi Tarbiyaa.</p>
+    </div>
+
+    <div class="markaza-box">
+
+      <h2>
+        🌿✨ MARKAZA UWEYSII IBNU AAMIR ✨🌿
+      </h2>
+
+      <div class="arabic">
+        مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ
+        <br>
+        لِدِرَاسَةِ الْعُلُومِ الشَّرْعِيَّةِ
+      </div>
+
+      <p>
+        Markazni Uweysii Ibnu Aamir iddoo Qur'aana,
+        Tajwiida, Aqiidaa, Fiqhii, Seenaa Nabiyyii ﷺ
+        fi Akhlaaqa itti baratan.
+      </p>
+
+      <div class="quote">
+        نُعَلِّمُكَ الْقُرْآنَ كَمَا أُنْزِلَ
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROGRAMS ================= -->
+
+<section id="education">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Education Programs</span>
+      <h2>📚 Sagantaalee Barnootaa</h2>
+    </div>
+
+    <div class="program-grid">
+
+      <div class="program">
+        <div class="program-icon">🔤</div>
+        <h3>Qaacidda Nooraniyyaa</h3>
+        <p>
+          Sadarkaa jalqabaa fi daa'immaniif.
+        </p>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">📖</div>
+        <h3>Tilawaa fi Tajwiid</h3>
+        <p>
+          Makhaarij, Sifaat fi Ahkaama Tajwiid.
+        </p>
+        <span class="duration">3 Ji'a</span>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">☝️</div>
+        <h3>Aqiidaa</h3>
+        <p>
+          Tawhiida fi bu'uura Aqiidaa Islaamaa.
+        </p>
+        <span class="duration">2 Ji'a</span>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">⚖️</div>
+        <h3>Fiqhii fi Ahkaam</h3>
+        <p>
+          Ahkaama ibaadaa fi jireenyaa.
+        </p>
+        <span class="duration">3 Ji'a</span>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">🌙</div>
+        <h3>Seenaa Nabiyyii ﷺ</h3>
+        <p>
+          Jireenya fi Akhlaaqa Nabiyyii ﷺ.
+        </p>
+        <span class="duration">2 Ji'a</span>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">✨</div>
+        <h3>Sagantaa Guutuu</h3>
+        <p>
+          Qur'aana, Tajwiida, Aqiidaa, Fiqhii fi Seeraa.
+        </p>
+        <span class="duration">3 Ji'a</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TIME ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Learning Schedule</span>
+      <h2>📅 Sagantaa</h2>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="card">
+        <h3>📅 Guyyaa</h3>
+        <p>
+          Sanbata hanga Kamisaatti.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>⏰ Sa'aatii</h3>
+        <p>
+          2:30 PM — 5:30 PM
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TECHNOLOGY ================= -->
+
+<section id="technology">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Technology</span>
+      <h2>💻 Software Engineering</h2>
+      <p>
+        Teknooloojii akka meeshaa barnootaa fi tajaajila hawaasaatti.
+      </p>
+    </div>
+
+    <div class="skills">
+
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Java</div>
+      <div class="skill">Python</div>
+      <div class="skill">Git</div>
+      <div class="skill">GitHub</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= LANGUAGES ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Languages</span>
+      <h2>🌍 Afaanota</h2>
+    </div>
+
+    <div class="languages">
+
+      <div class="language">
+        <strong>Afaan Oromoo</strong>
+        <span>Native</span>
+      </div>
+
+      <div class="language">
+        <strong>العربية</strong>
+        <!DOCTYPE html>
+<html lang="om">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ferhan Shaamil | Da'ii • Islamic Educator • Software Engineering Student</title>
+
+  <meta name="description" content="Official personal website of Ferhan Shaamil — Da'ii, Teacher at Markaza Uweysii Ibnu Aamir, and Software Engineering Student.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #06130f;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(6, 19, 15, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    nav {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #d4af37;
+    }
+
+    .logo span {
+      color: #ffffff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: #0d5c46;
+      filter: blur(150px);
+      opacity: 0.25;
+      top: 100px;
+      left: -200px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .small-title {
+      color: #d4af37;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 9vw, 90px);
+      line-height: 1;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      color: #d4af37;
+    }
+
+    .arabic-title {
+      font-size: clamp(22px, 4vw, 35px);
+      direction: rtl;
+      color: #e8d99b;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      color: #b9c8c1;
+      margin-bottom: 25px;
+    }
+
+    .hero-description {
+      max-width: 700px;
+      color: #9eada6;
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 13px 25px;
+      border-radius: 30px;
+      display: inline-block;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #d4af37;
+      color: #06130f;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #f0cf58;
+    }
+
+    .btn-outline {
+      border: 1px solid #d4af37;
+      color: #d4af37;
+    }
+
+    .btn-outline:hover {
+      background: #d4af37;
+      color: #06130f;
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title span {
+      color: #d4af37;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: #9eada6;
+      margin-top: 10px;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 30px;
+    }
+
+    .card {
+      background: #0a1d17;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      border-radius: 20px;
+      padding: 30px;
+    }
+
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #b5c2bc;
+    }
+
+    /* ================= IDENTITY ================= */
+
+    .identity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .identity-box {
+      padding: 30px;
+      text-align: center;
+      background: linear-gradient(145deg, #0a2119, #07150f);
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .identity-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .identity-box h3 {
+      margin-bottom: 8px;
+    }
+
+    .identity-box p {
+      color: #9eada6;
+      font-size: 14px;
+    }
+
+    /* ================= MARKAZA ================= */
+
+    .markaza-box {
+      background: linear-gradient(135deg, #0b261d, #07150f);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 25px;
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .markaza-box h2 {
+      color: #d4af37;
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    .arabic {
+      direction: rtl;
+      font-size: 25px;
+      color: #e8d99b;
+      margin: 20px 0;
+      line-height: 2;
+    }
+
+    .markaza-box p {
+      color: #b9c8c1;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .quote {
+      margin-top: 25px;
+      font-size: 20px;
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    /* ================= PROGRAMS ================= */
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .program {
+      background: #0a1d17;
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      transition: 0.3s;
+    }
+
+    .program:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .program-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .program h3 {
+      margin-bottom: 8px;
+    }
+
+    .program p {
+      color: #9eada6;
+      font-size: 14px;
+    }
+
+    .duration {
+      display: inline-block;
+      margin-top: 12px;
+      color: #d4af37;
+      font-size: 13px;
+    }
+
+    /* ================= DA'WAH ================= */
+
+    .dawah {
+      background: #081a14;
+    }
+
+    .dawah-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .dawah-content p {
+      color: #b9c8c1;
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+
+    /* ================= TECHNOLOGY ================= */
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .skill {
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: #e8d99b;
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: #0a1d17;
+    }
+
+    /* ================= LANGUAGES ================= */
+
+    .languages {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .language {
+      text-align: center;
+      padding: 20px;
+      background: #0a1d17;
+      border-radius: 15px;
+    }
+
+    .language strong {
+      display: block;
+      color: #d4af37;
+      margin-bottom: 5px;
+    }
+
+    .language span {
+      color: #9eada6;
+      font-size: 13px;
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      padding: 30px;
+      background: #0a1d17;
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .project h3 {
+      color: #d4af37;
+      margin-bottom: 12px;
+    }
+
+    .project p {
+      color: #9eada6;
+      font-size: 14px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      padding: 50px 30px;
+      border-radius: 25px;
+      background: linear-gradient(145deg, #0b261d, #07150f);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .contact-box h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #9eada6;
+      margin-bottom: 25px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      padding: 35px 0;
+      text-align: center;
+      border-top: 1px solid rgba(212, 175, 55, 0.12);
+      color: #81918a;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .about-grid,
+      .identity-grid,
+      .program-grid,
+      .projects,
+      .languages {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .hero-content {
+        margin: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+  <div class="container">
+    <nav>
+
+      <div class="logo">
+        FERHAN <span>SHAAMIL</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#dawah">Da'wah</a></li>
+        <li><a href="#markaza">Markaza</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        Official Personal Website
+      </div>
+
+      <h1>
+        FERHAN <span>SHAAMIL</span>
+      </h1>
+
+      <div class="arabic-title">
+        داعية ومعلّم للقرآن والعلوم الشرعية
+      </div>
+
+      <div class="hero-subtitle">
+        Barsiisaa • Da'ii • Barataa Software Engineering
+      </div>
+
+      <p class="hero-description">
+        Ani Ferhan Shaamil AbdulGafur, barsiisaa Markaza Uweysii Ibnu Aamir,
+        Da'ii fi barataa Software Engineering ti.
+        Kaayyoon koo Qur'aanaa fi beekumsa sirrii barsiisuu,
+        dhaloota ijaaruu fi teknooloojii karaa gaarii ta'een fayyadamuudha.
+      </p>
+
+      <div class="buttons">
+        <a href="#about" class="btn btn-primary">
+          👤 About Me
+        </a>
+
+        <a href="#markaza" class="btn btn-outline">
+          🕌 Markaza Uweysii
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>About Me</span>
+      <h2>👤 Waa'ee Koo</h2>
+      <p>Nama ani ta'e, hojii koo fi kaayyoo koo.</p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="card">
+
+        <h3>🌿 Ferhan Shaamil AbdulGafur</h3>
+
+        <p>
+          Ani barsiisaa Markaza Uweysii Ibnu Aamir,
+          Da'ii fi barataa Software Engineering ti.
+          Barnoota Qur'aanaa fi علوم شرعية irratti barsiisuu,
+          beekumsa babal'isuu fi dhaloota akhlaaqa gaarii qabu ijaaruun
+          hojii koo keessaa isa ijoodha.
+        </p>
+
+        <br>
+
+        <p>
+          Akkasumas teknooloojii ammayyaa akka meeshaa barnootaa,
+          da'waa fi tajaajila hawaasaaf fayyadamu irratti xiyyeeffadha.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>🎯 Mul'ata Koo</h3>
+
+        <p>
+          Dhaloota Qur'aana jaallatu, beekumsa Shari'aa qabu,
+          akhlaaqa gaarii horatu fi teknooloojii ammayyaa
+          karaa bu'a qabeessa ta'een fayyadamu ijaaruu.
+        </p>
+
+        <br>
+
+        <h3>✨ Kaayyoo</h3>
+
+        <p>
+          Beekumsa sirrii barsiisuu, nama gaarii ijaaruu,
+          dhaloota kakaasuu fi hawaasa keessatti gahee gaarii taphachuu.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= IDENTITY ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>My Identity</span>
+      <h2>✨ Eenyu Ani?</h2>
+    </div>
+
+    <div class="identity-grid">
+
+      <div class="identity-box">
+        <div class="identity-icon">🕌</div>
+        <h3>Da'ii</h3>
+        <p>
+          Nama gara kheeyrii, beekumsa fi hojii gaarii waamu.
+        </p>
+      </div>
+
+      <div class="identity-box">
+        <div class="identity-icon">📖</div>
+        <h3>Islamic Educator</h3>
+        <p>
+          Barsiisaa Qur'aanaa fi علوم شرعية.
+        </p>
+      </div>
+
+      <div class="identity-box">
+        <div class="identity-icon">💻</div>
+        <h3>Software Engineering</h3>
+        <p>
+          Barataa Software Engineering fi technology enthusiast.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= DA'WAH ================= -->
+
+<section class="dawah" id="dawah">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Da'wah & Education</span>
+      <h2>🕌 Da'waa fi Barnoota</h2>
+    </div>
+
+    <div class="dawah-content">
+
+      <p>
+        Da'waan koo Qur'aanaa fi Sunnah irratti hundaa'uun
+        nama gara beekumsaa, tawhiidaa, akhlaaqa gaarii fi hojii gaarii
+        waamuudha.
+      </p>
+
+      <p>
+        Dargaggoota fi hawaasa keessatti jaalala Qur'aanaa,
+        beekumsa Shari'aa, naamusa gaarii fi itti gaafatamummaa cimsuu
+        irratti xiyyeeffadha.
+      </p>
+
+      <p>
+        Teknooloojii ammayyaa illee akka karaa barnootaa fi da'waa
+        babal'isuutti itti fayyadamuun kaayyoo koo keessaa isa tokko.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= MARKAZA ================= -->
+
+<section id="markaza">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Islamic Education Center</span>
+      <h2>🌿 Markaza Uweysii</h2>
+      <p>Iddoo Qur'aanaa, Beekumsa Shari'aa fi Tarbiyaa.</p>
+    </div>
+
+    <div class="markaza-box">
+
+      <h2>
+        🌿✨ MARKAZA UWEYSII IBNU AAMIR ✨🌿
+      </h2>
+
+      <div class="arabic">
+        مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ
+        <br>
+        لِدِرَاسَةِ الْعُلُومِ الشَّرْعِيَّةِ
+      </div>
+
+      <p>
+        Markazni Uweysii Ibnu Aamir iddoo Qur'aana,
+        Tajwiida, Aqiidaa, Fiqhii, Seenaa Nabiyyii ﷺ
+        fi Akhlaaqa itti baratan.
+      </p>
+
+      <div class="quote">
+        نُعَلِّمُكَ الْقُرْآنَ كَمَا أُنْزِلَ
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROGRAMS ================= -->
+
+<section id="education">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Education Programs</span>
+      <h2>📚 Sagantaalee Barnootaa</h2>
+    </div>
+
+    <div class="program-grid">
+
+      <div class="program">
+        <div class="program-icon">🔤</div>
+        <h3>Qaacidda Nooraniyyaa</h3>
+        <p>
+          Sadarkaa jalqabaa fi daa'immaniif.
+        </p>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">📖</div>
+        <h3>Tilawaa fi Tajwiid</h3>
+        <p>
+          Makhaarij, Sifaat fi Ahkaama Tajwiid.
+        </p>
+        <span class="duration">3 Ji'a</span>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">☝️</div>
+        <h3>Aqiidaa</h3>
+        <p>
+          Tawhiida fi bu'uura Aqiidaa Islaamaa.
+        </p>
+        <span class="duration">2 Ji'a</span>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">⚖️</div>
+        <h3>Fiqhii fi Ahkaam</h3>
+        <p>
+          Ahkaama ibaadaa fi jireenyaa.
+        </p>
+        <span class="duration">3 Ji'a</span>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">🌙</div>
+        <h3>Seenaa Nabiyyii ﷺ</h3>
+        <p>
+          Jireenya fi Akhlaaqa Nabiyyii ﷺ.
+        </p>
+        <span class="duration">2 Ji'a</span>
+      </div>
+
+      <div class="program">
+        <div class="program-icon">✨</div>
+        <h3>Sagantaa Guutuu</h3>
+        <p>
+          Qur'aana, Tajwiida, Aqiidaa, Fiqhii fi Seeraa.
+        </p>
+        <span class="duration">3 Ji'a</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TIME ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Learning Schedule</span>
+      <h2>📅 Sagantaa</h2>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="card">
+        <h3>📅 Guyyaa</h3>
+        <p>
+          Sanbata hanga Kamisaatti.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>⏰ Sa'aatii</h3>
+        <p>
+          2:30 PM — 5:30 PM
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TECHNOLOGY ================= -->
+
+<section id="technology">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Technology</span>
+      <h2>💻 Software Engineering</h2>
+      <p>
+        Teknooloojii akka meeshaa barnootaa fi tajaajila hawaasaatti.
+      </p>
+    </div>
+
+    <div class="skills">
+
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Java</div>
+      <div class="skill">Python</div>
+      <div class="skill">Git</div>
+      <div class="skill">GitHub</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= LANGUAGES ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Languages</span>
+      <h2>🌍 Afaanota</h2>
+    </div>
+
+    <div class="languages">
+
+      <div class="language">
+        <strong>Afaan Oromoo</strong>
+        <span>Native</span>
+      </div>
+
+      <div class="language">
+        <strong>العربية</strong>
+        <span>Advanced</span>
+      </div>
+
+      <div class="language">
+        <strong>አማርኛ</strong>
+        <span>Advanced</span>
+      </div>
+
+      <div class="language">
+        <strong>English</strong>
+        <span>Intermediate</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>My Work</span>
+      <h2>🚀 Projects</h2>
+      <p>
+        Hojiiwwan fi pirojektoota ani irratti hojjedhu.
+      </p>
+    </div>
+
+    <div class="projects">
+
+      <div class="project">
+        <h3>🌿 Markaza Uweysii Website</h3>
+        <p>
+          Website Markaza Uweysii Ibnu Aamir,
+          barnoota Qur'aanaa fi علوم شرعية beeksisuuf qophaa'e.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>💻 Ferhan Portfolio</h3>
+        <p>
+          Website dhuunfaa koo kan Da'waa,
+          barnoota fi Software Engineering walitti fidu.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>📚 Digital Learning</h3>
+        <p>
+          Yaada platformii barnootaa dijitaalaa
+          Qur'aanaa fi beekumsaaf.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FINAL MESSAGE ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="markaza-box">
+
+      <div class="arabic">
+        الْقُرْآنُ يَنْتَظِرُكَ! 📖
+      </div>
+
+      <h2>
+        Beekumsa Baradhu — Dhaloota Ijaari
+      </h2>
+
+      <p>
+        Qur'aana Baradhu, Diinii Kee Hubadhu,
+        Akhlaaqa Kee Miidhagsi.
+      </p>
+
+      <br>
+
+      <a href="#contact" class="btn btn-primary">
+        🤝 Nu Qunnami
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>Contact</span>
+      <h2>📞 Na Qunnami</h2>
+    </div>
+
+    <div class="contact-box">
+
+      <h2>
+        Let's Connect
+      </h2>
+
+      <p>
+        Da'waa, barnoota, technology ykn hojii waliin hojjechuu
+        irratti mari'achuuf na qunnami.
+      </p>
+
+      <!-- EMAIL KEE ASITTI GALCHI -->
+      <a href="mailto:YOUR_EMAIL@example.com"
+         class="btn btn-primary">
+        📧 Email Me
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="container">
+
+    <p>
+      © 2026 <strong>Ferhan Shaamil AbdulGafur</strong>.
+      All Rights Reserved.
+    </p>
+
+    <p>
+      🕌 Da'ii • 📖 Islamic Educator • 💻 Software Engineering Student
+    </p>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
 <span class="badge">Official Personal Website</span>
 
 <h1>
