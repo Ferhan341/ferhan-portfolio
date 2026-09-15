@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ustaaz Ferhan Shaamil | أستاذ فرحان شامل | Markaza Uweysii Ibnu Aamir</title>
-<meta name="description" content="Ustaaz Ferhan Shaamil AbdulGafur — Da'ii, Barsiisaa Qur'aanaa fi Beekumsa Shari'aa. Markaza Uweysii Ibnu Aamir — Qur'aana, Tajwiid, Ulum Shari'aa fi Teknooloojii Ammayyaa.">
+<title>Ferhan Shaamil | فرحان شامل | Markaza Uweysii Ibnu Aamir</title>
+<meta name="description" content="Ferhan Shaamil AbdulGafur — Da'ii, Barsiisaa Qur'aanaa fi Beekumsa Shari'aa, Software Engineering Student. Markaza Uweysii Ibnu Aamir.">
 <meta name="author" content="Ferhan Shaamil AbdulGafur">
 <meta name="theme-color" content="#040d09">
 
@@ -121,7 +121,7 @@ nav.scrolled{
 .logo{display:flex;align-items:center;gap:12px}
 .logo-icon{
   width:44px;height:44px;border-radius:50%;
-  border:1px solid var(--gold);
+  border:2px solid var(--gold);
   display:grid;place-items:center;font-size:20px;
   color:var(--gold-l);
   background:radial-gradient(circle,rgba(214,180,93,.15),transparent 70%);
@@ -193,7 +193,7 @@ nav.scrolled{
   50%{transform:translate(-30px,30px)}
 }
 
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
 
 .badge{
   display:inline-block;border:1px solid var(--border);
@@ -279,9 +279,9 @@ nav.scrolled{
   background:var(--card);
   -webkit-backdrop-filter:blur(15px);
           backdrop-filter:blur(15px);
-  border-radius:35px;padding:30px 28px;
+  border-radius:35px;padding:22px 22px 32px;
   text-align:center;
-  box-shadow:0 30px 80px rgba(0,0,0,.4);
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
   transition:.5s var(--ease);
   position:relative;overflow:hidden;
 }
@@ -295,24 +295,32 @@ nav.scrolled{
 .hero-card:hover{
   transform:translateY(-8px);
   border-color:var(--gold);
-  box-shadow:0 40px 100px rgba(0,0,0,.5);
+  box-shadow:0 40px 100px rgba(0,0,0,.6);
 }
-.hero-photo{
-  width:170px;height:170px;margin:0 auto 20px;
-  border-radius:50%;border:3px solid var(--gold);
+
+.hero-photo-frame{
+  position:relative;
+  border-radius:24px;
   overflow:hidden;
-  box-shadow:0 0 40px rgba(214,180,93,.35),inset 0 0 30px rgba(214,180,93,.1);
-  animation:glow 4s ease-in-out infinite;
-  position:relative;z-index:1;
-  background:#052c20;
+  border:2px solid var(--gold);
+  aspect-ratio:3/4;
+  margin-bottom:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+  background:linear-gradient(180deg,#052c20,#031f17);
+  z-index:1;
 }
-.hero-photo img{
+.hero-photo-frame img{
   width:100%;height:100%;object-fit:cover;object-position:center top;
+  transition:transform .6s var(--ease);
 }
-@keyframes glow{
-  0%,100%{box-shadow:0 0 40px rgba(214,180,93,.3),inset 0 0 30px rgba(214,180,93,.1)}
-  50%{box-shadow:0 0 60px rgba(214,180,93,.5),inset 0 0 40px rgba(214,180,93,.2)}
+.hero-card:hover .hero-photo-frame img{transform:scale(1.05)}
+.hero-photo-frame::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(2,26,19,.85));
+  pointer-events:none;
 }
+
 .hero-card h3{
   color:var(--gold-l);font-size:20px;
   margin-bottom:6px;position:relative;z-index:1;
@@ -320,7 +328,7 @@ nav.scrolled{
 .hero-card .role-badge{
   display:inline-block;
   margin:6px 0 10px;
-  padding:4px 14px;border-radius:20px;
+  padding:5px 16px;border-radius:20px;
   background:rgba(214,180,93,.12);
   border:1px solid var(--border);
   color:var(--gold-l);
@@ -422,7 +430,7 @@ section{padding:100px 0;scroll-margin-top:90px}
   grid-template-columns:.85fr 1.15fr;
   gap:32px;
   align-items:stretch;
-  margin-bottom:32px;
+  margin-bottom:60px;
 }
 
 .about-photo-card{
@@ -430,9 +438,9 @@ section{padding:100px 0;scroll-margin-top:90px}
   border:1px solid var(--gold);
   border-radius:28px;
   overflow:hidden;
-  box-shadow:0 25px 70px rgba(0,0,0,.5);
+  box-shadow:0 25px 70px rgba(0,0,0,.55);
   background:linear-gradient(180deg,#052c20,#031f17);
-  min-height:480px;
+  min-height:520px;
 }
 .about-photo-card img{
   width:100%;height:100%;
@@ -442,14 +450,14 @@ section{padding:100px 0;scroll-margin-top:90px}
 .about-photo-card:hover img{transform:scale(1.05)}
 .about-photo-card .photo-overlay{
   position:absolute;bottom:0;left:0;right:0;
-  padding:24px 20px;
+  padding:26px 22px;
   background:linear-gradient(0deg,rgba(2,26,19,.98),rgba(2,26,19,.7) 60%,transparent);
   text-align:center;
 }
 .about-photo-card .photo-overlay strong{
   display:block;
   color:var(--gold-l);
-  font-size:19px;
+  font-size:20px;
   font-weight:800;
   letter-spacing:-.2px;
 }
@@ -463,8 +471,8 @@ section{padding:100px 0;scroll-margin-top:90px}
   font-family:'Amiri',serif;
   direction:rtl;
   color:#e8dcb0;
-  font-size:15px;
-  margin-top:6px;
+  font-size:16px;
+  margin-top:8px;
 }
 
 .about-content{
@@ -516,6 +524,102 @@ section{padding:100px 0;scroll-margin-top:90px}
   margin-top:8px;line-height:1.7;
   position:relative;z-index:1;
   unicode-bidi:isolate;
+}
+
+/* ============================================================
+   MARKAZA SHOWCASE (with photo)
+   ============================================================ */
+.markaza-showcase{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  border:1px solid var(--gold);
+  border-radius:32px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.55);
+  background:rgba(8,25,18,.85);
+  position:relative;
+}
+
+.markaza-photo{
+  position:relative;
+  min-height:560px;
+  overflow:hidden;
+  background:#052c20;
+}
+.markaza-photo img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  transition:transform .6s var(--ease);
+}
+.markaza-showcase:hover .markaza-photo img{transform:scale(1.05)}
+.markaza-photo::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent 55%,rgba(8,25,18,.9));
+  pointer-events:none;
+}
+
+.markaza-content{
+  padding:55px 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+}
+.markaza-content::before{
+  content:"۞";position:absolute;
+  font-size:320px;color:rgba(214,180,93,.04);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  pointer-events:none;z-index:0;
+}
+.markaza-logo-badge{
+  width:96px;height:96px;margin:0 auto 20px;
+  border-radius:50%;
+  border:2px solid var(--gold);
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(214,180,93,.35);
+  background:#052c20;
+  position:relative;z-index:1;
+}
+.markaza-logo-badge img{width:100%;height:100%;object-fit:cover}
+.markaza-content h2{
+  color:var(--gold-l);
+  font-size:clamp(22px,3.2vw,32px);
+  margin-bottom:10px;position:relative;z-index:1;
+  letter-spacing:-.5px;line-height:1.25;
+}
+.markaza-content .ar{
+  font-family:'Amiri',serif;
+  font-size:clamp(15px,2vw,19px);
+  color:#eee4c8;direction:rtl;
+  margin:10px 0;position:relative;z-index:1;
+  line-height:1.9;unicode-bidi:isolate;
+}
+.markaza-content p{
+  color:var(--muted);
+  font-size:14.5px;
+  margin:14px 0;
+  position:relative;z-index:1;
+  line-height:1.85;
+}
+.markaza-content .quote-ar{
+  font-family:'Amiri',serif;
+  font-size:clamp(15px,2.2vw,20px);
+  color:var(--gold-l);
+  direction:rtl;line-height:1.9;
+  margin:18px 0;
+  position:relative;z-index:1;
+  padding:16px 20px;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  unicode-bidi:isolate;
+}
+.markaza-content .btn{
+  align-self:center;
+  margin-top:10px;
+  position:relative;z-index:1;
 }
 
 /* ============================================================
@@ -616,99 +720,52 @@ section{padding:100px 0;scroll-margin-top:90px}
 .schedule-card p{color:var(--text);font-size:16px;font-weight:600}
 
 /* ============================================================
-   MARKAZA SPOTLIGHT (with photo)
+   GALLERY
    ============================================================ */
-.markaza-showcase{
+.gallery-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:0;
-  border:1px solid var(--gold);
-  border-radius:32px;
-  overflow:hidden;
-  box-shadow:0 30px 80px rgba(0,0,0,.5);
-  background:rgba(8,25,18,.85);
-  position:relative;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  max-width:1100px;
+  margin:0 auto;
 }
-
-.markaza-photo{
+.gallery-item{
   position:relative;
-  min-height:520px;
+  border:1px solid var(--border);
+  border-radius:24px;
   overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,.45);
+  transition:.4s var(--ease);
   background:#052c20;
+  aspect-ratio:1/1;
 }
-.markaza-photo img{
-  width:100%;height:100%;
-  object-fit:cover;object-position:center top;
+.gallery-item img{
+  width:100%;height:100%;object-fit:cover;object-position:center top;
   transition:transform .6s var(--ease);
 }
-.markaza-showcase:hover .markaza-photo img{transform:scale(1.05)}
-.markaza-photo::after{
-  content:"";
-  position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent 60%,rgba(8,25,18,.85));
-  pointer-events:none;
+.gallery-item:hover{
+  transform:translateY(-8px);
+  border-color:var(--gold);
+  box-shadow:0 30px 70px rgba(0,0,0,.6);
 }
-
-.markaza-content{
-  padding:55px 40px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-}
-.markaza-content::before{
-  content:"۞";position:absolute;
-  font-size:300px;color:rgba(214,180,93,.04);
-  top:50%;left:50%;transform:translate(-50%,-50%);
-  pointer-events:none;z-index:0;
-}
-.markaza-logo-badge{
-  width:90px;height:90px;margin:0 auto 18px;
-  border-radius:50%;
-  border:2px solid var(--gold);
-  overflow:hidden;
-  box-shadow:0 12px 35px rgba(214,180,93,.35);
-  background:#052c20;
-  position:relative;z-index:1;
-}
-.markaza-logo-badge img{width:100%;height:100%;object-fit:cover}
-.markaza-content h2{
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item .caption{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:18px 20px;
+  background:linear-gradient(0deg,rgba(2,26,19,.98),rgba(2,26,19,.6) 70%,transparent);
+  font-size:14px;
   color:var(--gold-l);
-  font-size:clamp(22px,3.2vw,32px);
-  margin-bottom:10px;position:relative;z-index:1;
-  letter-spacing:-.5px;line-height:1.25;
+  font-weight:700;
+  letter-spacing:.2px;
 }
-.markaza-content .ar{
-  font-family:'Amiri',serif;
-  font-size:clamp(15px,2vw,19px);
-  color:#eee4c8;direction:rtl;
-  margin:10px 0;position:relative;z-index:1;
-  line-height:1.9;unicode-bidi:isolate;
-}
-.markaza-content p{
+.gallery-item .caption span{
+  display:block;
   color:var(--muted);
-  font-size:14.5px;
-  margin:14px 0;
-  position:relative;z-index:1;
-  line-height:1.85;
-}
-.markaza-content .quote-ar{
+  font-size:11.5px;
+  font-weight:500;
+  margin-top:3px;
   font-family:'Amiri',serif;
-  font-size:clamp(15px,2.2vw,20px);
-  color:var(--gold-l);
-  direction:rtl;line-height:1.9;
-  margin:18px 0;
-  position:relative;z-index:1;
-  padding:16px 20px;
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  unicode-bidi:isolate;
-}
-.markaza-content .btn{
-  align-self:center;
-  margin-top:10px;
-  position:relative;z-index:1;
+  direction:rtl;
 }
 
 /* ============================================================
@@ -783,53 +840,6 @@ section{padding:100px 0;scroll-margin-top:90px}
 .project p{
   color:var(--muted);font-size:13.5px;
   position:relative;z-index:1;
-}
-
-/* ============================================================
-   GALLERY
-   ============================================================ */
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  max-width:1100px;
-  margin:0 auto;
-}
-.gallery-item{
-  position:relative;
-  border:1px solid var(--border);
-  border-radius:22px;
-  overflow:hidden;
-  box-shadow:0 20px 50px rgba(0,0,0,.4);
-  transition:.4s var(--ease);
-  background:#052c20;
-  aspect-ratio:1/1;
-}
-.gallery-item img{
-  width:100%;height:100%;object-fit:cover;
-  transition:transform .6s var(--ease);
-}
-.gallery-item:hover{
-  transform:translateY(-8px);
-  border-color:var(--gold);
-  box-shadow:0 30px 70px rgba(0,0,0,.55);
-}
-.gallery-item:hover img{transform:scale(1.08)}
-.gallery-item .caption{
-  position:absolute;bottom:0;left:0;right:0;
-  padding:16px 18px;
-  background:linear-gradient(0deg,rgba(2,26,19,.98),rgba(2,26,19,.6) 70%,transparent);
-  font-size:13px;
-  color:var(--gold-l);
-  font-weight:700;
-  letter-spacing:.2px;
-}
-.gallery-item .caption span{
-  display:block;
-  color:var(--muted);
-  font-size:11.5px;
-  font-weight:500;
-  margin-top:2px;
 }
 
 /* ============================================================
@@ -1020,10 +1030,10 @@ footer .fine{
   .hero-arabic,.hero-sub-ar{text-align:center}
   .hero-buttons{justify-content:center}
   .about-grid{grid-template-columns:1fr}
-  .about-photo-card{min-height:420px}
+  .about-photo-card{min-height:460px}
   .markaza-showcase{grid-template-columns:1fr}
-  .markaza-photo{min-height:380px}
-  .markaza-photo::after{background:linear-gradient(180deg,transparent 60%,rgba(8,25,18,.9))}
+  .markaza-photo{min-height:420px}
+  .markaza-photo::after{background:linear-gradient(180deg,transparent 55%,rgba(8,25,18,.9))}
   .markaza-content{padding:40px 25px}
   .grid-2{grid-template-columns:1fr}
   .work-grid{grid-template-columns:1fr 1fr}
@@ -1045,10 +1055,10 @@ footer .fine{
   .wa{width:52px;height:52px;font-size:24px;bottom:20px;left:20px}
   .scroll-top{width:46px;height:46px;font-size:20px;bottom:20px;right:20px}
   .card{padding:26px 22px}
-  .hero-card{padding:32px 22px}
-  .hero-photo{width:140px;height:140px}
-  .about-photo-card{min-height:380px}
-  .markaza-photo{min-height:320px}
+  .hero-card{padding:20px 20px 28px}
+  .hero-photo-frame{margin-bottom:18px}
+  .about-photo-card{min-height:400px}
+  .markaza-photo{min-height:360px}
   .markaza-content{padding:32px 20px}
 }
 </style>
@@ -1064,11 +1074,11 @@ footer .fine{
   <div class="container nav-inner">
     <a href="#home" class="logo">
       <div class="logo-icon">
-        <img src="images/logo-markaza.jpg" alt="Markaza Uweysii Ibnu Aamir Logo" onerror="this.style.display='none';this.parentElement.innerHTML='🌿';">
+        <img src="markaza-logo.jpg" alt="Markaza Uweysii Ibnu Aamir" onerror="this.style.display='none';this.parentElement.innerHTML='🌿';">
       </div>
       <div class="logo-text">
-        <strong>USTAAZ FERHAN SHAAMIL</strong>
-        <small>أستاذ فرحان شامل</small>
+        <strong>FERHAN SHAAMIL</strong>
+        <small>فرحان شامل عبدالغفور</small>
       </div>
     </a>
 
@@ -1076,7 +1086,7 @@ footer .fine{
 
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">Ustaaz</a></li>
+      <li><a href="#about">Waa'ee Kiyya</a></li>
       <li><a href="#markaza">Markaza</a></li>
       <li><a href="#education">Barnoota</a></li>
       <li><a href="#gallery">Gallery</a></li>
@@ -1091,32 +1101,33 @@ footer .fine{
 <section class="hero" id="home">
   <div class="container hero-grid">
     <div class="reveal">
-      <div class="badge">🌿✨ USTAAZ • أستاذ • OFFICIAL WEBSITE</div>
+      <div class="badge">🌿✨ OFFICIAL WEBSITE • الْمَوْقِعُ الرَّسْمِيُّ</div>
       <h1>FERHAN<br><span>SHAAMIL</span></h1>
-      <div class="hero-arabic">الأستاذ فرحان شامل عبدالغفور</div>
-      <div class="hero-sub">Ustaaz • Da'ii • Barsiisaa Qur'aanaa Fi Beekumsa Shari'aa • Software Engineering Student</div>
-      <div class="hero-sub-ar">أُسْتَاذٌ • دَاعِيَةٌ • مُعَلِّمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ • طَالِبُ هَنْدَسَةِ الْبَرْمَجِيَّاتِ</div>
+      <div class="hero-arabic">فرحان شامل عبدالغفور</div>
+      <div class="hero-sub">Da'ii • Barsiisaa Qur'aanaa Fi Beekumsa Shari'aa • Software Engineering Student</div>
+      <div class="hero-sub-ar">دَاعِيَةٌ • مُعَلِّمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ • طَالِبُ هَنْدَسَةِ الْبَرْمَجِيَّاتِ</div>
       <p class="hero-desc">
-        Ustaaz Ferhan Shaamil AbdulGafur, Barsiisaa Markaza Uweysii Ibnu Aamir,
+        Ani Ferhan Shaamil AbdulGafur, Barsiisaa Markaza Uweysii Ibnu Aamir,
         Da'ii Fi Nama Dhaloota Qur'aanaa, Beekumsa Shari'aa Fi Akkaataa Jireenyaa
         Gaarii Irratti Kakaasuudha.
       </p>
       <p class="hero-desc-ar">
-        الْأُسْتَاذُ فَرْحَانُ شَامِلُ عَبْدِ الْغَفُورِ، مُعَلِّمٌ فِي مَرْكَزِ أُوَيْسِ بْنِ عَامِرٍ،
-        دَاعِيَةٌ وَطَالِبُ هَنْدَسَةِ الْبَرْمَجِيَّاتِ. هَدَفُهُ تَعْلِيمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ.
+        أَنَا فَرْحَانُ شَامِلُ عَبْدِ الْغَفُورِ، مُعَلِّمٌ فِي مَرْكَزِ أُوَيْسِ بْنِ عَامِرٍ،
+        دَاعِيَةٌ وَطَالِبُ هَنْدَسَةِ الْبَرْمَجِيَّاتِ. هَدَفِي تَعْلِيمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ،
+        وَبِنَاءُ جِيلٍ وَاعٍ بِدِينِهِ وَأَخْلَاقِهِ.
       </p>
       <div class="hero-buttons">
-        <a href="#about" class="btn btn-primary">👤 Waa'ee Ustaaz</a>
+        <a href="#about" class="btn btn-primary">👤 Waa'ee Kiyya</a>
         <a href="#markaza" class="btn btn-outline">🕌 Markaza Uweysii</a>
       </div>
     </div>
 
     <aside class="hero-card reveal" style="--d:150ms">
-      <div class="hero-photo">
-        <img src="images/ustaaz-ferhan-1.jpg" alt="Ustaaz Ferhan Shaamil" onerror="this.style.display='none';this.parentElement.innerHTML='👤';">
+      <div class="hero-photo-frame">
+        <img src="ferhan-3.jpg" alt="Ferhan Shaamil AbdulGafur" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 400%22%3E%3Crect fill=%22%23052c20%22 width=%22300%22 height=%22400%22/%3E%3Ctext x=%22150%22 y=%22200%22 font-size=%2280%22 text-anchor=%22middle%22 fill=%22%23d6b45d%22%3E👤%3C/text%3E%3C/svg%3E';">
       </div>
-      <h3>Ustaaz Ferhan Shaamil</h3>
-      <div class="role-badge">أستاذ • Barsiisaa</div>
+      <h3>Ferhan Shaamil AbdulGafur</h3>
+      <div class="role-badge">Da'ii • Barsiisaa • Developer</div>
       <div class="ar">فرحان شامل عبدالغفور</div>
       <p>Markaza Uweysii Ibnu Aamir</p>
       <div class="hero-pills">
@@ -1128,40 +1139,40 @@ footer .fine{
   </div>
 </section>
 
-<!-- ================= ABOUT USTAAZ ================= -->
+<!-- ================= ABOUT ================= -->
 <section id="about">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-mini">About Ustaaz</div>
-      <h2>🌿 Waa'ee <span>Ustaaz</span></h2>
-      <div class="arabic-sub">عَنِ الْأُسْتَاذِ</div>
-      <p>Ustaaz Ferhan Shaamil — Da'ii, Barsiisaa Qur'aanaa Fi Beekumsa Shari'aa, Akkasumas Barataa Software Engineering Ti.</p>
+      <div class="section-mini">About Me</div>
+      <h2>🌿 Waa'ee <span>Kiyya</span></h2>
+      <div class="arabic-sub">عَنِّي</div>
+      <p>Ferhan Shaamil — Da'ii, Barsiisaa Qur'aanaa Fi Beekumsa Shari'aa, Akkasumas Barataa Software Engineering Ti.</p>
     </div>
 
     <div class="about-grid">
       <div class="about-photo-card reveal">
-        <img src="images/ustaaz-ferhan-2.jpg" alt="Ustaaz Ferhan Shaamil" onerror="this.style.background='linear-gradient(180deg,#052c20,#031f17)';">
+        <img src="ferhan-1.jpg" alt="Ferhan Shaamil AbdulGafur at work" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 520%22%3E%3Crect fill=%22%23052c20%22 width=%22400%22 height=%22520%22/%3E%3Ctext x=%22200%22 y=%22260%22 font-size=%22120%22 text-anchor=%22middle%22 fill=%22%23d6b45d%22%3E📖%3C/text%3E%3C/svg%3E';">
         <div class="photo-overlay">
-          <strong>Ustaaz Ferhan Shaamil</strong>
+          <strong>Ferhan Shaamil AbdulGafur</strong>
           <span>Barsiisaa Markaza Uweysii Ibnu Aamir</span>
-          <div class="ar">الأستاذ فرحان شامل</div>
+          <div class="ar">فرحان شامل عبدالغفور</div>
         </div>
       </div>
 
       <div class="about-content">
         <div class="card reveal">
-          <h3>👤 Eenyu Ustaaz?</h3>
-          <p>Ustaaz Ferhan Shaamil AbdulGafur, Barsiisaa Markaza Uweysii Ibnu Aamir, Da'ii Fi Nama Dhaloota Qur'aanaa, Beekumsa Shari'aa Fi Akkaataa Jireenyaa Gaarii Irratti Kakaasuudha.</p>
-          <p>Kaayyoon Isaa Beekumsa Qofa Dabarsuu Osoo Hin Taane, Beekumsa Sana Jireenya Keessatti Hojiiirra Oolchuuf Dhaloota Qopheessuudha.</p>
-          <p>Qur'aana Jaalachuu, Diinii Hubachuu, Akhlaaqa Gaarii Horachuu Fi Teknooloojii Sirriitti Fayyadamuun Dhaloota Boruu Ijaaruuf Hojjeta.</p>
+          <h3>👤 Eenyu Ani?</h3>
+          <p>Ani Ferhan Shaamil AbdulGafur, Barsiisaa Markaza Uweysii Ibnu Aamir, Da'ii Fi Nama Dhaloota Qur'aanaa, Beekumsa Shari'aa Fi Akkaataa Jireenyaa Gaarii Irratti Kakaasuudha.</p>
+          <p>Kaayyoon Koo Beekumsa Qofa Dabarsuu Osoo Hin Taane, Beekumsa Sana Jireenya Keessatti Hojiiirra Oolchuuf Dhaloota Qopheessuudha.</p>
+          <p>Qur'aana Jaalachuu, Diinii Hubachuu, Akhlaaqa Gaarii Horachuu Fi Teknooloojii Sirriitti Fayyadamuun Dhaloota Boruu Ijaaruuf Nan Hojjedha.</p>
           <div class="ar-block">
-            الْأُسْتَاذُ فَرْحَانُ شَامِلٌ، يُعَلِّمُ الْقُرْآنَ وَالْعُلُومَ الشَّرْعِيَّةَ فِي مَرْكَزِ أُوَيْسِ بْنِ عَامِرٍ،
-            وَيَسْعَى لِبِنَاءِ جِيلٍ يَجْمَعُ بَيْنَ الْعِلْمِ الشَّرْعِيِّ وَالْمَهَارَاتِ الرَّقْمِيَّةِ.
+            أَنَا فَرْحَانُ شَامِلٌ، أُعَلِّمُ الْقُرْآنَ وَالْعُلُومَ الشَّرْعِيَّةَ فِي مَرْكَزِ أُوَيْسِ بْنِ عَامِرٍ،
+            وَأَسْعَى لِبِنَاءِ جِيلٍ يَجْمَعُ بَيْنَ الْعِلْمِ الشَّرْعِيِّ وَالْمَهَارَاتِ الرَّقْمِيَّةِ.
           </div>
         </div>
 
         <div class="card reveal" style="--d:120ms">
-          <h3>🎯 Kaayyoo Ustaaz</h3>
+          <h3>🎯 Kaayyoo Kiyya</h3>
           <p>Dhaloonni Keenya Qur'aana Isaa Akka Beeku, Rabbii Isaa Akka Beeku, Nabiyyii Isaa ﷺ Akka Jaalatu, Diinii Isaa Akka Hubatu Fi Jireenya Isaa Akka Gaariitti Ijaaru Gumaacha Gochuu.</p>
           <div class="ar-block">
             دِرَاسَةُ حَيَاةِ النَّبِيِّ ﷺ، وَأَخْلَاقِهِ، وَغَزَوَاتِهِ، وَمَوَاقِفِهِ التَّرْبَوِيَّةِ،
@@ -1180,10 +1191,10 @@ footer .fine{
     </div>
 
     <!-- Work grid -->
-    <div class="section-head reveal" style="margin-top:40px;margin-bottom:40px;">
-      <div class="section-mini">What Ustaaz Does</div>
-      <h2>💡 Waan Ustaaz <span>Hojjedhu</span></h2>
-      <div class="arabic-sub">مَا يَعْمَلُهُ الْأُسْتَاذُ</div>
+    <div class="section-head reveal" style="margin-top:20px;margin-bottom:40px;">
+      <div class="section-mini">What I Do</div>
+      <h2>💡 Waan Ani Irratti <span>Hojjedhu</span></h2>
+      <div class="arabic-sub">مَا أَعْمَلُهُ</div>
     </div>
 
     <div class="work-grid">
@@ -1239,7 +1250,7 @@ footer .fine{
   </div>
 </section>
 
-<!-- ================= MARKAZA SPOTLIGHT (with photo) ================= -->
+<!-- ================= MARKAZA SHOWCASE ================= -->
 <section id="markaza" style="background:rgba(7,22,15,.4)">
   <div class="container">
     <div class="section-head reveal">
@@ -1251,12 +1262,12 @@ footer .fine{
 
     <div class="markaza-showcase reveal">
       <div class="markaza-photo">
-        <img src="images/markaza-ustaaz-3.jpg" alt="Ustaaz Ferhan Shaamil in Markaza Uweysii Ibnu Aamir" onerror="this.style.background='linear-gradient(135deg,#052c20,#031f17)';">
+        <img src="ferhan-2.jpg" alt="Markaza Uweysii Ibnu Aamir" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 500 560%22%3E%3Crect fill=%22%23052c20%22 width=%22500%22 height=%22560%22/%3E%3Ctext x=%22250%22 y=%22280%22 font-size=%22150%22 text-anchor=%22middle%22 fill=%22%23d6b45d%22%3E🕌%3C/text%3E%3C/svg%3E';">
       </div>
 
       <div class="markaza-content">
         <div class="markaza-logo-badge">
-          <img src="images/logo-markaza.jpg" alt="Markaza Logo" onerror="this.parentElement.innerHTML='🕌';">
+          <img src="markaza-logo.jpg" alt="Markaza Logo" onerror="this.parentElement.innerHTML='🕌';">
         </div>
         <h2>MARKAZA UWEYSII IBNU AAMIR</h2>
         <div class="ar">مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ<br>لِدِرَاسَةِ الْعُلُومِ الشَّرْعِيَّةِ</div>
@@ -1400,33 +1411,33 @@ footer .fine{
   <div class="container">
     <div class="section-head reveal">
       <div class="section-mini">Gallery</div>
-      <h2>🖼️ Suuraa <span>Ustaaz</span></h2>
-      <div class="arabic-sub">صُوَرُ الْأُسْتَاذِ</div>
-      <p>Suuraawwan Ustaaz Ferhan Shaamil fi Markaza Uweysii Ibnu Aamir.</p>
+      <h2>🖼️ Suuraa <span>Kiyya</span></h2>
+      <div class="arabic-sub">صُوَرِي</div>
+      <p>Suuraawwan Ferhan Shaamil fi Markaza Uweysii Ibnu Aamir.</p>
     </div>
 
     <div class="gallery-grid">
       <div class="gallery-item reveal">
-        <img src="images/ustaaz-ferhan-1.jpg" alt="Ustaaz Ferhan Shaamil" onerror="this.parentElement.innerHTML='<div style=&quot;display:grid;place-items:center;height:100%;color:#d6b45d;font-size:60px;&quot;>👤</div>';">
+        <img src="ferhan-1.jpg" alt="Ferhan Shaamil" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23052c20%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22200%22 font-size=%22120%22 text-anchor=%22middle%22 fill=%22%23d6b45d%22%3E📖%3C/text%3E%3C/svg%3E';">
         <div class="caption">
-          Ustaaz Ferhan Shaamil
-          <span>Barsiisaa Markaza Uweysii</span>
+          Ferhan Shaamil
+          <span>في مكتبه مع القرآن الكريم</span>
         </div>
       </div>
 
       <div class="gallery-item reveal" style="--d:100ms">
-        <img src="images/ustaaz-ferhan-2.jpg" alt="Ustaaz Ferhan Shaamil" onerror="this.parentElement.innerHTML='<div style=&quot;display:grid;place-items:center;height:100%;color:#d6b45d;font-size:60px;&quot;>📖</div>';">
+        <img src="ferhan-2.jpg" alt="Ferhan Shaamil" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23052c18%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22200%22 font-size=%22120%22 text-anchor=%22middle%22 fill=%22%23d6b45d%22%3E🕌%3C/text%3E%3C/svg%3E';">
         <div class="caption">
-          Ustaaz fi Qur'aana
-          <span>طلب العلم فريضة على كل مسلم</span>
+          Ferhan Shaamil
+          <span>طلب العلم فريضة على كل مسلم ومسلمة</span>
         </div>
       </div>
 
       <div class="gallery-item reveal" style="--d:200ms">
-        <img src="images/markaza-ustaaz-3.jpg" alt="Markaza Uweysii Ibnu Aamir" onerror="this.parentElement.innerHTML='<div style=&quot;display:grid;place-items:center;height:100%;color:#d6b45d;font-size:60px;&quot;>🕌</div>';">
+        <img src="ferhan-3.jpg" alt="Ferhan Shaamil" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 400%22%3E%3Crect fill=%22%23f5f5f5%22 width=%22400%22 height=%22400%22/%3E%3Ctext x=%22200%22 y=%22200%22 font-size=%22120%22 text-anchor=%22middle%22 fill=%22%23052c20%22%3E🌿%3C/text%3E%3C/svg%3E';">
         <div class="caption">
-          Markaza Uweysii Ibnu Aamir
-          <span>مركز أويس بن عامر</span>
+          Ferhan Shaamil
+          <span>مركز أويس بن عامر للدراسات الشرعية</span>
         </div>
       </div>
     </div>
@@ -1438,8 +1449,8 @@ footer .fine{
   <div class="container">
     <div class="section-head reveal">
       <div class="section-mini">Vision</div>
-      <h2>🌟 Mul'ata <span>Ustaaz</span></h2>
-      <div class="arabic-sub">رُؤْيَةُ الْأُسْتَاذِ</div>
+      <h2>🌟 Mul'ata <span>Kiyya</span></h2>
+      <div class="arabic-sub">رُؤْيَتِي</div>
     </div>
     <div class="card reveal" style="text-align:center;padding:55px 30px;">
       <p style="font-size:17px;line-height:1.95;max-width:820px;margin:0 auto;">
@@ -1461,8 +1472,8 @@ footer .fine{
   <div class="container">
     <div class="section-head reveal">
       <div class="section-mini">Message</div>
-      <h2>✨ Ergaa <span>Ustaaz</span></h2>
-      <div class="arabic-sub">رِسَالَةُ الْأُسْتَاذِ</div>
+      <h2>✨ Ergaa <span>Kiyya</span></h2>
+      <div class="arabic-sub">رِسَالَتِي</div>
     </div>
     <div class="message-box reveal">
       <blockquote>«بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ»</blockquote>
@@ -1477,14 +1488,40 @@ footer .fine{
   </div>
 </section>
 
-<!-- ================= SOCIAL ================= -->
-<section id="social" style="background:rgba(7,22,15,.4)">
+<!-- ================= PROJECTS ================= -->
+<section style="background:rgba(7,22,15,.4)">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-mini">Follow Ustaaz</div>
+      <div class="section-mini">My Work</div>
+      <h2>🚀 <span>Projects</span></h2>
+      <div class="arabic-sub">الْمَشَارِيعُ</div>
+      <p>Hojiiwwan Fi Pirojektoota Ani Irratti Hojjedhu.</p>
+    </div>
+    <div class="project-grid">
+      <div class="project reveal">
+        <h4>🌿 Markaza Uweysii Website</h4>
+        <p>Website Markaza Uweysii Ibnu Aamir, Barnoota Qur'aanaa Fi Beekumsa Shari'aa Beeksisuuf Qophaa'e.</p>
+      </div>
+      <div class="project reveal" style="--d:100ms">
+        <h4>💻 Ferhan Portfolio</h4>
+        <p>Website Dhuunfaa Koo Kan Da'waa, Barnoota Fi Software Engineering Walitti Fiduu.</p>
+      </div>
+      <div class="project reveal" style="--d:200ms">
+        <h4>📚 Digital Learning</h4>
+        <p>Yaada Platformii Barnootaa Dijitaalaa Qur'aanaa Fi Beekumsaaf.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOCIAL ================= -->
+<section id="social">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-mini">Follow Me</div>
       <h2>📱 Nu <span>Hordofaa</span></h2>
-      <div class="arabic-sub">تَابِعُوا الْأُسْتَاذَ</div>
-      <p>Karaa Armaan Gaditiin Ustaaz Qunnamuu Dandeessu</p>
+      <div class="arabic-sub">تَابِعُونَا</div>
+      <p>Karaa Armaan Gaditiin Na Qunnamuu Dandeessu</p>
     </div>
 
     <div class="social-grid">
@@ -1527,10 +1564,10 @@ footer .fine{
   <div class="container reveal">
     <div class="ar">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</div>
     <h2>🤝 Nu Qunnami</h2>
-    <div class="ar-sub">تَوَاصَلُوا مَعَ الْأُسْتَاذِ</div>
+    <div class="ar-sub">تَوَاصَلُوا مَعِي</div>
     <p>
       Da'waa, Barnoota, Technology Ykn Hojii Waliin
-      Hojjechuu Irratti Mari'achuuf Ustaaz Qunnami.
+      Hojjechuu Irratti Mari'achuuf Na Qunnami.
       <br><br>
       📧 <strong>Ferhanshaamil@gmail.com</strong>
       <br>
@@ -1543,8 +1580,8 @@ footer .fine{
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
-    <strong>USTAAZ FERHAN SHAAMIL ABDULGAFUR</strong>
-    <div class="ar">الأستاذ فرحان شامل عبدالغفور</div>
+    <strong>FERHAN SHAAMIL ABDULGAFUR</strong>
+    <div class="ar">فرحان شامل عبدالغفور</div>
     <p>🕌 Da'ii • 📖 Barsiisaa Qur'aanaa Fi Beekumsa Shari'aa • 💻 Software Engineering Student</p>
     <div class="ar-small">دَاعِيَةٌ • مُعَلِّمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ • طَالِبُ هَنْدَسَةِ الْبَرْمَجِيَّاتِ</div>
 
@@ -1562,7 +1599,7 @@ footer .fine{
     </div>
 
     <p class="fine">
-      © 2026 Ustaaz Ferhan Shaamil AbdulGafur. Mirgi Hundaa Seeraan Eegama.
+      © 2026 Ferhan Shaamil AbdulGafur. Mirgi Hundaa Seeraan Eegama.
       <br>
       جَمِيعُ الْحُقُوقِ مَحْفُوظَةٌ
     </p>
@@ -1594,7 +1631,7 @@ footer .fine{
     });
   });
 
-  /* ---------- SCROLL: Progress, Navbar, Top ---------- */
+  /* ---------- SCROLL ---------- */
   const navbar = document.getElementById('navbar');
   const progress = document.getElementById('progress');
   const scrollTop = document.getElementById('scrollTop');
@@ -1627,7 +1664,7 @@ footer .fine{
     window.scrollTo({ top:0, behavior:'smooth' });
   });
 
-  /* ---------- REVEAL ON SCROLL ---------- */
+  /* ---------- REVEAL ---------- */
   const reveals = document.querySelectorAll('.reveal');
 
   if('IntersectionObserver' in window){
