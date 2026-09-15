@@ -3162,22 +3162,3 @@ img[src]{animation:none;background:none}
         if (first) first.focus();
       }
     });
-
-    // Clear error state on input
-    $$('[required]', form).forEach(f => {
-      const clear = () => { if (String(f.value).trim()) f.style.borderColor = ''; };
-      f.addEventListener('input', clear);
-      f.addEventListener('change', clear);
-    });
-  });
-
-  /* ============================================================
-     INITIALISE
-     ============================================================ */
-  onScroll();
-
-  // Add a subtle class after full load for future animations
-  setTimeout(() => document.documentElement.classList.add('is-ready'), 100);
-
-})();
-       </script>https://ferhan341.github.io/ferhan-portfolio/
