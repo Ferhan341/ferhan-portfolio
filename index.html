@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ferhan Shaamil | فرحان شامل | Markaza Uweysii Ibnu Aamir</title>
-<meta name="description" content="Ferhan Shaamil AbdulGafur — Da'ii, Barsiisaa Qur'aanaa fi Beekumsa Shari'aa, Software Engineering Student. Markaza Uweysii Ibnu Aamir.">
+<title>Ustaaz Ferhan Shaamil | أستاذ فرحان شامل | Markaza Uweysii Ibnu Aamir</title>
+<meta name="description" content="Ustaaz Ferhan Shaamil AbdulGafur — Da'ii, Barsiisaa Qur'aanaa fi Beekumsa Shari'aa. Markaza Uweysii Ibnu Aamir — Qur'aana, Tajwiid, Ulum Shari'aa fi Teknooloojii Ammayyaa.">
 <meta name="author" content="Ferhan Shaamil AbdulGafur">
 <meta name="theme-color" content="#040d09">
 
@@ -127,7 +127,9 @@ nav.scrolled{
   background:radial-gradient(circle,rgba(214,180,93,.15),transparent 70%);
   box-shadow:var(--glow);
   transition:transform .4s var(--ease);
+  overflow:hidden;
 }
+.logo-icon img{width:100%;height:100%;object-fit:cover}
 .logo:hover .logo-icon{transform:rotate(360deg) scale(1.05)}
 .logo-text strong{display:block;color:var(--gold-l);font-size:15px;letter-spacing:.5px;font-weight:800}
 .logo-text small{display:block;color:var(--muted);font-size:10.5px;font-family:'Amiri',serif;direction:rtl;margin-top:-2px}
@@ -271,12 +273,13 @@ nav.scrolled{
   transform:translateY(-3px);
 }
 
+/* Hero card with photo */
 .hero-card{
   border:1px solid var(--border);
   background:var(--card);
   -webkit-backdrop-filter:blur(15px);
           backdrop-filter:blur(15px);
-  border-radius:35px;padding:40px 28px;
+  border-radius:35px;padding:30px 28px;
   text-align:center;
   box-shadow:0 30px 80px rgba(0,0,0,.4);
   transition:.5s var(--ease);
@@ -294,22 +297,35 @@ nav.scrolled{
   border-color:var(--gold);
   box-shadow:0 40px 100px rgba(0,0,0,.5);
 }
-.hero-symbol{
-  width:130px;height:130px;margin:0 auto 22px;
-  border-radius:50%;border:2px solid var(--gold);
-  display:grid;place-items:center;font-size:58px;
-  background:radial-gradient(circle,rgba(214,180,93,.2),transparent 65%);
-  box-shadow:0 0 40px rgba(214,180,93,.25),inset 0 0 30px rgba(214,180,93,.1);
+.hero-photo{
+  width:170px;height:170px;margin:0 auto 20px;
+  border-radius:50%;border:3px solid var(--gold);
+  overflow:hidden;
+  box-shadow:0 0 40px rgba(214,180,93,.35),inset 0 0 30px rgba(214,180,93,.1);
   animation:glow 4s ease-in-out infinite;
   position:relative;z-index:1;
+  background:#052c20;
+}
+.hero-photo img{
+  width:100%;height:100%;object-fit:cover;object-position:center top;
 }
 @keyframes glow{
-  0%,100%{box-shadow:0 0 40px rgba(214,180,93,.25),inset 0 0 30px rgba(214,180,93,.1)}
-  50%{box-shadow:0 0 60px rgba(214,180,93,.4),inset 0 0 40px rgba(214,180,93,.2)}
+  0%,100%{box-shadow:0 0 40px rgba(214,180,93,.3),inset 0 0 30px rgba(214,180,93,.1)}
+  50%{box-shadow:0 0 60px rgba(214,180,93,.5),inset 0 0 40px rgba(214,180,93,.2)}
 }
 .hero-card h3{
   color:var(--gold-l);font-size:20px;
   margin-bottom:6px;position:relative;z-index:1;
+}
+.hero-card .role-badge{
+  display:inline-block;
+  margin:6px 0 10px;
+  padding:4px 14px;border-radius:20px;
+  background:rgba(214,180,93,.12);
+  border:1px solid var(--border);
+  color:var(--gold-l);
+  font-size:12px;font-weight:700;
+  position:relative;z-index:1;
 }
 .hero-card .ar{
   font-family:'Amiri',serif;font-size:17px;
@@ -396,6 +412,65 @@ section{padding:100px 0;scroll-margin-top:90px}
   padding:6px 13px;color:var(--gold-l);
   background:rgba(214,180,93,.05);
   font-size:11.5px;font-weight:600;
+}
+
+/* ============================================================
+   ABOUT (with photo)
+   ============================================================ */
+.about-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:32px;
+  align-items:stretch;
+  margin-bottom:32px;
+}
+
+.about-photo-card{
+  position:relative;
+  border:1px solid var(--gold);
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 25px 70px rgba(0,0,0,.5);
+  background:linear-gradient(180deg,#052c20,#031f17);
+  min-height:480px;
+}
+.about-photo-card img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  transition:transform .6s var(--ease);
+}
+.about-photo-card:hover img{transform:scale(1.05)}
+.about-photo-card .photo-overlay{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:24px 20px;
+  background:linear-gradient(0deg,rgba(2,26,19,.98),rgba(2,26,19,.7) 60%,transparent);
+  text-align:center;
+}
+.about-photo-card .photo-overlay strong{
+  display:block;
+  color:var(--gold-l);
+  font-size:19px;
+  font-weight:800;
+  letter-spacing:-.2px;
+}
+.about-photo-card .photo-overlay span{
+  display:block;
+  color:var(--muted);
+  font-size:12.5px;
+  margin-top:2px;
+}
+.about-photo-card .photo-overlay .ar{
+  font-family:'Amiri',serif;
+  direction:rtl;
+  color:#e8dcb0;
+  font-size:15px;
+  margin-top:6px;
+}
+
+.about-content{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
 }
 
 /* ============================================================
@@ -541,44 +616,100 @@ section{padding:100px 0;scroll-margin-top:90px}
 .schedule-card p{color:var(--text);font-size:16px;font-weight:600}
 
 /* ============================================================
-   MARKAZA / VISION BOX
+   MARKAZA SPOTLIGHT (with photo)
    ============================================================ */
-.markaza-box{
+.markaza-showcase{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
   border:1px solid var(--gold);
   border-radius:32px;
-  padding:60px 30px;
-  background:
-    radial-gradient(circle at center,rgba(13,158,110,.15),transparent 60%),
-    rgba(8,25,18,.85);
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
+  background:rgba(8,25,18,.85);
+  position:relative;
+}
+
+.markaza-photo{
+  position:relative;
+  min-height:520px;
+  overflow:hidden;
+  background:#052c20;
+}
+.markaza-photo img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  transition:transform .6s var(--ease);
+}
+.markaza-showcase:hover .markaza-photo img{transform:scale(1.05)}
+.markaza-photo::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent 60%,rgba(8,25,18,.85));
+  pointer-events:none;
+}
+
+.markaza-content{
+  padding:55px 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
   text-align:center;
-  position:relative;overflow:hidden;
-  box-shadow:0 30px 80px rgba(0,0,0,.4);
+  position:relative;
 }
-.markaza-box::before{
-  content:"۞";position:absolute;font-size:350px;
-  color:rgba(214,180,93,.03);
-  top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  z-index:0;pointer-events:none;
+.markaza-content::before{
+  content:"۞";position:absolute;
+  font-size:300px;color:rgba(214,180,93,.04);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  pointer-events:none;z-index:0;
 }
-.markaza-box h2{
-  color:var(--gold-l);
-  font-size:clamp(26px,4vw,40px);
-  margin-bottom:15px;position:relative;z-index:1;
-  letter-spacing:-.5px;
-}
-.markaza-box .ar{
-  font-family:'Amiri',serif;font-size:23px;
-  color:#eee4c8;direction:rtl;
-  margin:15px 0;position:relative;z-index:1;
-  line-height:1.9;unicode-bidi:isolate;
-}
-.markaza-box p{
-  color:var(--muted);max-width:820px;
-  margin:0 auto 12px;font-size:15.5px;
+.markaza-logo-badge{
+  width:90px;height:90px;margin:0 auto 18px;
+  border-radius:50%;
+  border:2px solid var(--gold);
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(214,180,93,.35);
+  background:#052c20;
   position:relative;z-index:1;
 }
-.markaza-box .btn{position:relative;z-index:1;margin-top:15px}
+.markaza-logo-badge img{width:100%;height:100%;object-fit:cover}
+.markaza-content h2{
+  color:var(--gold-l);
+  font-size:clamp(22px,3.2vw,32px);
+  margin-bottom:10px;position:relative;z-index:1;
+  letter-spacing:-.5px;line-height:1.25;
+}
+.markaza-content .ar{
+  font-family:'Amiri',serif;
+  font-size:clamp(15px,2vw,19px);
+  color:#eee4c8;direction:rtl;
+  margin:10px 0;position:relative;z-index:1;
+  line-height:1.9;unicode-bidi:isolate;
+}
+.markaza-content p{
+  color:var(--muted);
+  font-size:14.5px;
+  margin:14px 0;
+  position:relative;z-index:1;
+  line-height:1.85;
+}
+.markaza-content .quote-ar{
+  font-family:'Amiri',serif;
+  font-size:clamp(15px,2.2vw,20px);
+  color:var(--gold-l);
+  direction:rtl;line-height:1.9;
+  margin:18px 0;
+  position:relative;z-index:1;
+  padding:16px 20px;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  unicode-bidi:isolate;
+}
+.markaza-content .btn{
+  align-self:center;
+  margin-top:10px;
+  position:relative;z-index:1;
+}
 
 /* ============================================================
    MESSAGE BOX
@@ -652,6 +783,53 @@ section{padding:100px 0;scroll-margin-top:90px}
 .project p{
   color:var(--muted);font-size:13.5px;
   position:relative;z-index:1;
+}
+
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  max-width:1100px;
+  margin:0 auto;
+}
+.gallery-item{
+  position:relative;
+  border:1px solid var(--border);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,.4);
+  transition:.4s var(--ease);
+  background:#052c20;
+  aspect-ratio:1/1;
+}
+.gallery-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s var(--ease);
+}
+.gallery-item:hover{
+  transform:translateY(-8px);
+  border-color:var(--gold);
+  box-shadow:0 30px 70px rgba(0,0,0,.55);
+}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item .caption{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:16px 18px;
+  background:linear-gradient(0deg,rgba(2,26,19,.98),rgba(2,26,19,.6) 70%,transparent);
+  font-size:13px;
+  color:var(--gold-l);
+  font-weight:700;
+  letter-spacing:.2px;
+}
+.gallery-item .caption span{
+  display:block;
+  color:var(--muted);
+  font-size:11.5px;
+  font-weight:500;
+  margin-top:2px;
 }
 
 /* ============================================================
@@ -841,10 +1019,17 @@ footer .fine{
   .hero-desc,.hero-desc-ar{margin:0 auto 12px}
   .hero-arabic,.hero-sub-ar{text-align:center}
   .hero-buttons{justify-content:center}
+  .about-grid{grid-template-columns:1fr}
+  .about-photo-card{min-height:420px}
+  .markaza-showcase{grid-template-columns:1fr}
+  .markaza-photo{min-height:380px}
+  .markaza-photo::after{background:linear-gradient(180deg,transparent 60%,rgba(8,25,18,.9))}
+  .markaza-content{padding:40px 25px}
   .grid-2{grid-template-columns:1fr}
   .work-grid{grid-template-columns:1fr 1fr}
   .edu-grid{grid-template-columns:1fr 1fr}
   .project-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}
   .social-grid{grid-template-columns:1fr 1fr}
   .schedule-grid{grid-template-columns:1fr}
   .grid-4{grid-template-columns:repeat(2,1fr)}
@@ -852,15 +1037,19 @@ footer .fine{
 
 @media(max-width:600px){
   .work-grid,.edu-grid,.social-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
   .grid-3,.grid-4{grid-template-columns:1fr}
   .hero{padding-top:120px}
   section{padding:75px 0}
-  .message-box,.markaza-box{padding:38px 20px}
+  .message-box{padding:38px 20px}
   .wa{width:52px;height:52px;font-size:24px;bottom:20px;left:20px}
   .scroll-top{width:46px;height:46px;font-size:20px;bottom:20px;right:20px}
   .card{padding:26px 22px}
   .hero-card{padding:32px 22px}
-  .hero-symbol{width:110px;height:110px;font-size:50px}
+  .hero-photo{width:140px;height:140px}
+  .about-photo-card{min-height:380px}
+  .markaza-photo{min-height:320px}
+  .markaza-content{padding:32px 20px}
 }
 </style>
 </head>
@@ -874,10 +1063,12 @@ footer .fine{
 <nav id="navbar">
   <div class="container nav-inner">
     <a href="#home" class="logo">
-      <div class="logo-icon">🌿</div>
+      <div class="logo-icon">
+        <img src="images/logo-markaza.jpg" alt="Markaza Uweysii Ibnu Aamir Logo" onerror="this.style.display='none';this.parentElement.innerHTML='🌿';">
+      </div>
       <div class="logo-text">
-        <strong>FERHAN SHAAMIL</strong>
-        <small>فرحان شامل عبدالغفور</small>
+        <strong>USTAAZ FERHAN SHAAMIL</strong>
+        <small>أستاذ فرحان شامل</small>
       </div>
     </a>
 
@@ -885,10 +1076,10 @@ footer .fine{
 
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#education">Barnoota</a></li>
+      <li><a href="#about">Ustaaz</a></li>
       <li><a href="#markaza">Markaza</a></li>
+      <li><a href="#education">Barnoota</a></li>
+      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#vision">Vision</a></li>
       <li><a href="#social">Social</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -900,32 +1091,34 @@ footer .fine{
 <section class="hero" id="home">
   <div class="container hero-grid">
     <div class="reveal">
-      <div class="badge">🌿✨ OFFICIAL PERSONAL WEBSITE • الْمَوْقِعُ الرَّسْمِيُّ</div>
+      <div class="badge">🌿✨ USTAAZ • أستاذ • OFFICIAL WEBSITE</div>
       <h1>FERHAN<br><span>SHAAMIL</span></h1>
-      <div class="hero-arabic">فرحان شامل عبدالغفور</div>
-      <div class="hero-sub">Da'ii • Barsiisaa Qur'aanaa Fi Beekumsa Shari'aa • Software Engineering Student</div>
-      <div class="hero-sub-ar">دَاعِيَةٌ • مُعَلِّمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ • طَالِبُ هَنْدَسَةِ الْبَرْمَجِيَّاتِ</div>
+      <div class="hero-arabic">الأستاذ فرحان شامل عبدالغفور</div>
+      <div class="hero-sub">Ustaaz • Da'ii • Barsiisaa Qur'aanaa Fi Beekumsa Shari'aa • Software Engineering Student</div>
+      <div class="hero-sub-ar">أُسْتَاذٌ • دَاعِيَةٌ • مُعَلِّمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ • طَالِبُ هَنْدَسَةِ الْبَرْمَجِيَّاتِ</div>
       <p class="hero-desc">
-        Ani Ferhan Shaamil AbdulGafur, Barsiisaa Markaza Uweysii Ibnu Aamir,
+        Ustaaz Ferhan Shaamil AbdulGafur, Barsiisaa Markaza Uweysii Ibnu Aamir,
         Da'ii Fi Nama Dhaloota Qur'aanaa, Beekumsa Shari'aa Fi Akkaataa Jireenyaa
         Gaarii Irratti Kakaasuudha.
       </p>
       <p class="hero-desc-ar">
-        أَنَا فَرْحَانُ شَامِلُ عَبْدِ الْغَفُورِ، مُعَلِّمٌ فِي مَرْكَزِ أُوَيْسِ بْنِ عَامِرٍ،
-        دَاعِيَةٌ وَطَالِبُ هَنْدَسَةِ الْبَرْمَجِيَّاتِ. هَدَفِي تَعْلِيمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ،
-        وَبِنَاءُ جِيلٍ وَاعٍ بِدِينِهِ وَأَخْلَاقِهِ، مَعَ تَسْخِيرِ التِّقْنِيَةِ الْحَدِيثَةِ فِي سَبِيلِ الدَّعْوَةِ وَالتَّعْلِيمِ.
+        الْأُسْتَاذُ فَرْحَانُ شَامِلُ عَبْدِ الْغَفُورِ، مُعَلِّمٌ فِي مَرْكَزِ أُوَيْسِ بْنِ عَامِرٍ،
+        دَاعِيَةٌ وَطَالِبُ هَنْدَسَةِ الْبَرْمَجِيَّاتِ. هَدَفُهُ تَعْلِيمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ.
       </p>
       <div class="hero-buttons">
-        <a href="#about" class="btn btn-primary">👤 Waa'ee Kiyya</a>
-        <a href="#education" class="btn btn-outline">📚 Barnoota</a>
+        <a href="#about" class="btn btn-primary">👤 Waa'ee Ustaaz</a>
+        <a href="#markaza" class="btn btn-outline">🕌 Markaza Uweysii</a>
       </div>
     </div>
 
     <aside class="hero-card reveal" style="--d:150ms">
-      <div class="hero-symbol">🌿</div>
-      <h3>Ferhan Shaamil</h3>
-      <div class="ar">فرحان شامل</div>
-      <p>Da'ii • Barsiisaa • Software Engineering Student</p>
+      <div class="hero-photo">
+        <img src="images/ustaaz-ferhan-1.jpg" alt="Ustaaz Ferhan Shaamil" onerror="this.style.display='none';this.parentElement.innerHTML='👤';">
+      </div>
+      <h3>Ustaaz Ferhan Shaamil</h3>
+      <div class="role-badge">أستاذ • Barsiisaa</div>
+      <div class="ar">فرحان شامل عبدالغفور</div>
+      <p>Markaza Uweysii Ibnu Aamir</p>
       <div class="hero-pills">
         <span>📖 Qur'aana</span>
         <span>🕌 Da'waa</span>
@@ -935,55 +1128,62 @@ footer .fine{
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ================= ABOUT USTAAZ ================= -->
 <section id="about">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-mini">About Me</div>
-      <h2>🌿 Waa'ee <span>Kiyya</span></h2>
-      <div class="arabic-sub">عَنِّي</div>
-      <p>Ferhan Shaamil — Da'ii, Barsiisaa Qur'aanaa Fi Beekumsa Shari'aa, Akkasumas Barataa Software Engineering Ti.</p>
+      <div class="section-mini">About Ustaaz</div>
+      <h2>🌿 Waa'ee <span>Ustaaz</span></h2>
+      <div class="arabic-sub">عَنِ الْأُسْتَاذِ</div>
+      <p>Ustaaz Ferhan Shaamil — Da'ii, Barsiisaa Qur'aanaa Fi Beekumsa Shari'aa, Akkasumas Barataa Software Engineering Ti.</p>
     </div>
 
-    <div class="grid-2">
-      <div class="card reveal">
-        <h3>👤 Eenyu Ani?</h3>
-        <p>Ani Barsiisaa Markaza Uweysii Ibnu Aamir, Da'ii Fi Nama Dhaloota Qur'aanaa, Beekumsa Shari'aa Fi Akkaataa Jireenyaa Gaarii Irratti Kakaasuudha.</p>
-        <p>Kaayyoon Koo Beekumsa Qofa Dabarsuu Osoo Hin Taane, Beekumsa Sana Jireenya Keessatti Hojiiirra Oolchuuf Dhaloota Qopheessuudha.</p>
-        <p>Qur'aana Jaalachuu, Diinii Hubachuu, Akhlaaqa Gaarii Horachuu Fi Teknooloojii Sirriitti Fayyadamuun Dhaloota Boruu Ijaaruuf Nan Hojjedha.</p>
-        <div class="ar-block">
-          أَنَا فَرْحَانُ شَامِلٌ، أُعَلِّمُ الْقُرْآنَ وَالْعُلُومَ الشَّرْعِيَّةَ فِي مَرْكَزِ أُوَيْسِ بْنِ عَامِرٍ،
-          وَأَسْعَى لِبِنَاءِ جِيلٍ يَجْمَعُ بَيْنَ الْعِلْمِ الشَّرْعِيِّ وَالْمَهَارَاتِ الرَّقْمِيَّةِ.
+    <div class="about-grid">
+      <div class="about-photo-card reveal">
+        <img src="images/ustaaz-ferhan-2.jpg" alt="Ustaaz Ferhan Shaamil" onerror="this.style.background='linear-gradient(180deg,#052c20,#031f17)';">
+        <div class="photo-overlay">
+          <strong>Ustaaz Ferhan Shaamil</strong>
+          <span>Barsiisaa Markaza Uweysii Ibnu Aamir</span>
+          <div class="ar">الأستاذ فرحان شامل</div>
         </div>
       </div>
 
-      <div class="card reveal" style="--d:120ms">
-        <h3>🎯 Kaayyoo Kiyya</h3>
-        <p>Dhaloonni Keenya Qur'aana Isaa Akka Beeku, Rabbii Isaa Akka Beeku, Nabiyyii Isaa ﷺ Akka Jaalatu, Diinii Isaa Akka Hubatu Fi Jireenya Isaa Akka Gaariitti Ijaaru Gumaacha Gochuu.</p>
-        <div class="ar-block">
-          دِرَاسَةُ حَيَاةِ النَّبِيِّ ﷺ، وَأَخْلَاقِهِ، وَغَزَوَاتِهِ، وَمَوَاقِفِهِ التَّرْبَوِيَّةِ،
-          وَبِنَاءُ جِيلٍ قُرْآنِيٍّ مُتْقَنٍ يَعْرِفُ دِينَهُ وَيُحْسِنُ الْعَمَلَ بِهِ.
+      <div class="about-content">
+        <div class="card reveal">
+          <h3>👤 Eenyu Ustaaz?</h3>
+          <p>Ustaaz Ferhan Shaamil AbdulGafur, Barsiisaa Markaza Uweysii Ibnu Aamir, Da'ii Fi Nama Dhaloota Qur'aanaa, Beekumsa Shari'aa Fi Akkaataa Jireenyaa Gaarii Irratti Kakaasuudha.</p>
+          <p>Kaayyoon Isaa Beekumsa Qofa Dabarsuu Osoo Hin Taane, Beekumsa Sana Jireenya Keessatti Hojiiirra Oolchuuf Dhaloota Qopheessuudha.</p>
+          <p>Qur'aana Jaalachuu, Diinii Hubachuu, Akhlaaqa Gaarii Horachuu Fi Teknooloojii Sirriitti Fayyadamuun Dhaloota Boruu Ijaaruuf Hojjeta.</p>
+          <div class="ar-block">
+            الْأُسْتَاذُ فَرْحَانُ شَامِلٌ، يُعَلِّمُ الْقُرْآنَ وَالْعُلُومَ الشَّرْعِيَّةَ فِي مَرْكَزِ أُوَيْسِ بْنِ عَامِرٍ،
+            وَيَسْعَى لِبِنَاءِ جِيلٍ يَجْمَعُ بَيْنَ الْعِلْمِ الشَّرْعِيِّ وَالْمَهَارَاتِ الرَّقْمِيَّةِ.
+          </div>
         </div>
-        <div class="skills">
-          <span class="skill">📖 Qur'aana</span>
-          <span class="skill">🕌 Da'waa</span>
-          <span class="skill">📚 Shari'aa</span>
-          <span class="skill">🌱 Tarbiyaa</span>
-          <span class="skill">💻 Software Engineering</span>
-          <span class="skill">🌐 Web Development</span>
+
+        <div class="card reveal" style="--d:120ms">
+          <h3>🎯 Kaayyoo Ustaaz</h3>
+          <p>Dhaloonni Keenya Qur'aana Isaa Akka Beeku, Rabbii Isaa Akka Beeku, Nabiyyii Isaa ﷺ Akka Jaalatu, Diinii Isaa Akka Hubatu Fi Jireenya Isaa Akka Gaariitti Ijaaru Gumaacha Gochuu.</p>
+          <div class="ar-block">
+            دِرَاسَةُ حَيَاةِ النَّبِيِّ ﷺ، وَأَخْلَاقِهِ، وَغَزَوَاتِهِ، وَمَوَاقِفِهِ التَّرْبَوِيَّةِ،
+            وَبِنَاءُ جِيلٍ قُرْآنِيٍّ مُتْقَنٍ يَعْرِفُ دِينَهُ وَيُحْسِنُ الْعَمَلَ بِهِ.
+          </div>
+          <div class="skills">
+            <span class="skill">📖 Qur'aana</span>
+            <span class="skill">🕌 Da'waa</span>
+            <span class="skill">📚 Shari'aa</span>
+            <span class="skill">🌱 Tarbiyaa</span>
+            <span class="skill">💻 Software Engineering</span>
+            <span class="skill">🌐 Web Development</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ================= WORK ================= -->
-<section id="work" style="background:rgba(7,22,15,.4)">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="section-mini">What I Do</div>
-      <h2>💡 Waan Ani Irratti <span>Hojjedhu</span></h2>
-      <div class="arabic-sub">مَا أَعْمَلُهُ</div>
+    <!-- Work grid -->
+    <div class="section-head reveal" style="margin-top:40px;margin-bottom:40px;">
+      <div class="section-mini">What Ustaaz Does</div>
+      <h2>💡 Waan Ustaaz <span>Hojjedhu</span></h2>
+      <div class="arabic-sub">مَا يَعْمَلُهُ الْأُسْتَاذُ</div>
     </div>
 
     <div class="work-grid">
@@ -1034,6 +1234,44 @@ footer .fine{
         <h4>Teknooloojii Fi Barnoota</h4>
         <p>Teknooloojii Akka Meeshaa Barnootaa, Da'waa Fi Tajaajila Hawaasaatti Fayyadamu.</p>
         <div class="ar-mini">التِّقْنِيَةُ وَالتَّعْلِيمُ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARKAZA SPOTLIGHT (with photo) ================= -->
+<section id="markaza" style="background:rgba(7,22,15,.4)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-mini">Islamic Education Center</div>
+      <h2>🌿 Markaza <span>Uweysii</span></h2>
+      <div class="arabic-sub">مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ</div>
+      <p>Iddoo Qur'aanaa, Beekumsa Shari'aa Fi Tarbiyaa.</p>
+    </div>
+
+    <div class="markaza-showcase reveal">
+      <div class="markaza-photo">
+        <img src="images/markaza-ustaaz-3.jpg" alt="Ustaaz Ferhan Shaamil in Markaza Uweysii Ibnu Aamir" onerror="this.style.background='linear-gradient(135deg,#052c20,#031f17)';">
+      </div>
+
+      <div class="markaza-content">
+        <div class="markaza-logo-badge">
+          <img src="images/logo-markaza.jpg" alt="Markaza Logo" onerror="this.parentElement.innerHTML='🕌';">
+        </div>
+        <h2>MARKAZA UWEYSII IBNU AAMIR</h2>
+        <div class="ar">مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ<br>لِدِرَاسَةِ الْعُلُومِ الشَّرْعِيَّةِ</div>
+        <p>
+          Markazni Uweysii Ibnu Aamir Iddoo Qur'aana, Tajwiida,
+          Aqiidaa, Fiqhii, Seenaa Nabiyyii ﷺ Fi Akhlaaqa Itti Baratan.
+        </p>
+        <div class="quote-ar">
+          نُعَلِّمُكَ الْقُرْآنَ كَمَا أُنْزِلَ،<br>
+          وَنُرَبِّي الْجِيلَ الْقُرْآنِيَّ الْمُتْقَنَ
+        </div>
+        <p style="font-size:14px;color:#e8dcb0;font-family:'Amiri',serif;direction:rtl;">
+          «إِنَّ الْمَرْكَزَ مَنَارَةٌ لِتَعَلُّمِ الْعُلُومِ الشَّرْعِيَّةِ وَالْقُرْآنِ الْكَرِيمِ»
+        </p>
+        <a href="https://tinyurl.com/Uweysii-inbu-aamir-center" target="_blank" rel="noopener" class="btn btn-primary">🕌 Markaza Website</a>
       </div>
     </div>
   </div>
@@ -1157,28 +1395,40 @@ footer .fine{
   </div>
 </section>
 
-<!-- ================= MARKAZA ================= -->
-<section id="markaza">
+<!-- ================= GALLERY ================= -->
+<section id="gallery">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-mini">Islamic Education Center</div>
-      <h2>🌿 Markaza <span>Uweysii</span></h2>
-      <div class="arabic-sub">مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ</div>
-      <p>Iddoo Qur'aanaa, Beekumsa Shari'aa Fi Tarbiyaa.</p>
+      <div class="section-mini">Gallery</div>
+      <h2>🖼️ Suuraa <span>Ustaaz</span></h2>
+      <div class="arabic-sub">صُوَرُ الْأُسْتَاذِ</div>
+      <p>Suuraawwan Ustaaz Ferhan Shaamil fi Markaza Uweysii Ibnu Aamir.</p>
     </div>
 
-    <div class="markaza-box reveal">
-      <h2>🌿✨ MARKAZA UWEYSII IBNU AAMIR ✨🌿</h2>
-      <div class="ar">مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ<br>لِدِرَاسَةِ الْعُلُومِ الشَّرْعِيَّةِ</div>
-      <p>
-        Markazni Uweysii Ibnu Aamir Iddoo Qur'aana, Tajwiida,
-        Aqiidaa, Fiqhii, Seenaa Nabiyyii ﷺ Fi Akhlaaqa Itti Baratan.
-      </p>
-      <div class="ar" style="font-size:26px;color:var(--gold-l);margin:20px 0">
-        نُعَلِّمُكَ الْقُرْآنَ كَمَا أُنْزِلَ،<br>
-        وَنُرَبِّي الْجِيلَ الْقُرْآنِيَّ الْمُتْقَنَ
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="images/ustaaz-ferhan-1.jpg" alt="Ustaaz Ferhan Shaamil" onerror="this.parentElement.innerHTML='<div style=&quot;display:grid;place-items:center;height:100%;color:#d6b45d;font-size:60px;&quot;>👤</div>';">
+        <div class="caption">
+          Ustaaz Ferhan Shaamil
+          <span>Barsiisaa Markaza Uweysii</span>
+        </div>
       </div>
-      <a href="https://tinyurl.com/Uweysii-inbu-aamir-center" target="_blank" rel="noopener" class="btn btn-primary">🕌 Markaza Website</a>
+
+      <div class="gallery-item reveal" style="--d:100ms">
+        <img src="images/ustaaz-ferhan-2.jpg" alt="Ustaaz Ferhan Shaamil" onerror="this.parentElement.innerHTML='<div style=&quot;display:grid;place-items:center;height:100%;color:#d6b45d;font-size:60px;&quot;>📖</div>';">
+        <div class="caption">
+          Ustaaz fi Qur'aana
+          <span>طلب العلم فريضة على كل مسلم</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" style="--d:200ms">
+        <img src="images/markaza-ustaaz-3.jpg" alt="Markaza Uweysii Ibnu Aamir" onerror="this.parentElement.innerHTML='<div style=&quot;display:grid;place-items:center;height:100%;color:#d6b45d;font-size:60px;&quot;>🕌</div>';">
+        <div class="caption">
+          Markaza Uweysii Ibnu Aamir
+          <span>مركز أويس بن عامر</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1187,17 +1437,17 @@ footer .fine{
 <section id="vision" style="background:rgba(7,22,15,.3)">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-mini">My Vision</div>
-      <h2>🌟 Mul'ata <span>Kiyya</span></h2>
-      <div class="arabic-sub">رُؤْيَتِي</div>
+      <div class="section-mini">Vision</div>
+      <h2>🌟 Mul'ata <span>Ustaaz</span></h2>
+      <div class="arabic-sub">رُؤْيَةُ الْأُسْتَاذِ</div>
     </div>
-    <div class="markaza-box reveal">
-      <p style="font-size:17px;line-height:1.9">
+    <div class="card reveal" style="text-align:center;padding:55px 30px;">
+      <p style="font-size:17px;line-height:1.95;max-width:820px;margin:0 auto;">
         Dhaloota Qur'aana Jaalatu, Diinii Isaa Hubatu,
         Akhlaaqa Gaarii Horatu, Beekumsa Barbaadu Fi
         Teknooloojii Karaa Gaarii Ta'een Fayyadamu Ijaaruu.
       </p>
-      <div class="ar" style="font-size:20px;margin-top:22px">
+      <div class="ar" style="font-size:20px;margin-top:26px;line-height:2.1;">
         جِيلٌ قُرْآنِيٌّ يُحِبُّ الْقُرْآنَ، وَيَفْهَمُ دِينَهُ،<br>
         وَيَتَحَلَّى بِالْأَخْلَاقِ الْكَرِيمَةِ،<br>
         وَيَسْتَخْدِمُ التِّقْنِيَةَ فِي مَا يَنْفَعُ.
@@ -1210,9 +1460,9 @@ footer .fine{
 <section>
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-mini">My Message</div>
-      <h2>✨ Ergaa <span>Kiyya</span></h2>
-      <div class="arabic-sub">رِسَالَتِي</div>
+      <div class="section-mini">Message</div>
+      <h2>✨ Ergaa <span>Ustaaz</span></h2>
+      <div class="arabic-sub">رِسَالَةُ الْأُسْتَاذِ</div>
     </div>
     <div class="message-box reveal">
       <blockquote>«بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ»</blockquote>
@@ -1220,46 +1470,21 @@ footer .fine{
       <p>Jireenyi Nama Tokkoo Yeroo Inni Ofii Isaatiif Qofa Jiraatu Caalaa, Yeroo Inni Nama Biraa Fayyadu Hiika Guddaa Qaba. Beekumsi Yeroo Qoodamu Babal'ata; Dhaloonni Yeroo Qajeelfamu Ijaaramuu Danda'a.</p>
       <div class="ar-para">
         «خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ»<br>
+        «طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ وَمُسْلِمَةٍ»<br>
         اُطْلُبِ الْعِلْمَ، وَابْنِ الْأَجْيَالَ، وَأَضِئْ حَيَاتَكَ بِنُورِ الْقُرْآنِ.
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
-<section style="background:rgba(7,22,15,.4)">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="section-mini">My Work</div>
-      <h2>🚀 <span>Projects</span></h2>
-      <div class="arabic-sub">الْمَشَارِيعُ</div>
-      <p>Hojiiwwan Fi Pirojektoota Ani Irratti Hojjedhu.</p>
-    </div>
-    <div class="project-grid">
-      <div class="project reveal">
-        <h4>🌿 Markaza Uweysii Website</h4>
-        <p>Website Markaza Uweysii Ibnu Aamir, Barnoota Qur'aanaa Fi Beekumsa Shari'aa Beeksisuuf Qophaa'e.</p>
-      </div>
-      <div class="project reveal" style="--d:100ms">
-        <h4>💻 Ferhan Portfolio</h4>
-        <p>Website Dhuunfaa Koo Kan Da'waa, Barnoota Fi Software Engineering Walitti Fiduu.</p>
-      </div>
-      <div class="project reveal" style="--d:200ms">
-        <h4>📚 Digital Learning</h4>
-        <p>Yaada Platformii Barnootaa Dijitaalaa Qur'aanaa Fi Beekumsaaf.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= SOCIAL ================= -->
-<section id="social">
+<section id="social" style="background:rgba(7,22,15,.4)">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-mini">Follow Me</div>
+      <div class="section-mini">Follow Ustaaz</div>
       <h2>📱 Nu <span>Hordofaa</span></h2>
-      <div class="arabic-sub">تَابِعُونَا</div>
-      <p>Karaa Armaan Gaditiin Na Qunnamuu Dandeessu</p>
+      <div class="arabic-sub">تَابِعُوا الْأُسْتَاذَ</div>
+      <p>Karaa Armaan Gaditiin Ustaaz Qunnamuu Dandeessu</p>
     </div>
 
     <div class="social-grid">
@@ -1302,10 +1527,10 @@ footer .fine{
   <div class="container reveal">
     <div class="ar">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</div>
     <h2>🤝 Nu Qunnami</h2>
-    <div class="ar-sub">تَوَاصَلْ مَعَنَا</div>
+    <div class="ar-sub">تَوَاصَلُوا مَعَ الْأُسْتَاذِ</div>
     <p>
       Da'waa, Barnoota, Technology Ykn Hojii Waliin
-      Hojjechuu Irratti Mari'achuuf Na Qunnami.
+      Hojjechuu Irratti Mari'achuuf Ustaaz Qunnami.
       <br><br>
       📧 <strong>Ferhanshaamil@gmail.com</strong>
       <br>
@@ -1318,10 +1543,14 @@ footer .fine{
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
-    <strong>FERHAN SHAAMIL ABDULGAFUR</strong>
-    <div class="ar">فرحان شامل عبدالغفور</div>
+    <strong>USTAAZ FERHAN SHAAMIL ABDULGAFUR</strong>
+    <div class="ar">الأستاذ فرحان شامل عبدالغفور</div>
     <p>🕌 Da'ii • 📖 Barsiisaa Qur'aanaa Fi Beekumsa Shari'aa • 💻 Software Engineering Student</p>
     <div class="ar-small">دَاعِيَةٌ • مُعَلِّمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ • طَالِبُ هَنْدَسَةِ الْبَرْمَجِيَّاتِ</div>
+
+    <p style="margin-top:16px;color:#e8dcb0;font-family:'Amiri',serif;font-size:15px;direction:rtl;">
+      مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ لِدِرَاسَةِ الْعُلُومِ الشَّرْعِيَّةِ
+    </p>
 
     <div class="footer-socials">
       <a href="https://www.facebook.com/share/1D9P96HFwe/" target="_blank" rel="noopener" title="Facebook">📘</a>
@@ -1333,7 +1562,7 @@ footer .fine{
     </div>
 
     <p class="fine">
-      © 2026 Ferhan Shaamil AbdulGafur. Mirgi Hundaa Seeraan Eegama.
+      © 2026 Ustaaz Ferhan Shaamil AbdulGafur. Mirgi Hundaa Seeraan Eegama.
       <br>
       جَمِيعُ الْحُقُوقِ مَحْفُوظَةٌ
     </p>
