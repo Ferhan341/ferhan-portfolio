@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Markaza Uweysii Ibnu Aamir | مركز أويس بن عامر</title>
-<meta name="description" content="Markaza Uweysii Ibnu Aamir — Iddoo Barnoota Qur'aanaa, Tajwiida, Aqiidaa, Fiqhii fi Seenaa Nabiyyii ﷺ.">
+<title>Markaza Uweysii Ibnu Aamir | Ferhan Shaamil | مركز أويس بن عامر</title>
+<meta name="description" content="Markaza Uweysii Ibnu Aamir — Iddoo Barnoota Qur'aanaa, Tajwiida, Aqiidaa, Fiqhii fi Seenaa Nabiyyii ﷺ. Barsiisaa: Ferhan Shaamil AbdulGafur.">
 <meta name="author" content="Ferhan Shaamil AbdulGafur">
-<meta name="theme-color" content="#031f17">
+<meta name="theme-color" content="#040d09">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +20,10 @@
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 
 :root{
-  --bg:#031f17;
-  --bg2:#063d2c;
-  --bg3:#0a1f15;
+  --bg:#040d09;
+  --bg2:#0a1f15;
   --card:rgba(11,44,30,.72);
+  --card2:#0b2419;
   --green:#0d9e6e;
   --green-d:#0d5138;
   --gold:#d6b45d;
@@ -54,9 +54,6 @@ img,svg{display:block;max-width:100%}
 button,input,select,textarea{font:inherit;color:inherit}
 .container{width:min(1180px,92%);margin:0 auto}
 
-/* ============================================================
-   ARABIC TEXT
-   ============================================================ */
 .arabic{
   font-family:'Amiri',serif;
   direction:rtl;
@@ -64,6 +61,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   line-height:1.95;
   unicode-bidi:isolate;
 }
+
 .ar-block{
   font-family:'Amiri',serif;
   direction:rtl;
@@ -76,6 +74,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   border-top:1px dashed rgba(214,180,93,.22);
   unicode-bidi:isolate;
 }
+
 .section-head .arabic-sub{
   font-family:'Amiri',serif;
   color:var(--gold-l);
@@ -113,68 +112,42 @@ nav.scrolled{
   border-bottom-color:var(--border);
   box-shadow:0 10px 40px rgba(0,0,0,.35);
 }
-
-.nav-inner{
-  display:flex;justify-content:space-between;align-items:center;
-  min-height:76px;gap:20px;
-}
-
+.nav-inner{display:flex;justify-content:space-between;align-items:center;min-height:76px;gap:20px}
 .logo{display:flex;align-items:center;gap:12px}
 .logo-icon{
-  width:44px;height:44px;border-radius:50%;
-  border:1px solid var(--gold);
-  display:grid;place-items:center;font-size:18px;
-  color:var(--gold-l);
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);
+  display:grid;place-items:center;font-size:20px;color:var(--gold-l);
   background:radial-gradient(circle,rgba(214,180,93,.15),transparent 70%);
-  box-shadow:var(--glow);
-  transition:transform .4s var(--ease);
+  box-shadow:var(--glow);transition:transform .4s var(--ease);
 }
 .logo:hover .logo-icon{transform:rotate(360deg) scale(1.05)}
 .logo-text strong{display:block;color:var(--gold-l);font-size:15px;letter-spacing:.5px;font-weight:800}
 .logo-text small{display:block;color:var(--muted);font-size:10.5px;font-family:'Amiri',serif;direction:rtl;margin-top:-2px}
 
-.nav-links{display:flex;gap:22px;list-style:none;font-size:13.5px;align-items:center}
-.nav-links a{
-  color:var(--text);transition:.3s var(--ease);font-weight:600;
-  position:relative;padding:4px 0;
-}
+.nav-links{display:flex;gap:18px;list-style:none;font-size:13px;align-items:center}
+.nav-links a{color:var(--text);transition:.3s var(--ease);font-weight:600;position:relative;padding:4px 0}
 .nav-links a::after{
-  content:'';position:absolute;bottom:0;left:0;
-  width:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-l));
+  content:'';position:absolute;bottom:0;left:0;width:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-l));
   transition:width .3s var(--ease);border-radius:2px;
 }
 .nav-links a:hover{color:var(--gold-l)}
 .nav-links a:hover::after{width:100%}
-
-.nav-cta{
-  border:1px solid var(--gold);
-  padding:8px 18px;border-radius:30px;
-  color:var(--gold-l)!important;
-  transition:.3s var(--ease);
-}
-.nav-cta:hover{
-  background:linear-gradient(135deg,var(--gold),var(--gold-l));
-  color:#07130d!important;
-}
+.nav-cta{border:1px solid var(--gold);padding:8px 18px;border-radius:30px;color:var(--gold-l)!important;transition:.3s var(--ease)}
+.nav-cta:hover{background:linear-gradient(135deg,var(--gold),var(--gold-l));color:#07130d!important}
 .nav-cta::after{display:none}
 
 .menu-btn{
-  display:none;font-size:26px;cursor:pointer;
-  color:var(--gold-l);user-select:none;
-  width:44px;height:44px;border-radius:12px;
-  border:1px solid var(--border);
-  background:rgba(214,180,93,.06);
+  display:none;font-size:26px;cursor:pointer;color:var(--gold-l);
+  user-select:none;width:44px;height:44px;border-radius:12px;
+  border:1px solid var(--border);background:rgba(214,180,93,.06);
   align-items:center;justify-content:center;
 }
 
 /* ============================================================
    HERO
    ============================================================ */
-.hero{
-  min-height:100vh;display:flex;align-items:center;
-  padding:150px 0 80px;
-  position:relative;overflow:hidden;
-}
+.hero{min-height:100vh;display:flex;align-items:center;padding:150px 0 80px;position:relative;overflow:hidden}
 .hero::before{
   content:"";position:absolute;width:520px;height:520px;
   background:radial-gradient(circle,rgba(13,158,110,.25),transparent 70%);
@@ -187,146 +160,93 @@ nav.scrolled{
   border-radius:50%;bottom:-120px;left:-120px;z-index:-1;
   animation:float 10s ease-in-out infinite reverse;
 }
-@keyframes float{
-  0%,100%{transform:translate(0,0)}
-  50%{transform:translate(-30px,30px)}
-}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,30px)}}
 
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
 
 .badge{
   display:inline-block;border:1px solid var(--border);
-  background:rgba(214,180,93,.08);
-  padding:8px 18px;border-radius:40px;
-  color:var(--gold-l);font-size:12.5px;
-  margin-bottom:22px;font-weight:700;letter-spacing:.5px;
+  background:rgba(214,180,93,.08);padding:8px 18px;border-radius:40px;
+  color:var(--gold-l);font-size:12.5px;margin-bottom:22px;
+  font-weight:700;letter-spacing:.5px;
   animation:pulseGlow 3s ease-in-out infinite;
 }
-@keyframes pulseGlow{
-  0%,100%{box-shadow:0 0 0 0 rgba(214,180,93,.3)}
-  50%{box-shadow:0 0 0 12px rgba(214,180,93,0)}
-}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(214,180,93,.3)}50%{box-shadow:0 0 0 12px rgba(214,180,93,0)}}
 
-.hero h1{
-  font-size:clamp(40px,6.5vw,78px);
-  line-height:1.05;font-weight:900;
-  letter-spacing:-1.5px;margin-bottom:8px;
-}
+.hero h1{font-size:clamp(40px,6.5vw,78px);line-height:1.05;font-weight:900;letter-spacing:-1.5px;margin-bottom:8px}
 .hero h1 span{
   background:linear-gradient(135deg,var(--gold-l) 0%,var(--gold) 50%,#fff8e0 100%);
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;color:transparent;
 }
 .hero-arabic{
-  font-family:'Amiri',serif;
-  font-size:clamp(22px,3.5vw,36px);
+  font-family:'Amiri',serif;font-size:clamp(22px,3.5vw,34px);
   color:var(--gold-l);direction:rtl;text-align:left;
-  margin:10px 0 15px;line-height:1.6;
-  unicode-bidi:isolate;
+  margin:10px 0 15px;line-height:1.6;unicode-bidi:isolate;
 }
-.hero-sub{
-  font-size:clamp(14px,2vw,18px);
-  color:var(--gold);margin-bottom:6px;
-  font-weight:700;letter-spacing:.3px;
-}
+.hero-sub{font-size:clamp(14px,2vw,18px);color:var(--gold);margin-bottom:6px;font-weight:700;letter-spacing:.3px}
 .hero-sub-ar{
-  font-family:'Amiri',serif;
-  font-size:clamp(16px,2.2vw,22px);
+  font-family:'Amiri',serif;font-size:clamp(16px,2.2vw,22px);
   color:#e8dcb0;direction:rtl;text-align:left;
-  margin-bottom:20px;line-height:1.7;
-  unicode-bidi:isolate;
+  margin-bottom:20px;line-height:1.7;unicode-bidi:isolate;
 }
-.hero-desc{
-  color:var(--muted);font-size:15.5px;
-  max-width:660px;margin-bottom:12px;
-}
+.hero-desc{color:var(--muted);font-size:15.5px;max-width:660px;margin-bottom:12px}
 .hero-desc-ar{
-  font-family:'Amiri',serif;
-  color:#c9d8cf;font-size:15px;
-  direction:rtl;text-align:left;
-  max-width:660px;margin-bottom:12px;
+  font-family:'Amiri',serif;color:#c9d8cf;font-size:15px;
+  direction:rtl;text-align:left;max-width:660px;margin-bottom:12px;
   line-height:2;unicode-bidi:isolate;
 }
 .hero-buttons{display:flex;flex-wrap:wrap;gap:15px;margin-top:30px}
 
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:13px 28px;border-radius:35px;
-  font-weight:700;font-size:14px;
-  transition:.3s var(--ease);
-  border:1px solid var(--gold);cursor:pointer;
+  padding:13px 28px;border-radius:35px;font-weight:700;font-size:14px;
+  transition:.3s var(--ease);border:1px solid var(--gold);cursor:pointer;
 }
 .btn-primary{
   background:linear-gradient(135deg,var(--gold-l),var(--gold));
-  color:#07130d;border:none;
-  box-shadow:0 10px 30px rgba(214,180,93,.25);
+  color:#07130d;border:none;box-shadow:0 10px 30px rgba(214,180,93,.25);
 }
-.btn-primary:hover{
-  transform:translateY(-4px);
-  box-shadow:0 18px 45px rgba(214,180,93,.4);
-}
+.btn-primary:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(214,180,93,.4)}
 .btn-outline{background:transparent;color:var(--white)}
-.btn-outline:hover{
-  background:rgba(214,180,93,.1);
-  border-color:var(--gold-l);
-  transform:translateY(-3px);
-}
+.btn-outline:hover{background:rgba(214,180,93,.1);border-color:var(--gold-l);transform:translateY(-3px)}
 
 .hero-card{
-  border:1px solid var(--border);
-  background:var(--card);
-  -webkit-backdrop-filter:blur(15px);
-          backdrop-filter:blur(15px);
-  border-radius:35px;padding:40px 28px;
-  text-align:center;
-  box-shadow:0 30px 80px rgba(0,0,0,.4);
-  transition:.5s var(--ease);
+  border:1px solid var(--border);background:var(--card);
+  -webkit-backdrop-filter:blur(15px);backdrop-filter:blur(15px);
+  border-radius:35px;padding:40px 28px;text-align:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.4);transition:.5s var(--ease);
   position:relative;overflow:hidden;
 }
 .hero-card::before{
-  content:"";position:absolute;top:-50%;left:-50%;
-  width:200%;height:200%;
+  content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;
   background:radial-gradient(circle,rgba(214,180,93,.1),transparent 60%);
   animation:rotate 20s linear infinite;pointer-events:none;
 }
 @keyframes rotate{to{transform:rotate(360deg)}}
-.hero-card:hover{
-  transform:translateY(-8px);
-  border-color:var(--gold);
-  box-shadow:0 40px 100px rgba(0,0,0,.5);
-}
+.hero-card:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 40px 100px rgba(0,0,0,.5)}
 .hero-symbol{
-  width:130px;height:130px;margin:0 auto 22px;
-  border-radius:50%;border:2px solid var(--gold);
-  display:grid;place-items:center;font-size:58px;
+  width:130px;height:130px;margin:0 auto 22px;border-radius:50%;
+  border:2px solid var(--gold);display:grid;place-items:center;font-size:58px;
   background:radial-gradient(circle,rgba(214,180,93,.2),transparent 65%);
   box-shadow:0 0 40px rgba(214,180,93,.25),inset 0 0 30px rgba(214,180,93,.1);
-  animation:glow 4s ease-in-out infinite;
-  position:relative;z-index:1;
+  animation:glow 4s ease-in-out infinite;position:relative;z-index:1;
 }
 @keyframes glow{
   0%,100%{box-shadow:0 0 40px rgba(214,180,93,.25),inset 0 0 30px rgba(214,180,93,.1)}
   50%{box-shadow:0 0 60px rgba(214,180,93,.4),inset 0 0 40px rgba(214,180,93,.2)}
 }
-.hero-card h3{
-  color:var(--gold-l);font-size:20px;
-  margin-bottom:6px;position:relative;z-index:1;
-}
+.hero-card h3{color:var(--gold-l);font-size:20px;margin-bottom:6px;position:relative;z-index:1}
 .hero-card .ar{
-  font-family:'Amiri',serif;font-size:17px;
-  color:var(--gold);direction:rtl;
-  margin:8px 0 12px;position:relative;z-index:1;line-height:1.8;
-  unicode-bidi:isolate;
+  font-family:'Amiri',serif;font-size:17px;color:var(--gold);
+  direction:rtl;margin:8px 0 12px;position:relative;z-index:1;
+  line-height:1.8;unicode-bidi:isolate;
 }
 .hero-card p{color:var(--muted);font-size:13px;position:relative;z-index:1}
-.hero-pills{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:8px;
-  margin-top:18px;position:relative;z-index:1;
-}
+.hero-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px;position:relative;z-index:1}
 .hero-pills span{
   padding:5px 12px;border-radius:100px;font-size:11.5px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
   color:#cfe4d8;font-weight:600;
 }
 
@@ -334,19 +254,9 @@ nav.scrolled{
    SECTIONS
    ============================================================ */
 section{padding:100px 0;scroll-margin-top:90px}
-.section-head{
-  text-align:center;max-width:820px;
-  margin:0 auto 55px;
-}
-.section-mini{
-  color:var(--gold);text-transform:uppercase;
-  letter-spacing:4px;font-size:11.5px;font-weight:800;
-}
-.section-head h2{
-  font-size:clamp(28px,4.8vw,46px);
-  margin:10px 0 4px;letter-spacing:-.8px;
-  line-height:1.2;
-}
+.section-head{text-align:center;max-width:820px;margin:0 auto 55px}
+.section-mini{color:var(--gold);text-transform:uppercase;letter-spacing:4px;font-size:11.5px;font-weight:800}
+.section-head h2{font-size:clamp(28px,4.8vw,46px);margin:10px 0 4px;letter-spacing:-.8px;line-height:1.2}
 .section-head h2 span{
   background:linear-gradient(135deg,var(--gold-l),var(--gold));
   -webkit-background-clip:text;background-clip:text;
@@ -362,40 +272,25 @@ section{padding:100px 0;scroll-margin-top:90px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 
 .card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:25px;
-  padding:32px 28px;
-  -webkit-backdrop-filter:blur(10px);
-          backdrop-filter:blur(10px);
-  transition:.4s var(--ease);
-  position:relative;overflow:hidden;
+  background:var(--card);border:1px solid var(--border);border-radius:25px;
+  padding:32px 28px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  transition:.4s var(--ease);position:relative;overflow:hidden;
 }
 .card::before{
-  content:"";position:absolute;
-  top:0;left:0;width:100%;height:3px;
+  content:"";position:absolute;top:0;left:0;width:100%;height:3px;
   background:linear-gradient(90deg,transparent,var(--gold),transparent);
-  transform:translateX(-100%);
-  transition:transform .6s var(--ease);
+  transform:translateX(-100%);transition:transform .6s var(--ease);
 }
 .card:hover::before{transform:translateX(0)}
-.card:hover{
-  transform:translateY(-6px);
-  border-color:var(--gold);
-  box-shadow:0 20px 50px rgba(0,0,0,.35);
-}
-.card h3{
-  color:var(--gold-l);font-size:20px;
-  margin-bottom:14px;letter-spacing:-.2px;
-}
+.card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.card h3{color:var(--gold-l);font-size:20px;margin-bottom:14px;letter-spacing:-.2px}
 .card p{color:var(--muted);font-size:14.5px;margin-bottom:12px}
 .card p:last-child{margin-bottom:0}
 
 .skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
 .skill{
-  border:1px solid var(--border);border-radius:20px;
-  padding:6px 13px;color:var(--gold-l);
-  background:rgba(214,180,93,.05);
+  border:1px solid var(--border);border-radius:20px;padding:6px 13px;
+  color:var(--gold-l);background:rgba(214,180,93,.05);
   font-size:11.5px;font-weight:600;
 }
 
@@ -404,11 +299,8 @@ section{padding:100px 0;scroll-margin-top:90px}
    ============================================================ */
 .work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .work-item{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:20px;padding:28px 20px;
-  text-align:center;
-  transition:.4s var(--ease);
+  background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:28px 20px;text-align:center;transition:.4s var(--ease);
   position:relative;overflow:hidden;
 }
 .work-item::after{
@@ -416,32 +308,15 @@ section{padding:100px 0;scroll-margin-top:90px}
   background:radial-gradient(circle at center,rgba(214,180,93,.1),transparent 70%);
   opacity:0;transition:.4s;
 }
-.work-item:hover{
-  transform:translateY(-8px);
-  border-color:var(--gold);
-  box-shadow:0 20px 50px rgba(0,0,0,.3);
-}
+.work-item:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.3)}
 .work-item:hover::after{opacity:1}
-.work-item .icon{
-  font-size:42px;margin-bottom:12px;
-  position:relative;z-index:1;
-  transition:transform .4s var(--ease);
-}
+.work-item .icon{font-size:42px;margin-bottom:12px;position:relative;z-index:1;transition:transform .4s var(--ease)}
 .work-item:hover .icon{transform:scale(1.15) translateY(-3px)}
-.work-item h4{
-  color:var(--gold-l);font-size:16px;
-  margin-bottom:8px;position:relative;z-index:1;
-}
-.work-item p{
-  color:var(--muted);font-size:12.5px;
-  position:relative;z-index:1;line-height:1.6;
-}
+.work-item h4{color:var(--gold-l);font-size:16px;margin-bottom:8px;position:relative;z-index:1}
+.work-item p{color:var(--muted);font-size:12.5px;position:relative;z-index:1;line-height:1.6}
 .work-item .ar-mini{
-  font-family:'Amiri',serif;direction:rtl;
-  color:#c9b878;font-size:12px;
-  margin-top:8px;line-height:1.7;
-  position:relative;z-index:1;
-  unicode-bidi:isolate;
+  font-family:'Amiri',serif;direction:rtl;color:#c9b878;font-size:12px;
+  margin-top:8px;line-height:1.7;position:relative;z-index:1;unicode-bidi:isolate;
 }
 
 /* ============================================================
@@ -449,55 +324,29 @@ section{padding:100px 0;scroll-margin-top:90px}
    ============================================================ */
 .edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .edu-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:22px;
-  padding:28px 22px;
-  transition:.4s var(--ease);
-  position:relative;overflow:hidden;
+  background:var(--card);border:1px solid var(--border);border-radius:22px;
+  padding:28px 22px;transition:.4s var(--ease);position:relative;overflow:hidden;
 }
-.edu-card:hover{
-  transform:translateY(-8px);
-  border-color:var(--gold);
-  box-shadow:0 20px 50px rgba(0,0,0,.3);
-}
+.edu-card:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.3)}
 .edu-card::before{
-  content:"";position:absolute;
-  top:0;left:0;right:0;height:4px;
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
   background:linear-gradient(90deg,var(--gold),var(--gold-l),var(--gold));
-  background-size:200% 100%;
-  animation:shine 3s linear infinite;
+  background-size:200% 100%;animation:shine 3s linear infinite;
 }
-@keyframes shine{
-  0%{background-position:0% 50%}
-  100%{background-position:200% 50%}
-}
+@keyframes shine{0%{background-position:0% 50%}100%{background-position:200% 50%}}
 .edu-card .icon{font-size:40px;margin-bottom:12px}
-.edu-card h4{
-  color:var(--gold-l);font-size:18px;
-  margin-bottom:4px;letter-spacing:-.2px;
-}
+.edu-card h4{color:var(--gold-l);font-size:18px;margin-bottom:4px;letter-spacing:-.2px}
 .edu-card .ar-title{
-  font-family:'Amiri',serif;direction:rtl;
-  color:#d4bc7f;font-size:14.5px;
-  margin-bottom:8px;line-height:1.7;
-  unicode-bidi:isolate;
+  font-family:'Amiri',serif;direction:rtl;color:#d4bc7f;
+  font-size:14.5px;margin-bottom:8px;line-height:1.7;unicode-bidi:isolate;
 }
 .edu-card p{color:var(--muted);font-size:13.5px}
 
-.materials{
-  display:flex;flex-wrap:wrap;gap:8px;
-  margin-top:16px;padding-top:16px;
-  border-top:1px solid var(--border);
-}
+.materials{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
 .mat-btn{
-  display:inline-flex;align-items:center;gap:5px;
-  padding:7px 13px;border-radius:20px;
-  font-size:11px;font-weight:700;
-  transition:.3s var(--ease);
-  border:1px solid var(--border);
-  background:rgba(255,255,255,.03);
-  color:var(--text);
+  display:inline-flex;align-items:center;gap:5px;padding:7px 13px;border-radius:20px;
+  font-size:11px;font-weight:700;transition:.3s var(--ease);
+  border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);
 }
 .mat-btn:hover{transform:translateY(-2px) scale(1.05)}
 .mat-btn.pdf{color:#ff8a8a;border-color:rgba(255,138,138,.3)}
@@ -510,194 +359,293 @@ section{padding:100px 0;scroll-margin-top:90px}
 .mat-btn.text:hover{background:rgba(214,180,93,.1);border-color:var(--gold)}
 
 /* ============================================================
-   SCHEDULE
+   MODERN VISION SECTION
    ============================================================ */
-.schedule-grid{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:25px;max-width:800px;margin:0 auto;
+.vision-hero{
+  background:
+    radial-gradient(circle at center,rgba(13,158,110,.18),transparent 60%),
+    rgba(8,25,18,.85);
+  border:1px solid var(--gold);
+  border-radius:32px;
+  padding:50px 30px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.4);
+  margin-bottom:55px;
 }
-.schedule-card{
+.vision-hero::before{
+  content:"۞";position:absolute;font-size:320px;
+  color:rgba(214,180,93,.035);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  z-index:0;pointer-events:none;
+}
+.vision-hero h2{
+  color:var(--gold-l);
+  font-size:clamp(24px,4vw,38px);
+  margin-bottom:15px;
+  position:relative;z-index:1;
+  letter-spacing:-.5px;
+}
+.vision-hero .ar{
+  font-family:'Amiri',serif;font-size:22px;
+  color:#eee4c8;direction:rtl;
+  margin:15px 0;position:relative;z-index:1;
+  line-height:1.9;unicode-bidi:isolate;
+}
+.vision-hero p{
+  color:var(--text);max-width:820px;
+  margin:0 auto 12px;font-size:16px;
+  position:relative;z-index:1;
+}
+
+.vision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vision-card{
   background:var(--card);
   border:1px solid var(--border);
   border-radius:22px;
-  padding:35px 25px;text-align:center;
+  padding:30px 24px;
   transition:.4s var(--ease);
+  position:relative;overflow:hidden;
 }
-.schedule-card:hover{
-  transform:translateY(-5px);
+.vision-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--green),var(--gold));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .5s var(--ease);
+}
+.vision-card:hover::before{transform:scaleX(1)}
+.vision-card:hover{
+  transform:translateY(-8px);
   border-color:var(--gold);
-  box-shadow:0 15px 40px rgba(0,0,0,.3);
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
-.schedule-card .icon{font-size:48px;margin-bottom:12px}
-.schedule-card h4{
-  color:var(--gold-l);font-size:20px;
-  margin-bottom:4px;letter-spacing:-.3px;
+.vision-num{
+  display:inline-block;
+  font-family:'Amiri',serif;
+  font-size:14px;font-weight:700;
+  color:var(--gold);
+  letter-spacing:3px;
+  margin-bottom:8px;
 }
-.schedule-card .ar-mini{
-  font-family:'Amiri',serif;direction:rtl;
-  color:#c9b878;font-size:14px;
-  margin-bottom:10px;line-height:1.7;
+.vision-card .v-icon{
+  font-size:42px;
+  margin-bottom:12px;
+  display:block;
+}
+.vision-card h4{
+  color:var(--gold-l);
+  font-size:18px;
+  margin-bottom:10px;
+  letter-spacing:-.2px;
+}
+.vision-card p{
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.7;
+}
+.vision-card ul{
+  list-style:none;
+  margin-top:12px;
+}
+.vision-card ul li{
+  color:var(--muted);
+  font-size:12.5px;
+  padding:4px 0 4px 18px;
+  position:relative;
+}
+.vision-card ul li::before{
+  content:"◆";
+  position:absolute;
+  left:0;
+  color:var(--gold);
+  font-size:8px;
+  top:9px;
+}
+.vision-card .ar-mini{
+  font-family:'Amiri',serif;
+  direction:rtl;
+  color:#c9b878;
+  font-size:13px;
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px dashed rgba(214,180,93,.2);
+  text-align:right;
+  line-height:1.8;
   unicode-bidi:isolate;
 }
+
+/* ============================================================
+   CURRICULUM / BOOKS
+   ============================================================ */
+.book-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.book{
+  display:flex;gap:18px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:22px;transition:.4s var(--ease);
+}
+.book:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 15px 40px rgba(0,0,0,.3)}
+.book-icon{font-size:30px;flex-shrink:0}
+.book h4{color:var(--gold-l);font-size:16px;margin-bottom:4px;font-family:'Amiri',serif;direction:rtl;text-align:left;unicode-bidi:isolate}
+.book p{color:var(--muted);font-size:13px}
+
+/* ============================================================
+   SCHEDULE
+   ============================================================ */
+.schedule-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;max-width:800px;margin:0 auto}
+.schedule-card{
+  background:var(--card);border:1px solid var(--border);border-radius:22px;
+  padding:35px 25px;text-align:center;transition:.4s var(--ease);
+}
+.schedule-card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 15px 40px rgba(0,0,0,.3)}
+.schedule-card .icon{font-size:48px;margin-bottom:12px}
+.schedule-card h4{color:var(--gold-l);font-size:20px;margin-bottom:4px;letter-spacing:-.3px}
+.schedule-card .ar-mini{
+  font-family:'Amiri',serif;direction:rtl;color:#c9b878;font-size:14px;
+  margin-bottom:10px;line-height:1.7;unicode-bidi:isolate;
+}
 .schedule-card p{color:var(--text);font-size:16px;font-weight:600}
+
+/* ============================================================
+   MONTHLY PROGRAM
+   ============================================================ */
+.week-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.week{
+  background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:24px;transition:.4s var(--ease);
+}
+.week:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 15px 40px rgba(0,0,0,.3)}
+.week h4{color:var(--gold-l);font-size:16px;margin-bottom:12px;letter-spacing:-.2px}
+.week .day{border-top:1px solid rgba(255,255,255,.07);padding:10px 0;font-size:12.5px;color:var(--muted)}
+.week .day:first-of-type{border-top:none;padding-top:0}
+.week .day strong{color:var(--white);display:block;font-size:13px;margin-bottom:2px}
 
 /* ============================================================
    MARKAZA / VISION BOX
    ============================================================ */
 .markaza-box{
-  border:1px solid var(--gold);
-  border-radius:32px;
-  padding:60px 30px;
+  border:1px solid var(--gold);border-radius:32px;padding:60px 30px;
   background:
     radial-gradient(circle at center,rgba(13,158,110,.15),transparent 60%),
     rgba(8,25,18,.85);
-  text-align:center;
-  position:relative;overflow:hidden;
+  text-align:center;position:relative;overflow:hidden;
   box-shadow:0 30px 80px rgba(0,0,0,.4);
 }
 .markaza-box::before{
   content:"۞";position:absolute;font-size:350px;
-  color:rgba(214,180,93,.03);
-  top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  z-index:0;pointer-events:none;
+  color:rgba(214,180,93,.03);top:50%;left:50%;
+  transform:translate(-50%,-50%);z-index:0;pointer-events:none;
 }
-.markaza-box h2{
-  color:var(--gold-l);
-  font-size:clamp(26px,4vw,40px);
-  margin-bottom:15px;position:relative;z-index:1;
-  letter-spacing:-.5px;
-}
+.markaza-box h2{color:var(--gold-l);font-size:clamp(26px,4vw,40px);margin-bottom:15px;position:relative;z-index:1;letter-spacing:-.5px}
 .markaza-box .ar{
-  font-family:'Amiri',serif;font-size:23px;
-  color:#eee4c8;direction:rtl;
-  margin:15px 0;position:relative;z-index:1;
-  line-height:1.9;unicode-bidi:isolate;
+  font-family:'Amiri',serif;font-size:23px;color:#eee4c8;direction:rtl;
+  margin:15px 0;position:relative;z-index:1;line-height:1.9;unicode-bidi:isolate;
 }
-.markaza-box p{
-  color:var(--muted);max-width:820px;
-  margin:0 auto 12px;font-size:15.5px;
-  position:relative;z-index:1;
-}
+.markaza-box p{color:var(--muted);max-width:820px;margin:0 auto 12px;font-size:15.5px;position:relative;z-index:1}
 .markaza-box .btn{position:relative;z-index:1;margin-top:15px}
 
 /* ============================================================
    MESSAGE BOX
    ============================================================ */
 .message-box{
-  border:1px solid var(--border);
-  border-radius:28px;
-  padding:50px 30px;
-  background:var(--card);
-  text-align:center;
-  position:relative;overflow:hidden;
+  border:1px solid var(--border);border-radius:28px;padding:50px 30px;
+  background:var(--card);text-align:center;position:relative;overflow:hidden;
 }
 .message-box::before{
-  content:"";position:absolute;
-  top:-50%;right:-50%;
-  width:200%;height:200%;
+  content:"";position:absolute;top:-50%;right:-50%;width:200%;height:200%;
   background:radial-gradient(circle,rgba(214,180,93,.05),transparent 60%);
   pointer-events:none;
 }
 .message-box blockquote{
-  font-size:clamp(20px,3.2vw,30px);
-  color:var(--gold-l);
-  font-weight:700;line-height:1.7;
-  margin-bottom:20px;
-  font-family:'Amiri',serif;direction:rtl;
-  position:relative;z-index:1;
-  unicode-bidi:isolate;
+  font-size:clamp(20px,3.2vw,30px);color:var(--gold-l);font-weight:700;
+  line-height:1.7;margin-bottom:20px;font-family:'Amiri',serif;direction:rtl;
+  position:relative;z-index:1;unicode-bidi:isolate;
 }
-.message-box p{
-  color:var(--muted);font-size:15.5px;
-  max-width:750px;margin:0 auto;
-  position:relative;z-index:1;
-}
+.message-box p{color:var(--muted);font-size:15.5px;max-width:750px;margin:0 auto;position:relative;z-index:1}
 .message-box .ar-para{
-  font-family:'Amiri',serif;direction:rtl;
-  color:#c9b878;font-size:15px;
-  line-height:2;margin:16px auto 0;
-  max-width:750px;unicode-bidi:isolate;
+  font-family:'Amiri',serif;direction:rtl;color:#c9b878;font-size:15px;
+  line-height:2;margin:16px auto 0;max-width:750px;unicode-bidi:isolate;
 }
 
 /* ============================================================
    PROJECTS
    ============================================================ */
-.project-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
-}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .project{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:22px;padding:28px;
-  transition:.4s var(--ease);
-  position:relative;overflow:hidden;
+  background:var(--card);border:1px solid var(--border);border-radius:22px;
+  padding:28px;transition:.4s var(--ease);position:relative;overflow:hidden;
 }
 .project::before{
-  content:"";position:absolute;
-  inset:0;border-radius:inherit;
+  content:"";position:absolute;inset:0;border-radius:inherit;
   background:radial-gradient(circle at 30% 0%,rgba(214,180,93,.12),transparent 60%);
   opacity:0;transition:.4s;
 }
-.project:hover{
-  transform:translateY(-8px);
-  border-color:var(--gold);
-  box-shadow:0 20px 50px rgba(0,0,0,.3);
-}
+.project:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.3)}
 .project:hover::before{opacity:1}
-.project h4{
-  color:var(--gold-l);font-size:18px;
-  margin-bottom:10px;position:relative;z-index:1;
-  letter-spacing:-.2px;
+.project h4{color:var(--gold-l);font-size:18px;margin-bottom:10px;position:relative;z-index:1;letter-spacing:-.2px}
+.project p{color:var(--muted);font-size:13.5px;position:relative;z-index:1}
+
+/* ============================================================
+   REGISTRATION FORM
+   ============================================================ */
+.form-box{
+  max-width:880px;
+  margin:0 auto;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:40px 34px;
+  -webkit-backdrop-filter:blur(10px);
+          backdrop-filter:blur(10px);
 }
-.project p{
-  color:var(--muted);font-size:13.5px;
-  position:relative;z-index:1;
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
 }
+.form-box input,
+.form-box select,
+.form-box textarea{
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.25);
+  color:var(--white);
+  outline:none;
+  transition:border-color .3s var(--ease),box-shadow .3s var(--ease);
+  font-size:14px;
+}
+.form-box input:focus,
+.form-box select:focus,
+.form-box textarea:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(214,180,93,.15);
+}
+.form-box textarea{min-height:120px;resize:vertical}
+.form-box .full{grid-column:1 / -1}
+.form-box select option{background:#0b2419;color:var(--white)}
 
 /* ============================================================
    SOCIAL MEDIA
    ============================================================ */
-.social-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:20px;max-width:900px;margin:0 auto;
-}
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
 .social-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:25px;
-  padding:30px 20px;text-align:center;
-  transition:.4s var(--ease);
+  background:var(--card);border:1px solid var(--border);border-radius:25px;
+  padding:30px 20px;text-align:center;transition:.4s var(--ease);
   position:relative;overflow:hidden;
 }
 .social-card::before{
-  content:"";position:absolute;
-  top:-50%;left:-50%;
-  width:200%;height:200%;
+  content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;
   background:radial-gradient(circle,rgba(214,180,93,.08),transparent 60%);
   opacity:0;transition:.5s;
 }
-.social-card:hover{
-  transform:translateY(-8px);
-  border-color:var(--gold);
-  box-shadow:0 20px 50px rgba(0,0,0,.3);
-}
+.social-card:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 20px 50px rgba(0,0,0,.3)}
 .social-card:hover::before{opacity:1}
-.social-card .s-icon{
-  font-size:42px;margin-bottom:12px;
-  position:relative;z-index:1;
-  transition:transform .4s var(--ease);
-}
+.social-card .s-icon{font-size:42px;margin-bottom:12px;position:relative;z-index:1;transition:transform .4s var(--ease)}
 .social-card:hover .s-icon{transform:scale(1.15) translateY(-3px)}
-.social-card h4{
-  color:var(--gold-l);font-size:17px;
-  margin-bottom:6px;position:relative;z-index:1;
-}
-.social-card a{
-  display:inline-block;color:var(--muted);
-  font-size:12px;word-break:break-word;
-  transition:.3s;position:relative;z-index:1;
-}
+.social-card h4{color:var(--gold-l);font-size:17px;margin-bottom:6px;position:relative;z-index:1}
+.social-card a{display:inline-block;color:var(--muted);font-size:12px;word-break:break-word;transition:.3s;position:relative;z-index:1}
 .social-card a:hover{color:var(--gold-l)}
 
 /* ============================================================
@@ -710,102 +658,50 @@ section{padding:100px 0;scroll-margin-top:90px}
 }
 .cta .ar{
   font-family:'Amiri',serif;font-size:clamp(24px,4vw,34px);
-  color:var(--gold-l);direction:rtl;
-  margin-bottom:15px;unicode-bidi:isolate;
+  color:var(--gold-l);direction:rtl;margin-bottom:15px;unicode-bidi:isolate;
 }
-.cta h2{
-  font-size:clamp(30px,5vw,50px);
-  color:var(--gold-l);margin:15px 0;
-  letter-spacing:-1px;
-}
-.cta p{
-  color:var(--muted);max-width:640px;
-  margin:0 auto 28px;font-size:16px;
-}
+.cta h2{font-size:clamp(30px,5vw,50px);color:var(--gold-l);margin:15px 0;letter-spacing:-1px}
+.cta p{color:var(--muted);max-width:640px;margin:0 auto 28px;font-size:16px}
 .cta .ar-sub{
-  font-family:'Amiri',serif;direction:rtl;
-  color:#d4bc7f;font-size:17px;
-  margin:6px auto 24px;max-width:640px;
-  line-height:1.9;unicode-bidi:isolate;
+  font-family:'Amiri',serif;direction:rtl;color:#d4bc7f;font-size:17px;
+  margin:6px auto 24px;max-width:640px;line-height:1.9;unicode-bidi:isolate;
 }
 
 /* ============================================================
    FOOTER
    ============================================================ */
-footer{
-  border-top:1px solid var(--border);
-  background:#020906;
-  padding:50px 0;text-align:center;
-}
+footer{border-top:1px solid var(--border);background:#020906;padding:50px 0;text-align:center}
 footer strong{color:var(--gold-l);font-size:17px;font-weight:800;letter-spacing:.5px}
-footer .ar{
-  font-family:'Amiri',serif;font-size:23px;
-  color:var(--gold);direction:rtl;
-  margin:10px 0;unicode-bidi:isolate;
-}
+footer .ar{font-family:'Amiri',serif;font-size:23px;color:var(--gold);direction:rtl;margin:10px 0;unicode-bidi:isolate}
 footer p{color:var(--muted);font-size:13.5px;margin:4px 0}
-footer .ar-small{
-  font-family:'Amiri',serif;direction:rtl;
-  color:#b8a45d;font-size:15px;
-  margin-top:8px;unicode-bidi:isolate;
-}
-.footer-socials{
-  margin-top:22px;display:flex;
-  justify-content:center;gap:18px;flex-wrap:wrap;
-}
-.footer-socials a{
-  color:var(--muted);font-size:26px;
-  transition:.3s var(--ease);display:inline-block;
-}
-.footer-socials a:hover{
-  color:var(--gold-l);
-  transform:scale(1.2) translateY(-3px);
-}
-footer .fine{
-  margin-top:24px;padding-top:22px;
-  border-top:1px solid rgba(255,255,255,.06);
-  font-size:12px;color:#7e9a8d;
-}
+footer .ar-small{font-family:'Amiri',serif;direction:rtl;color:#b8a45d;font-size:15px;margin-top:8px;unicode-bidi:isolate}
+.footer-socials{margin-top:22px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.footer-socials a{color:var(--muted);font-size:26px;transition:.3s var(--ease);display:inline-block}
+.footer-socials a:hover{color:var(--gold-l);transform:scale(1.2) translateY(-3px)}
+footer .fine{margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.06);font-size:12px;color:#7e9a8d}
 
 /* ============================================================
    FLOATING BUTTONS
    ============================================================ */
 .wa{
-  position:fixed;bottom:25px;left:25px;
-  width:58px;height:58px;border-radius:50%;
-  background:linear-gradient(135deg,#25d366,#128c7e);
-  display:grid;place-items:center;
-  font-size:28px;z-index:500;
-  box-shadow:0 10px 35px rgba(37,211,102,.4);
-  transition:.3s var(--ease);
-  animation:waPulse 2s ease-in-out infinite;
+  position:fixed;bottom:25px;left:25px;width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(135deg,#25d366,#128c7e);display:grid;place-items:center;
+  font-size:28px;z-index:500;box-shadow:0 10px 35px rgba(37,211,102,.4);
+  transition:.3s var(--ease);animation:waPulse 2s ease-in-out infinite;
 }
-.wa:hover{
-  transform:scale(1.1);
-  box-shadow:0 15px 45px rgba(37,211,102,.6);
-}
+.wa:hover{transform:scale(1.1);box-shadow:0 15px 45px rgba(37,211,102,.6)}
 @keyframes waPulse{
   0%,100%{box-shadow:0 10px 35px rgba(37,211,102,.4)}
   50%{box-shadow:0 10px 35px rgba(37,211,102,.4),0 0 0 15px rgba(37,211,102,0)}
 }
-
 .scroll-top{
-  position:fixed;bottom:25px;right:25px;
-  width:50px;height:50px;border-radius:50%;
-  background:var(--card);
-  border:1px solid var(--gold);
-  color:var(--gold-l);
-  display:grid;place-items:center;
-  font-size:22px;cursor:pointer;z-index:500;
-  opacity:0;visibility:hidden;
-  transition:.3s var(--ease);
+  position:fixed;bottom:25px;right:25px;width:50px;height:50px;border-radius:50%;
+  background:var(--card);border:1px solid var(--gold);color:var(--gold-l);
+  display:grid;place-items:center;font-size:22px;cursor:pointer;z-index:500;
+  opacity:0;visibility:hidden;transition:.3s var(--ease);
 }
 .scroll-top.show{opacity:1;visibility:visible}
-.scroll-top:hover{
-  background:linear-gradient(135deg,var(--gold),var(--gold-l));
-  color:#07130d;
-  transform:translateY(-4px);
-}
+.scroll-top:hover{background:linear-gradient(135deg,var(--gold),var(--gold-l));color:#07130d;transform:translateY(-4px)}
 
 /* ============================================================
    REVEAL ANIMATION
@@ -827,14 +723,11 @@ footer .fine{
    ============================================================ */
 @media(max-width:960px){
   .nav-links{
-    position:absolute;top:76px;left:0;
-    width:100%;background:rgba(4,13,9,.98);
+    position:absolute;top:76px;left:0;width:100%;
+    background:rgba(4,13,9,.98);
     -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
-    flex-direction:column;
-    padding:25px;gap:15px;
-    display:none;
-    border-bottom:1px solid var(--border);
-    box-shadow:0 20px 40px rgba(0,0,0,.5);
+    flex-direction:column;padding:25px;gap:15px;display:none;
+    border-bottom:1px solid var(--border);box-shadow:0 20px 40px rgba(0,0,0,.5);
   }
   .nav-links.active{display:flex}
   .menu-btn{display:flex}
@@ -845,26 +738,32 @@ footer .fine{
   .grid-2{grid-template-columns:1fr}
   .work-grid{grid-template-columns:1fr 1fr}
   .edu-grid{grid-template-columns:1fr 1fr}
+  .book-grid{grid-template-columns:1fr}
   .project-grid{grid-template-columns:1fr}
   .social-grid{grid-template-columns:1fr 1fr}
   .schedule-grid{grid-template-columns:1fr}
+  .week-grid{grid-template-columns:1fr 1fr}
+  .vision-grid{grid-template-columns:1fr 1fr}
   .grid-4{grid-template-columns:repeat(2,1fr)}
+  .form-grid{grid-template-columns:1fr}
 }
 
 @media(max-width:600px){
-  .work-grid,.edu-grid,.social-grid{grid-template-columns:1fr}
+  .work-grid,.edu-grid,.social-grid,.week-grid,.vision-grid{grid-template-columns:1fr}
   .grid-3,.grid-4{grid-template-columns:1fr}
   .hero{padding-top:120px}
   section{padding:75px 0}
-  .message-box,.markaza-box{padding:38px 20px}
+  .message-box,.markaza-box,.vision-hero{padding:38px 20px}
   .wa{width:52px;height:52px;font-size:24px;bottom:20px;left:20px}
   .scroll-top{width:46px;height:46px;font-size:20px;bottom:20px;right:20px}
   .card{padding:26px 22px}
   .hero-card{padding:32px 22px}
   .hero-symbol{width:110px;height:110px;font-size:50px}
+  .form-box{padding:28px 20px}
 }
 </style>
 </head>
+
 <body>
 
 <!-- ================= SCROLL PROGRESS ================= -->
@@ -880,14 +779,16 @@ footer .fine{
         <small>مركز أويس بن عامر</small>
       </div>
     </a>
+
     <div class="menu-btn" id="menuBtn">☰</div>
+
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#programs">Programs</a></li>
-      <li><a href="#curriculum">Curriculum</a></li>
-      <li><a href="#schedule">Schedule</a></li>
-      <li><a href="#markaza">Markaza</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#education">Barnoota</a></li>
+      <li><a href="#curriculum">Kitaabota</a></li>
       <li><a href="#register">Galmee</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
@@ -898,35 +799,37 @@ footer .fine{
 <section class="hero" id="home">
   <div class="container hero-grid">
     <div class="reveal">
-      <div class="badge">Iddoo Barnoota Qur'aanaa fi Shari'aa</div>
+      <div class="badge">Qur'aana • Barnoota • Teknooloojii</div>
       <h1>MARKAZA<br><span>UWEYSII</span></h1>
       <div class="hero-arabic">مركز أويس بن عامر لدراسة العلوم الشرعية</div>
-      <div class="hero-sub">Qur'aana • Tajwiid • Aqiidaa • Fiqhii • Seenaa Nabiyyii ﷺ</div>
-      <div class="hero-sub-ar">القرآن • التجويد • العقيدة • الفقه • السيرة النبوية</div>
+      <div class="hero-sub">Barsiisaa: Ferhan Shaamil AbdulGafur</div>
+      <div class="hero-sub-ar">دَاعِيَةٌ • مُعَلِّمُ الْقُرْآنِ وَالْعُلُومِ الشَّرْعِيَّةِ</div>
       <p class="hero-desc">
-        Markaza Uweysii Ibnu Aamir — Iddoo Qur'aana, Tajwiida, Aqiidaa, Fiqhii,
-        Seenaa Nabiyyii ﷺ fi Akhlaaqa Itti Baratan. Nuti Qur'aana Akkuma Bu'etti
-        Barsiinna, Dhaloota Beekumsa Qabu Ijaarra.
+        Markaza Uweysii Ibnu Aamir — Iddoo Qur'aana, Tajwiida, Aqiidaa,
+        Fiqhii, Seenaa Nabiyyii ﷺ fi Akhlaaqa Itti Baratan.
+        Nuti Qur'aana Akkuma Bu'etti Barsiinna, Dhaloota Beekumsa,
+        Akhlaaqaa fi Teknooloojii Qabu Ijaarra.
       </p>
       <p class="hero-desc-ar">
         نُعَلِّمُكَ الْقُرْآنَ كَمَا أُنْزِلَ، وَنُرَبِّي الْجِيلَ الْقُرْآنِيَّ الْمُتْقَنَ
       </p>
       <div class="hero-buttons">
-        <a href="#about" class="btn btn-primary">Waa'ee Keenya</a>
-        <a href="#programs" class="btn btn-outline">Sagantaalee</a>
+        <a href="#register" class="btn btn-primary">Galmee Jalqabi</a>
+        <a href="#vision" class="btn btn-outline">Mul'ata Ammayyaa</a>
       </div>
     </div>
+
     <aside class="hero-card reveal" style="--d:150ms">
       <div class="hero-symbol">۞</div>
-      <h3>Markaza Uweysii</h3>
-      <div class="ar">مركز أويس بن عامر</div>
-      <p>Iddoo Beekumsa Shar'iyyaa fi Qur'aana Kabajamaa</p>
+      <h3>Ferhan Shaamil</h3>
+      <div class="ar">فرحان شامل عبدالغفور</div>
+      <p>Barsiisaa Markaza Uweysii Ibnu Aamir</p>
       <div class="hero-pills">
         <span>Qur'aana</span>
         <span>Tajwiid</span>
         <span>Aqiidaa</span>
         <span>Fiqhii</span>
-        <span>Seenaa</span>
+        <span>Technology</span>
       </div>
     </aside>
   </div>
@@ -936,87 +839,326 @@ footer .fine{
 <section id="about">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-mini">About Us</div>
-      <h2>Waa'ee <span>Markazichaa</span></h2>
-      <div class="arabic-sub">عَنِ الْمَرْكَزِ</div>
-      <p>Markaza Uweysii Ibnu Aamir — Iddoo Barnoota Qur'aanaa fi Shari'aa.</p>
+      <div class="section-mini">About</div>
+      <h2>Waa'ee <span>Keenya</span></h2>
+      <div class="arabic-sub">عَنِّي وَعَنِ الْمَرْكَزِ</div>
+      <p>Ferhan Shaamil — Barsiisaa Markaza Uweysii Ibnu Aamir, Da'ii fi Barataa Software Engineering.</p>
     </div>
+
     <div class="grid-2">
       <div class="card reveal">
-        <h3>Kaayyoo Keenya</h3>
-        <p>Qur'aana Akkuma Bu'etti Barsiisuu, Diinii Hubachuu, Akhlaaqa Gaarii Horachuu fi Dhaloota Beekumsa fi Teknooloojii Qabu Ijaaruu.</p>
-        <p>Kaayyoon Keenya Beekumsa Qofa Dabarsuu Osoo Hin Taane, Beekumsa Sana Jireenya Keessatti Hojiiirra Oolchuuf Dhaloota Qopheessuudha.</p>
+        <h3>Eenyu Ani?</h3>
+        <p>Ani Ferhan Shaamil AbdulGafur, Barsiisaa Markaza Uweysii Ibnu Aamir,
+           Da'ii fi Nama Dhaloota Qur'aanaa, Beekumsa Shari'aa fi Akkaataa Jireenyaa
+           Gaarii Irratti Kakaasuudha.</p>
+        <p>Kaayyoon Koo Beekumsa Qofa Dabarsuu Osoo Hin Taane, Beekumsa Sana
+           Jireenya Keessatti Hojiiirra Oolchuuf Dhaloota Qopheessuudha.</p>
+        <p>Qur'aana Jaalachuu, Diinii Hubachuu, Akhlaaqa Gaarii Horachuu fi
+           Teknooloojii Sirriitti Fayyadamuun Dhaloota Boruu Ijaaruuf Nan Hojjedha.</p>
         <div class="ar-block">
           أَنَا فَرْحَانُ شَامِلٌ، أُعَلِّمُ الْقُرْآنَ وَالْعُلُومَ الشَّرْعِيَّةَ فِي مَرْكَزِ أُوَيْسِ بْنِ عَامِرٍ،
           وَأَسْعَى لِبِنَاءِ جِيلٍ يَجْمَعُ بَيْنَ الْعِلْمِ الشَّرْعِيِّ وَالْمَهَارَاتِ الرَّقْمِيَّةِ.
         </div>
       </div>
+
       <div class="card reveal" style="--d:120ms">
-        <h3>Mul'ata Keenya</h3>
-        <p>Dhaloota Qur'aana Jaalatu, Diinii Isaa Hubatu, Akhlaaqa Gaarii Horatu, Beekumsa Barbaadu Fi Teknooloojii Karaa Gaarii Ta'een Fayyadamu Ijaaruu.</p>
+        <h3>Kaayyoo Keenya</h3>
+        <p>Dhaloonni Keenya Qur'aana Isaa Akka Beeku, Rabbii Isaa Akka Beeku,
+           Nabiyyii Isaa ﷺ Akka Jaalatu, Diinii Isaa Akka Hubatu fi Jireenya
+           Isaa Akka Gaariitti Ijaaru Gumaacha Gochuu.</p>
         <div class="ar-block">
-          جِيلٌ قُرْآنِيٌّ يُحِبُّ الْقُرْآنَ، وَيَفْهَمُ دِينَهُ،<br>
-          وَيَتَحَلَّى بِالْأَخْلَاقِ الْكَرِيمَةِ،<br>
-          وَيَسْتَخْدِمُ التِّقْنِيَةَ فِي مَا يَنْفَعُ.
+          دِرَاسَةُ حَيَاةِ النَّبِيِّ ﷺ، وَأَخْلَاقِهِ، وَغَزَوَاتِهِ، وَمَوَاقِفِهِ التَّرْبَوِيَّةِ،
+          وَبِنَاءُ جِيلٍ قُرْآنِيٍّ مُتْقَنٍ يَعْرِفُ دِينَهُ وَيُحْسِنُ الْعَمَلَ بِهِ.
         </div>
         <div class="skills">
           <span class="skill">Qur'aana</span>
-          <span class="skill">Tajwiid</span>
-          <span class="skill">Aqiidaa</span>
-          <span class="skill">Fiqhii</span>
-          <span class="skill">Seenaa</span>
-          <span class="skill">Akhlaaqa</span>
+          <span class="skill">Da'waa</span>
+          <span class="skill">Shari'aa</span>
+          <span class="skill">Tarbiyaa</span>
+          <span class="skill">Software Engineering</span>
+          <span class="skill">Web Development</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PROGRAMS ================= -->
-<section id="programs" style="background:rgba(7,22,15,.4)">
+<!-- ================= MODERN VISION ================= -->
+<section id="vision" style="background:rgba(7,22,15,.4)">
   <div class="container">
     <div class="section-head reveal">
-      <div class="section-mini">Programs</div>
-      <h2>Sagantaalee <span>Keenya</span></h2>
-      <div class="arabic-sub">الْبَرَامِجُ التَّعْلِيمِيَّةُ</div>
-      <p>Barnoota Qur'aanaa fi Beekumsa Shari'aa Sadarkaa Adda Addaatiin.</p>
+      <div class="section-mini">Modern Vision</div>
+      <h2>Mul'ata <span>Ammayyaa</span></h2>
+      <div class="arabic-sub">الرُّؤْيَةُ الْحَدِيثَةُ</div>
+      <p>Barnoota Shari'aa fi Qur'aanaa teknooloojii, AI, digital learning, assessments fi management ammayyaa waliin walitti fiduu.</p>
     </div>
+
+    <div class="vision-hero reveal">
+      <h2>MARKAZA UWEYSII IBNU AAMIR — MODERN VISION</h2>
+      <div class="ar">مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ لِدِرَاسَةِ الْعُلُومِ الشَّرْعِيَّةِ</div>
+      <p>
+        "Qur'aanaa fi Beekumsa Shari'aa Sirnaan Baranna;
+        Dhaloota Beekumsa, Akhlaaqaa fi Teknooloojii Qabu Ijaarra."
+      </p>
+      <div class="ar" style="font-size:19px">
+        مِنَ الْكِتَابِ إِلَى التِّقْنِيَةِ، وَمِنَ التَّعَلُّمِ إِلَى التَّمَيُّزِ
+      </div>
+    </div>
+
+    <div class="vision-grid">
+      <div class="vision-card reveal">
+        <span class="vision-num">01</span>
+        <span class="v-icon">📱</span>
+        <h4>Barnoota Dijitaalaa</h4>
+        <p>Barnoota Telegram, WhatsApp, PDF, video lessons fi audio lessons.</p>
+        <ul>
+          <li>Telegram / WhatsApp</li>
+          <li>PDF Kitaabota</li>
+          <li>Video Lessons</li>
+          <li>Audio Lessons</li>
+        </ul>
+        <div class="ar-mini">التَّعْلِيمُ الرَّقْمِيُّ</div>
+      </div>
+
+      <div class="vision-card reveal" style="--d:80ms">
+        <span class="vision-num">02</span>
+        <span class="v-icon">🤖</span>
+        <h4>AI & Technology</h4>
+        <p>AI akka meeshaa barnootaa fayyadamuun.</p>
+        <ul>
+          <li>Qormaata qopheessuu</li>
+          <li>Gaaffii fi Deebii Barattoota</li>
+          <li>Revision</li>
+          <li>Notes fi Summaries</li>
+        </ul>
+        <div class="ar-mini">الذَّكَاءُ الاصْطِنَاعِيُّ فِي التَّعْلِيمِ</div>
+      </div>
+
+      <div class="vision-card reveal" style="--d:160ms">
+        <span class="vision-num">03</span>
+        <span class="v-icon">📝</span>
+        <h4>Qormaata Online</h4>
+        <p>Google Forms / Microsoft Forms fayyadamuun.</p>
+        <ul>
+          <li>Weekly Test</li>
+          <li>Monthly Exam</li>
+          <li>Final Exam</li>
+          <li>Automatic Scoring</li>
+          <li>Progress Tracking</li>
+        </ul>
+        <div class="ar-mini">الامْتِحَانَاتُ الإِلِكْتُرُونِيَّةُ</div>
+      </div>
+
+      <div class="vision-card reveal">
+        <span class="vision-num">04</span>
+        <span class="v-icon">🎓</span>
+        <h4>Student Management</h4>
+        <p>Barataa tokkoon tokkoon sirriitti hordofuu.</p>
+        <ul>
+          <li>Attendance</li>
+          <li>Qormaata</li>
+          <li>Hifzii</li>
+          <li>Progress & Level</li>
+          <li>Certificate</li>
+        </ul>
+        <div class="ar-mini">إِدَارَةُ الطُّلَّابِ</div>
+      </div>
+
+      <div class="vision-card reveal" style="--d:80ms">
+        <span class="vision-num">05</span>
+        <span class="v-icon">📖</span>
+        <h4>Curriculum Ammayyaa</h4>
+        <p>Beginner → Intermediate → Advanced → Diploma.</p>
+        <ul>
+          <li>Qur'aana & Tajwiid</li>
+          <li>Aqeedaa & Fiqh</li>
+          <li>Seeraa & Ulum al-Hadiith</li>
+          <li>Digital Skills</li>
+        </ul>
+        <div class="ar-mini">الْمَنْهَجُ الْحَدِيثُ</div>
+      </div>
+
+      <div class="vision-card reveal" style="--d:160ms">
+        <span class="vision-num">06</span>
+        <span class="v-icon">🏆</span>
+        <h4>Certificate System</h4>
+        <p>Barataa koorsii xumureef certificate kennuu.</p>
+        <ul>
+          <li>Digital Certificate</li>
+          <li>Printed Certificate</li>
+          <li>Verification ID</li>
+          <li>Kabajaa Barattootaa</li>
+        </ul>
+        <div class="ar-mini">نِظَامُ الشَّهَادَاتِ</div>
+      </div>
+
+      <div class="vision-card reveal" style="--d:240ms">
+        <span class="vision-num">07</span>
+        <span class="v-icon">🖥️</span>
+        <h4>Modern Classroom</h4>
+        <p>Daree ammayyaa ijaaruu.</p>
+        <ul>
+          <li>Projector</li>
+          <li>PowerPoint</li>
+          <li>Audio & Video</li>
+          <li>Digital Board</li>
+          <li>Interactive Learning</li>
+        </ul>
+        <div class="ar-mini">الْفَصْلُ الْحَدِيثُ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK / WHAT I DO ================= -->
+<section id="work">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-mini">What We Do</div>
+      <h2>Waan Nuti Irratti <span>Hojjedhu</span></h2>
+      <div class="arabic-sub">مَا نَعْمَلُهُ</div>
+    </div>
+
     <div class="work-grid">
       <div class="work-item reveal">
         <div class="icon">📖</div>
-        <h4>Qaacidda Nooraniyyaa</h4>
-        <p>Sadarkaa Jalqabaa fi Daa'immaniif. Qubee, Fatha, Kasra, Dhamma.</p>
-        <div class="ar-mini">الْقَاعِدَةُ النُّورَانِيَّةُ</div>
+        <h4>Qur'aana</h4>
+        <p>Qur'aana Barachuu, Barsiisuu fi Jaalala Qur'aanaa Dhaloota Keessatti Cimsuu.</p>
+        <div class="ar-mini">تَعْلِيمُ الْقُرْآنِ وَتَحْفِيظُهُ</div>
       </div>
       <div class="work-item reveal" style="--d:60ms">
-        <div class="icon">📘</div>
-        <h4>Tilawaa fi Tajwiid</h4>
-        <p>Makhaarij, Sifaat fi Ahkaama Tajwiid.</p>
-        <div class="ar-mini">التِّلَاوَةُ وَالتَّجْوِيدُ</div>
+        <div class="icon">🕌</div>
+        <h4>Da'waa</h4>
+        <p>Nama Gara Kheeyrii, Beekumsaa, Tawhiidaa fi Hojii Gaarii Waamuu.</p>
+        <div class="ar-mini">الدَّعْوَةُ إِلَى اللَّهِ</div>
       </div>
       <div class="work-item reveal" style="--d:120ms">
-        <div class="icon">☝</div>
-        <h4>Aqiidaa Sirrii</h4>
-        <p>Tawhiida, Aqiidaa Sirrii fi Bu'uura Amantii Islaamaa.</p>
-        <div class="ar-mini">الْعَقِيدَةُ الصَّحِيحَةُ</div>
+        <div class="icon">📚</div>
+        <h4>Beekumsa Shari'aa</h4>
+        <p>Aqiidaa, Fiqhii, Seenaa Nabiyyii ﷺ fi Barnoota Islaamaa Babal'isuu.</p>
+        <div class="ar-mini">الْعُلُومُ الشَّرْعِيَّةُ</div>
       </div>
       <div class="work-item reveal" style="--d:180ms">
-        <div class="icon">⚖</div>
-        <h4>Fiqhii fi Ahkaam</h4>
-        <p>Ahkaama Ibaadaa fi Jireenyaa.</p>
-        <div class="ar-mini">الْفِقْهُ وَالْأَحْكَامُ</div>
+        <div class="icon">🌱</div>
+        <h4>Tarbiyaa fi Akhlaaqa</h4>
+        <p>Dhaloota Akhlaaqa Gaarii, Naamusa, Obsa fi Itti Gaafatamummaa Qabu Ijaaruu.</p>
+        <div class="ar-mini">التَّرْبِيَةُ وَالْأَخْلَاقُ</div>
       </div>
       <div class="work-item reveal">
-        <div class="icon">🌙</div>
-        <h4>Seenaa Nabiyyii ﷺ</h4>
-        <p>Jireenya fi Akhlaaqa Nabiyyii ﷺ.</p>
-        <div class="ar-mini">السِّيرَةُ النَّبَوِيَّةُ</div>
+        <div class="icon">💻</div>
+        <h4>Software Engineering</h4>
+        <p>Teknooloojii Hubachuu fi Furmaata Dijitaalaa Bu'a Qabeessa Uumuu.</p>
+        <div class="ar-mini">هَنْدَسَةُ الْبَرْمَجِيَّاتِ</div>
       </div>
       <div class="work-item reveal" style="--d:60ms">
+        <div class="icon">🌐</div>
+        <h4>Web Development</h4>
+        <p>Websitewwan Ammayyaa, Saffisaa fi Fayyadamtootaaf Mijataa Ta'an Ijaaruu.</p>
+        <div class="ar-mini">تَطْوِيرُ الْوَيْبِ</div>
+      </div>
+      <div class="work-item reveal" style="--d:120ms">
+        <div class="icon">🎨</div>
+        <h4>Digital Design</h4>
+        <p>Design Dijitaalaa Bareedaa, Qulqulluu fi Ergaa Qabu Uumuu.</p>
+        <div class="ar-mini">التَّصْمِيمُ الرَّقْمِيُّ</div>
+      </div>
+      <div class="work-item reveal" style="--d:180ms">
+        <div class="icon">🚀</div>
+        <h4>Teknooloojii fi Barnoota</h4>
+        <p>Teknooloojii Akka Meeshaa Barnootaa, Da'waa fi Tajaajila Hawaasaatti Fayyadamu.</p>
+        <div class="ar-mini">التِّقْنِيَةُ وَالتَّعْلِيمُ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION PROGRAMS ================= -->
+<section id="education" style="background:rgba(7,22,15,.4)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-mini">Education Programs</div>
+      <h2>Sagantaalee <span>Barnootaa</span></h2>
+      <div class="arabic-sub">الْبَرَامِجُ التَّعْلِيمِيَّةُ</div>
+      <p>Barnoota Qur'aanaa fi Beekumsa Shari'aa Sadarkaa Adda Addaatiin.</p>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="icon">🔤</div>
+        <h4>Qaacidda Nooraniyyaa</h4>
+        <div class="ar-title">الْقَاعِدَةُ النُّورَانِيَّةُ</div>
+        <p>Sadarkaa Jalqabaa fi Daa'immaniif.</p>
+        <div class="materials">
+          <a href="kitaabota/nooraniyyaa.pdf" target="_blank" rel="noopener" class="mat-btn pdf">PDF</a>
+          <a href="https://youtube.com/@ferhanshaamil" target="_blank" rel="noopener" class="mat-btn video">Video</a>
+          <a href="https://t.me/Ferhan_Shaamil" target="_blank" rel="noopener" class="mat-btn audio">Sagalee</a>
+          <a href="kitaabota/nooraniyyaa-text.pdf" target="_blank" rel="noopener" class="mat-btn text">Barreeffama</a>
+        </div>
+      </div>
+
+      <div class="edu-card reveal" style="--d:80ms">
+        <div class="icon">📖</div>
+        <h4>Tilawaa fi Tajwiid</h4>
+        <div class="ar-title">التِّلَاوَةُ وَالتَّجْوِيدُ</div>
+        <p>Makhaarij, Sifaat fi Ahkaama Tajwiid.</p>
+        <div class="materials">
+          <a href="kitaabota/tajwiid.pdf" target="_blank" rel="noopener" class="mat-btn pdf">PDF</a>
+          <a href="https://youtube.com/@ferhanshaamil" target="_blank" rel="noopener" class="mat-btn video">Video</a>
+          <a href="https://t.me/Ferhan_Shaamil" target="_blank" rel="noopener" class="mat-btn audio">Sagalee</a>
+          <a href="kitaabota/tajwiid-text.pdf" target="_blank" rel="noopener" class="mat-btn text">Barreeffama</a>
+        </div>
+      </div>
+
+      <div class="edu-card reveal" style="--d:160ms">
+        <div class="icon">☝️</div>
+        <h4>Aqiidaa</h4>
+        <div class="ar-title">الْعَقِيدَةُ الصَّحِيحَةُ</div>
+        <p>Tawhiida fi Bu'uura Aqiidaa Islaamaa.</p>
+        <div class="materials">
+          <a href="kitaabota/aqiidaa.pdf" target="_blank" rel="noopener" class="mat-btn pdf">PDF</a>
+          <a href="https://youtube.com/@ferhanshaamil" target="_blank" rel="noopener" class="mat-btn video">Video</a>
+          <a href="https://t.me/Ferhan_Shaamil" target="_blank" rel="noopener" class="mat-btn audio">Sagalee</a>
+          <a href="kitaabota/aqiidaa-text.pdf" target="_blank" rel="noopener" class="mat-btn text">Barreeffama</a>
+        </div>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="icon">⚖️</div>
+        <h4>Fiqhii fi Ahkaam</h4>
+        <div class="ar-title">الْفِقْهُ وَالْأَحْكَامُ</div>
+        <p>Ahkaama Ibaadaa fi Jireenyaa.</p>
+        <div class="materials">
+          <a href="kitaabota/fiqhii.pdf" target="_blank" rel="noopener" class="mat-btn pdf">PDF</a>
+          <a href="https://youtube.com/@ferhanshaamil" target="_blank" rel="noopener" class="mat-btn video">Video</a>
+          <a href="https://t.me/Ferhan_Shaamil" target="_blank" rel="noopener" class="mat-btn audio">Sagalee</a>
+          <a href="kitaabota/fiqhii-text.pdf" target="_blank" rel="noopener" class="mat-btn text">Barreeffama</a>
+        </div>
+      </div>
+
+      <div class="edu-card reveal" style="--d:80ms">
+        <div class="icon">🌙</div>
+        <h4>Seenaa Nabiyyii ﷺ</h4>
+        <div class="ar-title">السِّيرَةُ النَّبَوِيَّةُ</div>
+        <p>Jireenya fi Akhlaaqa Nabiyyii ﷺ.</p>
+        <div class="materials">
+          <a href="kitaabota/siiraa.pdf" target="_blank" rel="noopener" class="mat-btn pdf">PDF</a>
+          <a href="https://youtube.com/@ferhanshaamil" target="_blank" rel="noopener" class="mat-btn video">Video</a>
+          <a href="https://t.me/Ferhan_Shaamil" target="_blank" rel="noopener" class="mat-btn audio">Sagalee</a>
+          <a href="kitaabota/siiraa-text.pdf" target="_blank" rel="noopener" class="mat-btn text">Barreeffama</a>
+        </div>
+      </div>
+
+      <div class="edu-card reveal" style="--d:160ms">
         <div class="icon">✨</div>
         <h4>Sagantaa Guutuu</h4>
+        <div class="ar-title">الْبَرْنَامَجُ الشَّامِلُ</div>
         <p>Qur'aana, Tajwiida, Aqiidaa, Fiqhii fi Seeraa.</p>
-        <div class="ar-mini">الْبَرْنَامَجُ الشَّامِلُ</div>
+        <div class="materials">
+          <a href="kitaabota/sagantaa-guutuu.pdf" target="_blank" rel="noopener" class="mat-btn pdf">PDF</a>
+          <a href="https://youtube.com/@ferhanshaamil" target="_blank" rel="noopener" class="mat-btn video">Video</a>
+          <a href="https://t.me/Ferhan_Shaamil" target="_blank" rel="noopener" class="mat-btn audio">Sagalee</a>
+          <a href="kitaabota/sagantaa-guutuu-text.pdf" target="_blank" rel="noopener" class="mat-btn text">Barreeffama</a>
+        </div>
       </div>
     </div>
   </div>
@@ -1031,37 +1173,120 @@ footer .fine{
       <div class="arabic-sub">الْكُتُبُ وَالْمُقَرَّرَاتُ</div>
       <p>Kitaabota fi Mata-dureewwan Barnoota Keessatti Fayyadamnu.</p>
     </div>
-    <div class="grid-3">
-      <div class="edu-card reveal">
-        <div class="icon">📖</div>
-        <h4>Qur'aana fi Bu'uuraa</h4>
-        <div class="ar-title">الْقُرْآنُ وَالتَّأْسِيسُ</div>
-        <p>Al-Qaida An-Nooraniyya, Tajwiid fi Tilawaa.</p>
+
+    <div class="book-grid">
+      <div class="book reveal">
+        <div class="book-icon">🔤</div>
+        <div>
+          <h4>الْقَاعِدَةُ النُّورَانِيَّةُ</h4>
+          <p>Qaacidda Nooraniyyaa fi bu'uura dubbisa Qur'aanaa.</p>
+        </div>
       </div>
-      <div class="edu-card reveal" style="--d:80ms">
-        <div class="icon">☝</div>
-        <h4>Aqiidaa fi Hadiisa</h4>
-        <div class="ar-title">الْعَقِيدَةُ وَالْحَدِيثُ</div>
-        <p>Al-Usulu Salaasa, Kitabu Tawhiid, Aqiidaa Wasixiyyaa.</p>
+      <div class="book reveal" style="--d:80ms">
+        <div class="book-icon">📖</div>
+        <div>
+          <h4>التِّلَاوَةُ وَالتَّجْوِيدُ</h4>
+          <p>Tilawaa, Makhaarij, Sifaat fi Ahkaama Tajwiidaa.</p>
+        </div>
       </div>
-      <div class="edu-card reveal" style="--d:160ms">
-        <div class="icon">🌿</div>
-        <h4>Fiqhii fi Seenaa</h4>
-        <div class="ar-title">الْفِقْهُ وَالسِّيرَةُ</div>
-        <p>Ahkaama Fiqhii, Seenaa Nabiyyii ﷺ.</p>
+      <div class="book reveal">
+        <div class="book-icon">☝️</div>
+        <div>
+          <h4>الْأُصُولُ الثَّلَاثَةُ</h4>
+          <p>Bu'uura beekumsa Aqeedaa fi Tawhiidaa.</p>
+        </div>
+      </div>
+      <div class="book reveal" style="--d:80ms">
+        <div class="book-icon">🕌</div>
+        <div>
+          <h4>كِتَابُ التَّوْحِيدِ وَالْعَقِيدَةُ الْوَاسِطِيَّةُ</h4>
+          <p>Barnoota Tawhiidaa fi Aqeedaa.</p>
+        </div>
+      </div>
+      <div class="book reveal">
+        <div class="book-icon">📕</div>
+        <div>
+          <h4>خُذْ عَقِيدَتَكَ</h4>
+          <p>Barnoota bu'uuraa Aqeedaa Islaamaa.</p>
+        </div>
+      </div>
+      <div class="book reveal" style="--d:80ms">
+        <div class="book-icon">📚</div>
+        <div>
+          <h4>الْأَرْبَعُونَ النَّوَوِيَّةُ وَبُلُوغُ الْمَرَامِ</h4>
+          <p>Hadiisa, Ahkaama fi barnoota Islaamaa.</p>
+        </div>
+      </div>
+      <div class="book reveal">
+        <div class="book-icon">⚖️</div>
+        <div>
+          <h4>الْأَحْكَامُ الْفِقْهِيَّةُ</h4>
+          <p>Ahkaama Fiqhii fi hojii guyyaa guyyaa.</p>
+        </div>
+      </div>
+      <div class="book reveal" style="--d:80ms">
+        <div class="book-icon">🌙</div>
+        <div>
+          <h4>السِّيرَةُ النَّبَوِيَّةُ</h4>
+          <p>Seenaa Nabiyyii ﷺ fi barnoota jireenyaa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MONTHLY INTENSIVE ================= -->
+<section id="monthly" style="background:rgba(7,22,15,.4)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-mini">Monthly Intensive</div>
+      <h2>Sagantaa Ji'a <span>Tokkoo</span></h2>
+      <div class="arabic-sub">الْبَرْنَامَجُ الشَّهْرِيُّ الْمُكَثَّفُ</div>
+      <p>Karoora Barnootaa Bu'uuraa, Tajwiidaa, Aqiidaa fi Qorannoo.</p>
+    </div>
+
+    <div class="week-grid">
+      <div class="week reveal">
+        <h4>Torban 1 — Bu'uura</h4>
+        <div class="day"><strong>Saturday</strong>Qubee Nooraniyyaa</div>
+        <div class="day"><strong>Sunday</strong>Fatha, Kasra, Dhamma</div>
+        <div class="day"><strong>Monday</strong>Tanwiin fi Sukuun</div>
+        <div class="day"><strong>Tuesday</strong>Shaddaa fi Liin</div>
+      </div>
+      <div class="week reveal" style="--d:80ms">
+        <h4>Torban 2 — Tajwiid</h4>
+        <div class="day"><strong>Saturday</strong>Nuun Saakina — Izhaar / Idghaam</div>
+        <div class="day"><strong>Sunday</strong>Iqlaab / Ikhfaa</div>
+        <div class="day"><strong>Monday</strong>Ahkaama Miim Saakina</div>
+        <div class="day"><strong>Tuesday</strong>Ghunnah</div>
+      </div>
+      <div class="week reveal" style="--d:160ms">
+        <h4>Torban 3 — Madd & Aqiidaa</h4>
+        <div class="day"><strong>Saturday</strong>Madd Tabi'ii + Muttasil</div>
+        <div class="day"><strong>Sunday</strong>Madd Munfasil + Badal</div>
+        <div class="day"><strong>Monday</strong>Tawhiida Allah</div>
+        <div class="day"><strong>Tuesday</strong>Suuraa Ikhlaas + Faatihah</div>
+      </div>
+      <div class="week reveal" style="--d:240ms">
+        <h4>Torban 4 — Xumura</h4>
+        <div class="day"><strong>Saturday</strong>Irra Deebii Nooraniyyaa</div>
+        <div class="day"><strong>Sunday</strong>Irra Deebii Nuun / Miim</div>
+        <div class="day"><strong>Monday</strong>Madd + Aqiidaa</div>
+        <div class="day"><strong>Tuesday</strong>Qormaata + Kabajaa</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ================= SCHEDULE ================= -->
-<section id="schedule" style="background:rgba(7,22,15,.4)">
+<section id="schedule">
   <div class="container">
     <div class="section-head reveal">
       <div class="section-mini">Learning Schedule</div>
       <h2>Sagantaa <span>Barnootaa</span></h2>
       <div class="arabic-sub">جَدْوَلُ الدِّرَاسَةِ</div>
     </div>
+
     <div class="schedule-grid">
       <div class="schedule-card reveal">
         <div class="icon">📅</div>
@@ -1080,7 +1305,7 @@ footer .fine{
 </section>
 
 <!-- ================= MARKAZA ================= -->
-<section id="markaza">
+<section id="markaza" style="background:rgba(7,22,15,.4)">
   <div class="container">
     <div class="section-head reveal">
       <div class="section-mini">Islamic Education Center</div>
@@ -1088,6 +1313,7 @@ footer .fine{
       <div class="arabic-sub">مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ</div>
       <p>Iddoo Qur'aanaa, Beekumsa Shari'aa fi Tarbiyaa.</p>
     </div>
+
     <div class="markaza-box reveal">
       <h2>MARKAZA UWEYSII IBNU AAMIR</h2>
       <div class="ar">مَرْكَزُ أُوَيْسِ بْنِ عَامِرٍ<br>لِدِرَاسَةِ الْعُلُومِ الشَّرْعِيَّةِ</div>
@@ -1104,29 +1330,6 @@ footer .fine{
   </div>
 </section>
 
-<!-- ================= VISION ================= -->
-<section id="vision" style="background:rgba(7,22,15,.3)">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="section-mini">Our Vision</div>
-      <h2>Mul'ata <span>Keenya</span></h2>
-      <div class="arabic-sub">رُؤْيَتُنَا</div>
-    </div>
-    <div class="markaza-box reveal">
-      <p style="font-size:17px;line-height:1.9">
-        Dhaloota Qur'aana Jaalatu, Diinii Isaa Hubatu,
-        Akhlaaqa Gaarii Horatu, Beekumsa Barbaadu fi
-        Teknooloojii Karaa Gaarii Ta'een Fayyadamu Ijaaruu.
-      </p>
-      <div class="ar" style="font-size:20px;margin-top:22px">
-        جِيلٌ قُرْآنِيٌّ يُحِبُّ الْقُرْآنَ، وَيَفْهَمُ دِينَهُ،<br>
-        وَيَتَحَلَّى بِالْأَخْلَاقِ الْكَرِيمَةِ،<br>
-        وَيَسْتَخْدِمُ التِّقْنِيَةَ فِي مَا يَنْفَعُ.
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= MESSAGE ================= -->
 <section>
   <div class="container">
@@ -1136,12 +1339,68 @@ footer .fine{
       <div class="arabic-sub">رِسَالَتُنَا</div>
     </div>
     <div class="message-box reveal">
-      <blockquote>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</blockquote>
+      <blockquote>«بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ»</blockquote>
       <blockquote>"Beekumsa Baradhu, Dhaloota Ijaari, Jireenya Kee Ifa Godhi."</blockquote>
       <p>Jireenyi Nama Tokkoo Yeroo Inni Ofii Isaatiif Qofa Jiraatu Caalaa, Yeroo Inni Nama Biraa Fayyadu Hiika Guddaa Qaba. Beekumsi Yeroo Qoodamu Babal'ata; Dhaloonni Yeroo Qajeelfamu Ijaaramuu Danda'a.</p>
       <div class="ar-para">
         «خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ»<br>
         اُطْلُبِ الْعِلْمَ، وَابْنِ الْأَجْيَالَ، وَأَضِئْ حَيَاتَكَ بِنُورِ الْقُرْآنِ.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ONLINE LEARNING ================= -->
+<section id="online" style="background:rgba(7,22,15,.4)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-mini">Online Learning</div>
+      <h2>Barnoota <span>Online</span></h2>
+      <div class="arabic-sub">التَّعْلِيمُ الرَّقْمِيُّ</div>
+      <p>Barnoota Bakka Jirtutti Argachuu Dandeessa.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card reveal" style="text-align:center">
+        <div style="font-size:42px;margin-bottom:10px">💬</div>
+        <h3 style="font-size:17px">WhatsApp</h3>
+        <p>Odeeffannoo, qunnamtii fi hordoffii barnootaa.</p>
+      </div>
+      <div class="card reveal" style="text-align:center;--d:80ms">
+        <div style="font-size:42px;margin-bottom:10px">✈️</div>
+        <h3 style="font-size:17px">Telegram</h3>
+        <p>Qabiyyee barnootaa fi beeksisa Markazaa.</p>
+      </div>
+      <div class="card reveal" style="text-align:center;--d:160ms">
+        <div style="font-size:42px;margin-bottom:10px">📱</div>
+        <h3 style="font-size:17px">IMO</h3>
+        <p>Qunnamtii fi barnoota karaa online.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-mini">Projects</div>
+      <h2>Pirojektoota <span>Keenya</span></h2>
+      <div class="arabic-sub">الْمَشَارِيعُ</div>
+      <p>Hojiiwwan fi Pirojektoota Nuti Irratti Hojjedhu.</p>
+    </div>
+    <div class="project-grid">
+      <div class="project reveal">
+        <h4>Markaza Uweysii Website</h4>
+        <p>Website Markaza Uweysii Ibnu Aamir, Barnoota Qur'aanaa fi Beekumsa Shari'aa Beeksisuuf Qophaa'e.</p>
+      </div>
+      <div class="project reveal" style="--d:100ms">
+        <h4>Ferhan Portfolio</h4>
+        <p>Website Dhuunfaa Kan Da'waa, Barnoota fi Software Engineering Walitti Fiduu.</p>
+      </div>
+      <div class="project reveal" style="--d:200ms">
+        <h4>Digital Learning Platform</h4>
+        <p>Yaada Platformii Barnootaa Dijitaalaa Qur'aanaa fi Beekumsaaf.</p>
       </div>
     </div>
   </div>
@@ -1155,36 +1414,55 @@ footer .fine{
       <h2>Galmee <span>Barataa Haaraa</span></h2>
       <div class="arabic-sub">اسْتِمَارَةُ التَّسْجِيلِ</div>
       <p>استمارة التسجيل في برامج العلوم الشرعية</p>
+      <p>"نُعلّمك القرآن، ونُعرّفك نبيّك، انضم إلينا في رحلة بناء الجيل القرآني المتقن."</p>
     </div>
-    <div class="card reveal" style="max-width:850px;margin:0 auto">
-      <form onsubmit="submitForm(event)" style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
-        <input type="text" placeholder="Maqaa Guutuu / الاسم الكامل" required style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.2);color:white;outline:none">
-        <input type="number" placeholder="Umurii / السن" required style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.2);color:white;outline:none">
-        <select required style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.2);color:white;outline:none">
-          <option value="">Saala / الجنس</option>
-          <option>Dhiira / ذكر</option>
-          <option>Dhalaa / أنثى</option>
-        </select>
-        <input type="text" placeholder="Teessoo / العنوان" style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.2);color:white;outline:none">
-        <input type="tel" placeholder="Lakkoofsa Bilbilaa / رقم الهاتف" required style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.2);color:white;outline:none">
-        <input type="tel" placeholder="WhatsApp" style="padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.2);color:white;outline:none">
-        <select required style="grid-column:1/-1;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.2);color:white;outline:none">
-          <option value="">Sadarkaa Qur'aanaa</option>
-          <option>Hin Dubbisu — Jalqabaa</option>
-          <option>Nan Dubbisa Garuu Na Rakkisa</option>
-          <option>Sirriittan Dubbisa — Tajwiidaan Sirreeffachuu Barbaada</option>
-        </select>
-        <select required style="grid-column:1/-1;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.2);color:white;outline:none">
-          <option value="">Sagantaa Barbaaddu Filadhu</option>
-          <option>Qaacidda Nooraniyyaa</option>
-          <option>Tilawaa fi Tajwiid — Ji'a 3</option>
-          <option>Seenaa Nabiyyii ﷺ — Ji'a 2</option>
-          <option>Fiqhii fi Ahkaam — Ji'a 3</option>
-          <option>Aqiidaa Sirrii — Ji'a 2</option>
-          <option>Sagantaa Guutuu — Ji'a 3</option>
-        </select>
-        <textarea placeholder="Yaada Yookaan Gaaffii Dabalataa" style="grid-column:1/-1;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.2);color:white;outline:none;min-height:100px;resize:vertical"></textarea>
-        <button type="submit" class="btn btn-primary" style="grid-column:1/-1">Galmee Ergi</button>
+
+    <div class="form-box reveal">
+      <form onsubmit="submitForm(event)">
+        <div class="form-grid">
+          <input type="text" placeholder="Maqaa Guutuu / الاسم الكامل" required>
+          <input type="number" placeholder="Umurii / السن" required min="5" max="99">
+
+          <select required>
+            <option value="">Saala / الجنس</option>
+            <option>Dhiira / ذكر</option>
+            <option>Dhalaa / أنثى</option>
+          </select>
+
+          <input type="text" placeholder="Teessoo / العنوان">
+          <input type="tel" placeholder="Lakkoofsa Bilbilaa / رقم الهاتف" required>
+          <input type="tel" placeholder="WhatsApp">
+          <input class="full" type="tel" placeholder="Lakkoofsa Guddisaa — Ijoollee Qofa">
+
+          <select class="full" required>
+            <option value="">Sadarkaa Qur'aanaa</option>
+            <option>Hin Dubbisu — Jalqabaa</option>
+            <option>Nan Dubbisa Garuu Na Rakkisa</option>
+            <option>Sirriittan Dubbisa — Tajwiidaan Sirreeffachuu Barbaada</option>
+            <option>Juzuu'ota Muraasa Haffazee</option>
+          </select>
+
+          <select class="full" required>
+            <option value="">Sagantaa Barbaaddu Filadhu</option>
+            <option>Qaacidda Nooraniyyaa</option>
+            <option>Tilawaa fi Tajwiid — Ji'a 3</option>
+            <option>Seenaa Nabiyyii ﷺ — Ji'a 2</option>
+            <option>Fiqhii fi Ahkaam — Ji'a 3</option>
+            <option>Aqiidaa Sirrii — Ji'a 2</option>
+            <option>Sagantaa Guutuu — Ji'a 3</option>
+          </select>
+
+          <select class="full">
+            <option value="">Yeroo Barnootaa Filadhu</option>
+            <option>Ganama</option>
+            <option>Waaree Booda</option>
+            <option>Galgala</option>
+          </select>
+
+          <textarea class="full" placeholder="Yaada Yookaan Gaaffii Dabalataa"></textarea>
+
+          <button class="btn btn-primary full" type="submit">Galmee Ergi</button>
+        </div>
       </form>
     </div>
   </div>
@@ -1199,6 +1477,7 @@ footer .fine{
       <div class="arabic-sub">تَابِعُونَا</div>
       <p>Karaa Armaan Gaditiin Nu Qunnamuu Dandeessu</p>
     </div>
+
     <div class="social-grid">
       <div class="social-card reveal">
         <div class="s-icon">📘</div>
@@ -1211,12 +1490,12 @@ footer .fine{
         <a href="https://www.tiktok.com/@mirkanihararge" target="_blank" rel="noopener">@mirkanihararge</a>
       </div>
       <div class="social-card reveal" style="--d:160ms">
-        <div class="s-icon">▶</div>
+        <div class="s-icon">▶️</div>
         <h4>YouTube</h4>
         <a href="https://youtube.com/@ferhanshaamil" target="_blank" rel="noopener">@ferhanshaamil</a>
       </div>
       <div class="social-card reveal">
-        <div class="s-icon">✈</div>
+        <div class="s-icon">✈️</div>
         <h4>Telegram</h4>
         <a href="https://t.me/Ferhan_Shaamil" target="_blank" rel="noopener">t.me/Ferhan_Shaamil</a>
       </div>
@@ -1257,16 +1536,19 @@ footer .fine{
   <div class="container">
     <strong>MARKAZA UWEYSII IBNU AAMIR</strong>
     <div class="ar">مركز أويس بن عامر</div>
+    <p>Barsiisaa: Ferhan Shaamil AbdulGafur</p>
     <p>Qur'aana • Tajwiid • Aqiidaa • Fiqhii • Seenaa Nabiyyii ﷺ</p>
     <div class="ar-small">الْقُرْآنُ • التَّجْوِيدُ • الْعَقِيدَةُ • الْفِقْهُ • السِّيرَةُ النَّبَوِيَّةُ</div>
+
     <div class="footer-socials">
       <a href="https://www.facebook.com/share/1D9P96HFwe/" target="_blank" rel="noopener" title="Facebook">📘</a>
       <a href="https://www.tiktok.com/@mirkanihararge" target="_blank" rel="noopener" title="TikTok">🎵</a>
-      <a href="https://youtube.com/@ferhanshaamil" target="_blank" rel="noopener" title="YouTube">▶</a>
-      <a href="https://t.me/Ferhan_Shaamil" target="_blank" rel="noopener" title="Telegram">✈</a>
+      <a href="https://youtube.com/@ferhanshaamil" target="_blank" rel="noopener" title="YouTube">▶️</a>
+      <a href="https://t.me/Ferhan_Shaamil" target="_blank" rel="noopener" title="Telegram">✈️</a>
       <a href="https://wa.me/251915455051" target="_blank" rel="noopener" title="WhatsApp">💬</a>
       <a href="mailto:Ferhanshaamil@gmail.com" title="Email">📧</a>
     </div>
+
     <p class="fine">
       © 2026 Markaza Uweysii Ibnu Aamir. Mirgi Hundaa Seeraan Eegama.
       <br>
@@ -1284,23 +1566,25 @@ footer .fine{
 (function(){
   'use strict';
 
-  /* ---------- MENU ---------- */
+  /* ---------- MOBILE MENU ---------- */
   const menuBtn = document.getElementById('menuBtn');
   const navLinks = document.getElementById('navLinks');
 
-  menuBtn.addEventListener('click', function(){
-    const open = navLinks.classList.toggle('active');
-    menuBtn.textContent = open ? '✕' : '☰';
-  });
-
-  navLinks.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){
-      navLinks.classList.remove('active');
-      menuBtn.textContent = '☰';
+  if(menuBtn && navLinks){
+    menuBtn.addEventListener('click', function(){
+      const open = navLinks.classList.toggle('active');
+      menuBtn.textContent = open ? '✕' : '☰';
     });
-  });
 
-  /* ---------- SCROLL: Progress, Navbar, Top ---------- */
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        navLinks.classList.remove('active');
+        menuBtn.textContent = '☰';
+      });
+    });
+  }
+
+  /* ---------- SCROLL: Progress, Navbar, Scroll-Top ---------- */
   const navbar = document.getElementById('navbar');
   const progress = document.getElementById('progress');
   const scrollTop = document.getElementById('scrollTop');
@@ -1310,9 +1594,9 @@ footer .fine{
     const h = document.documentElement.scrollHeight - window.innerHeight;
     const pct = h > 0 ? (y / h) * 100 : 0;
 
-    progress.style.width = pct + '%';
-    navbar.classList.toggle('scrolled', y > 40);
-    scrollTop.classList.toggle('show', y > 400);
+    if(progress) progress.style.width = pct + '%';
+    if(navbar) navbar.classList.toggle('scrolled', y > 40);
+    if(scrollTop) scrollTop.classList.toggle('show', y > 400);
   }
 
   let ticking = false;
@@ -1329,9 +1613,11 @@ footer .fine{
   onScroll();
 
   /* ---------- BACK TO TOP ---------- */
-  scrollTop.addEventListener('click', function(){
-    window.scrollTo({ top:0, behavior:'smooth' });
-  });
+  if(scrollTop){
+    scrollTop.addEventListener('click', function(){
+      window.scrollTo({ top:0, behavior:'smooth' });
+    });
+  }
 
   /* ---------- REVEAL ON SCROLL ---------- */
   const reveals = document.querySelectorAll('.reveal');
@@ -1352,7 +1638,7 @@ footer .fine{
   }
 })();
 
-/* ---------- FORM ---------- */
+/* ---------- FORM SUBMIT ---------- */
 function submitForm(event){
   event.preventDefault();
   alert('Galatoomi! Odeeffannoon Galmee Keessanii Fuulduratti Qoratama.');
