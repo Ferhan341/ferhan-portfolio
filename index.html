@@ -14,7 +14,7 @@
 
 <style>
 /* ============================================================
-   RESET & ROOT — Academy Style (Murtaqaa-inspired)
+   RESET & ROOT — Academy Style
    ============================================================ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -79,7 +79,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .arabic{font-family:'Amiri','Noto Naskh Arabic',serif;direction:rtl;unicode-bidi:isolate;line-height:1.9}
 
 /* ============================================================
-   TOP BAR (announcement — like Murtaqaa)
+   TOP BAR
    ============================================================ */
 .topbar{
   background:linear-gradient(90deg,var(--green),var(--green-mid));
@@ -179,7 +179,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .drawer a:hover{background:var(--card);border-color:var(--line)}
 
 /* ============================================================
-   HERO — Academy Style with geometric pattern
+   HERO
    ============================================================ */
 .hero{
   position:relative;
@@ -256,7 +256,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .btn-outline:hover{transform:translateY(-3px);background:var(--card-hover);border-color:var(--gold)}
 
 /* ============================================================
-   STATISTICS SECTION (Murtaqaa-style counters)
+   STATISTICS SECTION
    ============================================================ */
 .stats{
   background:linear-gradient(180deg,transparent,rgba(7,35,26,.6),transparent);
@@ -284,7 +284,6 @@ button,input,select,textarea{font:inherit;color:inherit}
   line-height:1;
   margin-bottom:8px;
   letter-spacing:-1px;
-  font-family:'Cairo',sans-serif;
 }
 .stat-label{
   font-size:12.5px;
@@ -331,7 +330,7 @@ section{padding:90px 0;scroll-margin-top:80px}
 }
 
 /* ============================================================
-   ABOUT — Academy split layout
+   ABOUT
    ============================================================ */
 .about-split{
   display:grid;
@@ -417,68 +416,116 @@ section{padding:90px 0;scroll-margin-top:80px}
 }
 
 /* ============================================================
-   COURSE CATEGORY CARDS (Murtaqaa-style grid)
+   TRACKS SECTION (Methodological & Elective)
    ============================================================ */
-.programs-grid{
+.tracks-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
 }
-.program-card{
+.track-card{
   position:relative;
-  padding:32px 26px;
-  border-radius:22px;
+  padding:40px 32px;
+  border-radius:24px;
+  border:1px solid var(--line);
+  background:linear-gradient(160deg,rgba(201,162,39,.06),rgba(255,255,255,.02));
+  transition:.4s var(--ease);
+  overflow:hidden;
+}
+.track-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light),transparent);
+}
+.track-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--gold);
+  box-shadow:0 24px 60px rgba(0,0,0,.4);
+}
+.track-icon{
+  width:60px;height:60px;border-radius:16px;
+  display:grid;place-items:center;font-size:28px;
+  background:rgba(201,162,39,.12);
+  border:1px solid var(--line);
+  margin-bottom:20px;
+}
+.track-card h3{
+  font-size:22px;font-weight:900;color:#fff;
+  margin-bottom:8px;letter-spacing:-.3px;
+}
+.track-card .ar-title{
+  font-family:'Amiri',serif;direction:rtl;
+  color:var(--gold-light);font-size:17px;
+  margin-bottom:16px;line-height:1.7;
+}
+.track-card p{
+  color:var(--muted);font-size:14.5px;line-height:1.8;
+  margin-bottom:20px;
+}
+.track-meta{
+  display:flex;flex-wrap:wrap;gap:10px;
+  padding-top:20px;border-top:1px solid var(--line-soft);
+}
+.track-tag{
+  padding:6px 14px;border-radius:100px;
+  font-size:12px;font-weight:700;
+  color:var(--gold-light);
+  background:rgba(201,162,39,.08);
+  border:1px solid var(--line);
+}
+.track-tag.free{color:#7be495;border-color:rgba(123,228,149,.25);background:rgba(123,228,149,.06)}
+
+/* ============================================================
+   COURSE CATEGORY CARDS
+   ============================================================ */
+.courses-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.course-card{
+  position:relative;
+  padding:28px 24px;
+  border-radius:20px;
   border:1px solid var(--line-soft);
   background:linear-gradient(160deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
   transition:.4s var(--ease);
   overflow:hidden;
+  text-align:center;
 }
-.program-card::before{
+.course-card::before{
   content:"";position:absolute;top:0;left:0;right:0;height:3px;
   background:linear-gradient(90deg,var(--gold),var(--gold-light),transparent);
   opacity:0;transition:opacity .4s var(--ease);
 }
-.program-card:hover{
+.course-card:hover{
   transform:translateY(-6px);
   border-color:var(--line);
   background:linear-gradient(160deg,rgba(201,162,39,.08),rgba(255,255,255,.02));
   box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
-.program-card:hover::before{opacity:1}
-.program-icon{
-  width:56px;height:56px;border-radius:16px;
+.course-card:hover::before{opacity:1}
+.course-icon{
+  width:56px;height:56px;margin:0 auto 16px;
+  border-radius:16px;
   display:grid;place-items:center;font-size:26px;
   background:rgba(201,162,39,.1);
   border:1px solid var(--line);
-  margin-bottom:18px;
 }
-.program-card h3{
-  font-size:19px;font-weight:800;color:#fff;
-  margin-bottom:6px;letter-spacing:-.3px;
+.course-card h4{
+  font-size:16px;font-weight:800;color:#fff;
+  margin-bottom:6px;letter-spacing:-.2px;
 }
-.program-card .ar-title{
+.course-card .ar-title{
   font-family:'Amiri',serif;direction:rtl;
-  color:var(--gold-light);font-size:15px;
-  margin-bottom:12px;line-height:1.7;
+  color:var(--gold-light);font-size:14px;
+  margin-bottom:10px;line-height:1.7;
 }
-.program-card p{
-  color:var(--muted);font-size:14px;line-height:1.75;
+.course-card p{
+  color:var(--muted);font-size:13px;line-height:1.75;
 }
-.program-card .program-meta{
-  display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;
-  padding-top:16px;border-top:1px solid var(--line-soft);
-}
-.program-tag{
-  padding:5px 12px;border-radius:100px;
-  font-size:11.5px;font-weight:700;
-  color:var(--gold-light);
-  background:rgba(201,162,39,.08);
-  border:1px solid var(--line);
-}
-.program-tag.free{color:#7be495;border-color:rgba(123,228,149,.25);background:rgba(123,228,149,.06)}
 
 /* ============================================================
-   FEATURES SECTION
+   FEATURES
    ============================================================ */
 .features-grid{
   display:grid;
@@ -772,7 +819,8 @@ footer .fine{
   .stat:nth-child(3n){border-right:none}
   .about-split{grid-template-columns:1fr;gap:40px}
   .about-visual{aspect-ratio:16/10;order:-1}
-  .programs-grid{grid-template-columns:repeat(2,1fr)}
+  .tracks-grid{grid-template-columns:1fr}
+  .courses-grid{grid-template-columns:repeat(2,1fr)}
   .features-grid{grid-template-columns:repeat(2,1fr)}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -780,7 +828,7 @@ footer .fine{
 @media (max-width:680px){
   section{padding:70px 0}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .programs-grid,.features-grid,.gallery-grid,.contact-grid{grid-template-columns:1fr}
+  .courses-grid,.features-grid,.gallery-grid,.contact-grid{grid-template-columns:1fr}
   .hero{padding:60px 0 70px}
   .hero h1{letter-spacing:-.8px}
   .markaza-band{padding:44px 22px}
@@ -814,7 +862,8 @@ footer .fine{
 
     <nav class="nav-links" id="navLinks">
       <a href="#about">Waa'ee Keenya</a>
-      <a href="#programs">Sagantaalee</a>
+      <a href="#tracks">Masaalee</a>
+      <a href="#courses">Sagantaalee</a>
       <a href="#features">Miiraalee</a>
       <a href="#markaza">Markaza</a>
       <a href="#gallery">Suuraa</a>
@@ -828,7 +877,8 @@ footer .fine{
 <!-- Drawer -->
 <nav class="drawer" id="drawer">
   <a href="#about">Waa'ee Keenya</a>
-  <a href="#programs">Sagantaalee Barnootaa</a>
+  <a href="#tracks">Masaalee Barnootaa</a>
+  <a href="#courses">Sagantaalee</a>
   <a href="#features">Miiraalee Markazichaa</a>
   <a href="#markaza">Markaza Uweysii Ibnu Aamir</a>
   <a href="#gallery">Suuraawwan</a>
@@ -858,7 +908,7 @@ footer .fine{
 
     <div class="hero-actions reveal" style="--d:320ms">
       <a href="#contact" class="btn btn-primary">📝 Amma Galmaa'i</a>
-      <a href="#programs" class="btn btn-outline">📚 Sagantaalee Ilaali</a>
+      <a href="#tracks" class="btn btn-outline">📚 Masaalee Ilaali</a>
     </div>
   </div>
 </header>
@@ -968,82 +1018,120 @@ footer .fine{
   </div>
 </section>
 
-<!-- ================= PROGRAMS ================= -->
-<section id="programs" style="background:rgba(7,35,26,.35)">
+<!-- ================= TRACKS ================= -->
+<section id="tracks" style="background:rgba(7,35,26,.35)">
   <div class="container">
     <div class="section-head reveal">
-      <span class="section-tag">Education Programs</span>
-      <h2>Sagantaalee <span>Barnootaa</span></h2>
-      <p>Barnoota bu'uuraa irraa kaasee hanga sadarkaa ol'aanaatti — sirna sadarkaa qabuun.</p>
+      <span class="section-tag">Program Tracks</span>
+      <h2>Masaalee <span>Barnootaa</span></h2>
+      <p>Masaalee lama — sirna guutuu fi filannoo. Kanaan barbaaddu filadhu.</p>
     </div>
 
-    <div class="programs-grid">
-      <article class="program-card reveal">
-        <div class="program-icon">🔤</div>
-        <h3>Qaacidda Nooraniyyaa</h3>
-        <div class="ar-title">الْقَاعِدَةُ النُّورَانِيَّةُ</div>
-        <p>Sadarkaa jalqabaa fi daa'immaniif — qubee, harakaat, tanwiin fi shaddaa sirriitti barachuu.</p>
-        <div class="program-meta">
-          <span class="program-tag">Jalqabaa</span>
-          <span class="program-tag free">Bilisa</span>
+    <div class="tracks-grid">
+      <article class="track-card reveal">
+        <div class="track-icon">📚</div>
+        <h3>Masara Sirnaa</h3>
+        <div class="ar-title">الْمَسَارُ الْمَنْهَجِيُّ</div>
+        <p>
+          Sagantaa guutuu sadarkaa 3 waggaa qabu — jalqabaa irraa kaasee
+          hanga xumuraatti sirna qabuun barnoota hunda barachuu.
+        </p>
+        <div class="track-meta">
+          <span class="track-tag">Waggaa 3</span>
+          <span class="track-tag">Sadarkaa 4</span>
+          <span class="track-tag free">Bilisa</span>
         </div>
       </article>
 
-      <article class="program-card reveal" style="--d:60ms">
-        <div class="program-icon">📖</div>
-        <h3>Tilawaa fi Tajwiid</h3>
-        <div class="ar-title">التِّلَاوَةُ وَالتَّجْوِيدُ</div>
-        <p>Makhaarij, sifaat, ahkaama nuun fi miim, madd fi ghunnah — sagalee bareedaan qara'uu.</p>
-        <div class="program-meta">
-          <span class="program-tag">Sadarkaa 2</span>
-        </div>
-      </article>
-
-      <article class="program-card reveal" style="--d:120ms">
-        <div class="program-icon">☝️</div>
-        <h3>Aqiidaa Sirrii</h3>
-        <div class="ar-title">الْعَقِيدَةُ الصَّحِيحَةُ</div>
-        <p>Tawhiida, Usuul ath-Thalaatha, Kitaab at-Tawhiid — bu'uura amantii Islaamaa sirriitti hubachuu.</p>
-        <div class="program-meta">
-          <span class="program-tag">Bu'uura</span>
-        </div>
-      </article>
-
-      <article class="program-card reveal" style="--d:180ms">
-        <div class="program-icon">⚖️</div>
-        <h3>Fiqhii fi Ahkaam</h3>
-        <div class="ar-title">الْفِقْهُ وَالْأَحْكَامُ</div>
-        <p>Ahkaama ibaadaa fi jireenyaa — tahaaraa, salaata, sooma, zakaata fi hajjii.</p>
-        <div class="program-meta">
-          <span class="program-tag">Jireenya</span>
-        </div>
-      </article>
-
-      <article class="program-card reveal" style="--d:240ms">
-        <div class="program-icon">🌙</div>
-        <h3>Seenaa Nabiyyii ﷺ</h3>
-        <div class="ar-title">السِّيرَةُ النَّبَوِيَّةُ</div>
-        <p>Jireenya Nabiyyii ﷺ, akhlaaqa isaa fi tarbiyaa isarraa barachuu — fakkeenya gaarii hordofuu.</p>
-        <div class="program-meta">
-          <span class="program-tag">Seenaa</span>
-        </div>
-      </article>
-
-      <article class="program-card reveal" style="--d:300ms">
-        <div class="program-icon">✨</div>
-        <h3>Sagantaa Guutuu</h3>
-        <div class="ar-title">الْبَرْنَامَجُ الشَّامِلُ</div>
-        <p>Qur'aana, Tajwiida, Aqiidaa, Fiqhii fi Seenaa Nabiyyii ﷺ — hunda walitti qabu.</p>
-        <div class="program-meta">
-          <span class="program-tag">Xumuraa</span>
+      <article class="track-card reveal" style="--d:100ms">
+        <div class="track-icon">📖</div>
+        <h3>Masara Filannoo</h3>
+        <div class="ar-title">الْمَسَارُ الِانْتِقَائِيُّ</div>
+        <p>
+          Sagantaa bilisa — kutaa kitaabotaa fi barnoota barbaaddu filatii
+          barachuu dandeessa. Yeroon daangeffame hin jiru.
+        </p>
+        <div class="track-meta">
+          <span class="track-tag">Filannoo</span>
+          <span class="track-tag">Yeroo Bilisa</span>
+          <span class="track-tag free">Bilisa</span>
         </div>
       </article>
     </div>
   </div>
 </section>
 
+<!-- ================= COURSES ================= -->
+<section id="courses">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Course Categories</span>
+      <h2>Kutaalee <span>Barnootaa</span></h2>
+      <p>Barnoota bu'uuraa irraa kaasee hanga sadarkaa ol'aanaatti — sirna sadarkaa qabuun.</p>
+    </div>
+
+    <div class="courses-grid">
+      <article class="course-card reveal">
+        <div class="course-icon">📖</div>
+        <h4>Qur'aana fi Ulumuhu</h4>
+        <div class="ar-title">الْقُرْآنُ وَعُلُومُهُ</div>
+        <p>Tilawaa, Tajwiid, Tafsiir fi Ulum al-Qur'aan.</p>
+      </article>
+
+      <article class="course-card reveal" style="--d:60ms">
+        <div class="course-icon">📚</div>
+        <h4>Hadiisa fi Ulumuhu</h4>
+        <div class="ar-title">الْحَدِيثُ وَعُلُومُهُ</div>
+        <p>Sahiih Bukhaarii, Muslim, Muwatta fi Arba'iin Nawawii.</p>
+      </article>
+
+      <article class="course-card reveal" style="--d:120ms">
+        <div class="course-icon">🌙</div>
+        <h4>Seenaa Nabiyyii ﷺ</h4>
+        <div class="ar-title">السِّيرَةُ النَّبَوِيَّةُ</div>
+        <p>Jireenya, Da'waa, Hijraa fi Akhlaaqa Nabiyyii ﷺ.</p>
+      </article>
+
+      <article class="course-card reveal" style="--d:180ms">
+        <div class="course-icon">⚖️</div>
+        <h4>Fiqhii fi Usuuluhu</h4>
+        <div class="ar-title">الْفِقْهُ وَأُصُولُهُ</div>
+        <p>Ahkaama Ibaadaa, Mu'aamalaat fi Usuul al-Fiqh.</p>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-icon">☝️</div>
+        <h4>Aqiidaa</h4>
+        <div class="ar-title">الْعَقِيدَةُ</div>
+        <p>Tawhiida, Usuul ath-Thalaatha fi Kitaab at-Tawhiid.</p>
+      </article>
+
+      <article class="course-card reveal" style="--d:60ms">
+        <div class="course-icon">🔤</div>
+        <h4>Afaan Arabiffaa</h4>
+        <div class="ar-title">اللُّغَةُ الْعَرَبِيَّةُ</div>
+        <p>Nahwii, Sarfii fi Luqaa — bu'uura Afaan Arabiffaa.</p>
+      </article>
+
+      <article class="course-card reveal" style="--d:120ms">
+        <div class="course-icon">🌱</div>
+        <h4>Aadaaba fi Akhlaaqa</h4>
+        <div class="ar-title">الْآدَابُ وَالْأَخْلَاقُ</div>
+        <p>Aadaaba gaarii, Tazkiyah fi Tarbiyaa Nafsii.</p>
+      </article>
+
+      <article class="course-card reveal" style="--d:180ms">
+        <div class="course-icon">✨</div>
+        <h4>Sagantaa Guutuu</h4>
+        <div class="ar-title">الْبَرْنَامَجُ الشَّامِلُ</div>
+        <p>Qur'aana, Hadiisa, Fiqhii, Aqiidaa fi Seerah — hunda walitti.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ================= FEATURES ================= -->
-<section id="features">
+<section id="features" style="background:rgba(7,35,26,.35)">
   <div class="container">
     <div class="section-head reveal">
       <span class="section-tag">Why Choose Us</span>
@@ -1087,7 +1175,7 @@ footer .fine{
 </section>
 
 <!-- ================= MARKAZA ================= -->
-<section id="markaza" style="background:rgba(7,35,26,.35)">
+<section id="markaza">
   <div class="container">
     <div class="markaza-band reveal">
       <div class="markaza-logo">
@@ -1113,7 +1201,7 @@ footer .fine{
 </section>
 
 <!-- ================= GALLERY ================= -->
-<section id="gallery">
+<section id="gallery" style="background:rgba(7,35,26,.35)">
   <div class="container">
     <div class="section-head reveal">
       <span class="section-tag">Gallery</span>
@@ -1255,7 +1343,7 @@ footer .fine{
     });
   }
 
-  /* Smooth scroll with nav offset */
+  /* Smooth scroll */
   const OFFSET = 80;
   $$('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
@@ -1271,7 +1359,7 @@ footer .fine{
     });
   });
 
-  /* Scroll progress + nav + top button */
+  /* Scroll progress + nav + top */
   const nav = $('#nav'), toTop = $('#toTop');
   function onScroll(){
     const y = pageYOffset;
